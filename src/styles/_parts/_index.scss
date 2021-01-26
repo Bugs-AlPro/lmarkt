@@ -1,3 +1,16 @@
+ul, li {
+list-style: none;
+padding: 0;
+}
+a {
+  text-decoration: none;
+}
 .body {
-  background-color: $background;
+  max-width: 1375px; 
+  margin: 0 auto; 
+  font-family: 'Titillium Web', sans-serif;
+}
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
 }

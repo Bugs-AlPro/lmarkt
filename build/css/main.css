@@ -1,5 +1,41 @@
-p {
-  color: blue; }
+ul, li {
+  list-style: none;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
 
 .body {
-  background-color: #E5E5E5; }
+  max-width: 1375px;
+  margin: 0 auto;
+  font-family: 'Titillium Web', sans-serif; }
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto; }
+
+.footer-wrap {
+  background-color: #FFF8FE; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0.5;
+  color: #2D0027; }
+  .footer__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .footer__b-tittle {
+    font-size: 22px;
+    font-weight: 700; }
+  .footer__down {
+    display: flex;
+    justify-content: space-between; }
+  .footer__link {
+    color: #2D0027; }
+
+.phone {
+  font-size: 22px;
+  font-weight: 700; }
