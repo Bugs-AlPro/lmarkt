@@ -19,17 +19,20 @@ var path = {
     html: 'src/*.html',
     styles: 'src/styles/*.scss',
     images: 'src/img/*.{jpg,jpeg,png,webp,svg}',
+    js: 'src/js/*.js',
     svg: 'src/img/svg/*.svg'
   },
   build: {
     html: 'build/',
     styles: 'build/css/',
     images: 'build/img/',
+    js: 'build/js/',
     svg: 'build/img/svg'
   },
   watch: {
     html: 'src/**/*.html',
     styles: 'src/styles/**/*.scss',
+    js: 'src/js/*.js',
     images: 'src/img/**/*.{jpg,jpeg,png,webp,svg}',
     svg: 'src/img/svg/*.svg'
   },
@@ -63,6 +66,13 @@ function styles() {
     .src(path.src.styles)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.build.styles))
+    .pipe(reload({ stream: true }));
+};
+
+function js() {
+  return gulp
+    .src(path.src.js)
+    .pipe(gulp.dest(path.build.js))
     .pipe(reload({ stream: true }));
 };
 
@@ -109,6 +119,7 @@ function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.styles], styles);
   gulp.watch([path.watch.images], images);
+  gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.svg], svg)
 };
 
@@ -116,6 +127,7 @@ gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('img', images);
 gulp.task('svg', svg);
+gulp.task('js', js);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, images, svg)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, images, js, svg)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));
