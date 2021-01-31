@@ -3,7 +3,7 @@
 }
 .footer {
   color: $black;
-  &__b-tittle {
+  &__box-tittle {
     opacity: 0.5;  
   }
   &__img {
@@ -30,8 +30,6 @@
   opacity: 0.5;
 }
 .social {
-  display: flex;
-  gap: 15px;
   &__tg {
     fill: $black;
     opacity: 0.15;
@@ -71,35 +69,37 @@
     opacity: 1;
   }
 }
-
-
 @include media-down(sm) {
   .footer {
-    &__block-sm {
+    display: grid;
+    grid-template-rows: auto auto 20px;
+    &__box-sm {
       border-left: 1px solid $footer-outline;
       border-right: 1px solid $footer-outline;
       margin: 0 20px;
+      display: flex;
+      flex-direction: column;
     }
-    &__block-sm:first-child {
+    &__box-sm:first-child {
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       border-top: 1px solid $footer-outline;
     }
-    &__block-sm:nth-child(2) {
+    &__box-sm:nth-child(2) {
       border-top: 1px solid $footer-outline;
       border-bottom: 1px solid $footer-outline;
     }
-    &__block-sm:nth-child(3) {
+    &__box-sm:nth-child(3) {
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
       border-bottom: 1px solid $footer-outline;
     }
-    &__b-tittle {
+    &__box-tittle {
       font-size: 13px;
       font-weight: 600;
       padding: 10px 20px;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
     }
     &__button {
       border: 0;
@@ -107,24 +107,39 @@
       background-color: inherit;
       height: 15px;  
       position: relative;  
-      font-size: 0%;
-
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0;
+      flex-grow: 2;
+      text-align: left;
     }
     &__button::after {
       width: 7px;
       height: 7px;
       border-bottom:  2px solid $black;
       border-right:  2px solid $black;
+      border-top:  2px solid $footer-outline-button;
+      border-left:  2px solid $footer-outline-button;
       position: absolute;
       content: "";
       background-color: inherit;
       transform: rotate(45deg);
-      top: 3px;
+      top: -1px;
       right: 4px;
     }
-    &__button-open {
-      transform: rotate(180deg);
-      top: 5px;
+    &__button-open::after {
+      width: 7px;
+      height: 7px;
+      border-top:  2px solid $black;
+      border-left:  2px solid $black;
+      border-bottom:  2px solid $footer-outline-button;
+      border-right:  2px solid $footer-outline-button;
+      position: absolute;
+      content: "";
+      background-color: inherit;
+      transform: rotate(45deg);
+      top: 6px;
+      right: 4px;
     }
     &__items {
       display: flex;
@@ -157,6 +172,7 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
   &__link {
     opacity: 0.5;
   }
@@ -174,6 +190,8 @@
   font-size: 18px; 
 }
   .social {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
     &__link {
       height: 25px;
     }
@@ -199,71 +217,11 @@
     }
   }
 }
-@include media-only(sm) {
-  .footer {
-    display: grid;
-    grid-template-rows: auto auto;
-    margin: 0 15px;
-    &__top {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
-    &__items {
-      display: flex;
-      flex-direction: column;
-    }
-    &__b-tittle {
-      font-size: 22px;
-      font-weight: 700;
-      margin: 20px 0;
-      
-    }
-    &__item {
-      line-height: 33px;
-    }
-    &__link {
-      color: $black;
-    }
-    &__down {
-      display: grid;
-      grid-template-columns: 3fr 2fr 2fr;
-      
-    }
-  }
-  .phone {
-    font-size: 20px;}
-    .social {
-      &__link {
-        height: 18px;
-      }
-      &__tg {
-        width: 20px;
-        height: 17px;
-      }
-      &__ins-black {
-        width: 18px;
-        height: 18px;
-      }
-      &__ins-color {
-        width: 18px;
-        height: 18px;
-      }
-      &__vk {
-        width: 23px;
-        height: 13px;
-      }
-      &__fb {
-        width: 18px;
-        height: 18px;
-      }
-    }
-}
 @include media-only(md) {
   .footer {
     display: grid;
-    grid-template-rows: auto auto;
-    margin-left: 20px;
+    grid-template-rows: auto auto 20px;
+    margin-left: 40px;
     &__top {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -273,7 +231,7 @@
       display: flex;
       flex-direction: column;
     }
-    &__b-tittle {
+    &__box-tittle {
       font-size: 22px;
       font-weight: 700;
       margin: 20px 0;
@@ -287,7 +245,9 @@
     &__down {
       display: grid;
       grid-template-columns: 3fr 2fr 2fr;
-      
+    }
+    &__button {
+      display: none;
     }
   }
   .phone {
@@ -303,6 +263,8 @@
   }
 }
 .social {
+  display: grid;
+  grid-template-columns: 35px 35px 35px 35px;
   &__link {
     height: 18px;
   }
@@ -331,8 +293,8 @@
 @include media-up(lg) {
   .footer {
     display: grid;
-    grid-template-rows: auto auto;
-    margin-left: 20px;
+    grid-template-rows: auto auto 20px;
+    margin-left: 50px;
     &__top {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -342,11 +304,10 @@
       display: flex;
       flex-direction: column;
     }
-    &__b-tittle {
+    &__box-tittle {
       font-size: 22px;
       font-weight: 700;
       margin: 20px 0;
-      
     }
     &__item {
       line-height: 33px;
@@ -358,41 +319,46 @@
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
     }
+    &__button {
+      display: none;
+    }
   }
   .phone {
-    font-size: 22px;}
-}
-.app {
-
-  &__link {
-    opacity: 0.5;
+    font-size: 22px;
   }
-  &__link:hover {
-    opacity: 1;
+    .app {
+      &__link {
+        opacity: 0.5;
+      }
+      &__link:hover {
+        opacity: 1;
+      }
+    }
+    .social {
+      display: grid;
+      grid-template-columns: 35px 35px 35px 35px;
+      &__link {
+        height: 18px;
+      }
+      &__tg {
+        width: 20px;
+        height: 17px;
+      }
+      &__ins-black {
+        width: 18px;
+        height: 18px;
+      }
+      &__ins-color {
+        width: 18px;
+        height: 18px;
+      }
+      &__vk {
+        width: 23px;
+        height: 13px;
+      }
+      &__fb {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
-}
-.social {
-  &__link {
-    height: 18px;
-  }
-  &__tg {
-    width: 20px;
-    height: 17px;
-  }
-  &__ins-black {
-    width: 18px;
-    height: 18px;
-  }
-  &__ins-color {
-    width: 18px;
-    height: 18px;
-  }
-  &__vk {
-    width: 23px;
-    height: 13px;
-  }
-  &__fb {
-    width: 18px;
-    height: 18px;
-  }
-}
