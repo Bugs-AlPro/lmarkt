@@ -24,8 +24,8 @@ img {
 
 @include media-down(sm) {
   .container {
-
     margin: auto 20px;
+    
   }
 }
 @include media-only(md) {

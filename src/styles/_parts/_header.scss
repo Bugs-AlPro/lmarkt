@@ -1,11 +1,3 @@
-
-.nav {
-  // &__icon {
-  //   stroke: $general;
-  //   fill: $outline;
-  // }
-
-}
 .icon-menu {
   width: 18px;
   height: 15px;
@@ -56,26 +48,27 @@ fill: $general;
       justify-content: space-between;
       margin-top: 15px;
     }
-    &__item {
+    &__link {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      height: 100%;
       align-items: center;
-      font-size: 9px;
-      position: relative;
       stroke: $general;
       color: $general;
       fill: $outline;
+      position: relative;
+      font-size: 9px;
       padding-bottom: 10px;
     }
-    &__item:hover {
+    &__link:hover {
       stroke: $hover;
       color: $hover;
     }
-    &__item:hover .icon-phone {
+    &__link:hover .icon-phone {
       fill: $hover;
     }
-    &__item:hover .icon-market__count {
+    &__link:hover .icon-market__count {
      background-color: $hover;
     }
   }
@@ -122,6 +115,43 @@ fill: $general;
     border-right:  2px solid $general;
     top: 3px;
     right: 2px;
+  }
+  .header-c {
+    position: relative;
+  }
+  .header-c__input {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    border: 3px solid $border-search;
+    padding: 10px 0px 10px 20px;
+    background-color: $outline;
+    color: $general;
+  }
+  .header-c__input:hover {
+    background-color: $search-fild;
+  }
+  .header-c::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 2px solid $general;
+    border-color: $general;
+    border-radius: 50%;
+    top: 10px;
+    right: 16px;
+  }
+  .header-c::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: $general;
+    top: 23px;
+    right: 11px;
+    transform: rotate(45deg);
   }
 }
 @include media-only(md) {}

@@ -76,23 +76,24 @@ img {
     display: flex;
     justify-content: space-between;
     margin-top: 15px; }
-  .nav__item {
+  .nav__link {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     align-items: center;
-    font-size: 9px;
-    position: relative;
     stroke: #A0148E;
     color: #A0148E;
     fill: #FFF8FE;
+    position: relative;
+    font-size: 9px;
     padding-bottom: 10px; }
-  .nav__item:hover {
+  .nav__link:hover {
     stroke: #D866C9;
     color: #D866C9; }
-  .nav__item:hover .icon-phone {
+  .nav__link:hover .icon-phone {
     fill: #D866C9; }
-  .nav__item:hover .icon-market__count {
+  .nav__link:hover .icon-market__count {
     background-color: #D866C9; }
   .logo__img {
     fill: #A0148E;
@@ -129,7 +130,39 @@ img {
     border-bottom: 2px solid #A0148E;
     border-right: 2px solid #A0148E;
     top: 3px;
-    right: 2px; } }
+    right: 2px; }
+  .header-c {
+    position: relative; }
+  .header-c__input {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    border: 3px solid #F9EFF7;
+    padding: 10px 0px 10px 20px;
+    background-color: #FFF8FE;
+    color: #A0148E; }
+  .header-c__input:hover {
+    background-color: #FFEFFD; }
+  .header-c::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 2px solid #A0148E;
+    border-color: #A0148E;
+    border-radius: 50%;
+    top: 10px;
+    right: 16px; }
+  .header-c::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: #A0148E;
+    top: 23px;
+    right: 11px;
+    transform: rotate(45deg); } }
 
 .footer-wrap {
   background-color: #FFF8FE; }
@@ -202,7 +235,7 @@ img {
     .footer__box-sm {
       border-left: 1px solid #EFE4ED;
       border-right: 1px solid #EFE4ED;
-      margin: 0 20px;
+      margin: 0;
       display: flex;
       flex-direction: column; }
     .footer__box-sm:first-child {
@@ -262,7 +295,8 @@ img {
     .footer__items {
       display: flex;
       flex-direction: column;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      margin-right: 10px; }
     .footer__item {
       font-size: 12px;
       line-height: 26px;
@@ -272,8 +306,9 @@ img {
     .footer__down {
       display: flex;
       flex-direction: column-reverse;
-      align-items: center;
-      gap: 15px; }
+      align-items: center; }
+    .footer__down-line {
+      margin-bottom: 15px; }
     .footer .copyright {
       font-size: 11px; }
   .none {
