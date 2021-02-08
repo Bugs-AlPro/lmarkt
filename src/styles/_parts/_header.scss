@@ -5,10 +5,9 @@
 .icon-phone {
   width: 21px;
   height: 22px;
-stroke: initial;
-fill: $general;
+  stroke: initial;
+  fill: $general;
 }
-
 .icon-profile {
   width: 18px;
   height: 21px;
@@ -16,7 +15,6 @@ fill: $general;
 .icon-market {
   width: 23px;
   height: 20px;
-
   &__count {
     position: absolute;
     width: auto;
@@ -41,6 +39,26 @@ fill: $general;
   .header-wrap {
     background-color: $outline;
     min-width: 200px;
+  }
+  .header {
+    display: grid;
+    grid-template-areas: 
+    "a a"
+    "b c"
+    "d d";
+    &__nav {
+      grid-area: a;
+    }
+    &__logo {
+      grid-area: b;
+    }
+    &__location {
+      grid-area: c;
+    }
+    &__search {
+      grid-area: d;
+      position: relative;
+    }
   }
   .nav {
     &__items {
@@ -119,7 +137,7 @@ fill: $general;
   .header-c {
     position: relative;
   }
-  .header-c__input {
+  .search__input {
     width: 100%;
     border-radius: 3px;
     box-shadow: none;
@@ -128,11 +146,12 @@ fill: $general;
     padding: 10px 0px 10px 20px;
     background-color: $outline;
     color: $general;
+    box-shadow: none;
   }
-  .header-c__input:hover {
+  .search__input:hover {
     background-color: $search-fild;
   }
-  .header-c::after {
+  .search::after {
     position: absolute;
     content: "";
     width: 10px;
@@ -143,14 +162,14 @@ fill: $general;
     top: 10px;
     right: 16px;
   }
-  .header-c::before {
+  .search::before {
     position: absolute;
     content: "";
-    width: 8px;
+    width: 7px;
     height: 2px;
     background-color: $general;
     top: 23px;
-    right: 11px;
+    right: 12px;
     transform: rotate(45deg);
   }
 }
