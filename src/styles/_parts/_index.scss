@@ -20,7 +20,23 @@ img {
   flex-direction: column;
   font-size: 15px;
 }
-.container {
-  max-width: 1210px;
-  margin: auto;
+
+
+@include media-down(sm) {
+  .container {
+
+    margin: auto 20px;
+  }
+}
+@include media-only(md) {
+  .container {
+
+    margin: auto;
+  }
+}
+@include media-up(lg) {
+  .container {
+    max-width: 1260px;
+    margin: auto;
+  }
 }

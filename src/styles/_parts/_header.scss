@@ -1,3 +1,128 @@
-header {
-  margin-bottom: 30px;
+
+.nav {
+  // &__icon {
+  //   stroke: $general;
+  //   fill: $outline;
+  // }
+
 }
+.icon-menu {
+  width: 18px;
+  height: 15px;
+}
+.icon-phone {
+  width: 21px;
+  height: 22px;
+stroke: initial;
+fill: $general;
+}
+
+.icon-profile {
+  width: 18px;
+  height: 21px;
+}
+.icon-market {
+  width: 23px;
+  height: 20px;
+
+  &__count {
+    position: absolute;
+    width: auto;
+    min-width: 10px;
+    height: 10px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: $general;
+    color: white;
+    font-weight: 700;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -1px;
+    left: 15px;
+    box-shadow: 0px 0px 0px 1px $outline;
+  }
+}
+
+@include media-down(sm) {
+  .header-wrap {
+    background-color: $outline;
+    min-width: 200px;
+  }
+  .nav {
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      position: relative;
+      stroke: $general;
+      color: $general;
+      fill: $outline;
+      padding-bottom: 10px;
+    }
+    &__item:hover {
+      stroke: $hover;
+      color: $hover;
+    }
+    &__item:hover .icon-phone {
+      fill: $hover;
+    }
+    &__item:hover .icon-market__count {
+     background-color: $hover;
+    }
+  }
+  .logo {
+    &__img {
+      fill: $general;
+      width: 90px;
+      height: 20px;
+    }
+  }
+  .header-b {
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+      padding: 10px 0;
+    }
+    &__location {
+      padding: 10px 0 10px 10px;
+      border-top-left-radius: 7px;
+    }
+  }
+  .location__name {
+    border: 0;
+    outline: none;
+    background-color: inherit;
+    height: 15px;  
+    position: relative;  
+    font-size: 13px;
+    font-weight: 700;
+    color: $general;
+    padding: 0;
+    flex-grow: 2;
+    text-align: left;
+    padding-right: 20px;
+  }
+  .location__name::after {
+    position: absolute;
+    content: "";
+    background-color: inherit;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    border-bottom:  2px solid $general;
+    border-right:  2px solid $general;
+    top: 3px;
+    right: 2px;
+  }
+}
+@include media-only(md) {}
+@include media-up(lg) {}

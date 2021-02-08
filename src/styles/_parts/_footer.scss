@@ -45,6 +45,7 @@
   }
   &__ins-black:hover {
     display: none;
+
   }
   &__ins-color {
     opacity: 0;
@@ -293,8 +294,9 @@
 @include media-up(lg) {
   .footer {
     display: grid;
-    grid-template-rows: auto auto 20px;
+    grid-template-rows: auto auto;
     margin-left: 50px;
+    margin-bottom: 50px;
     &__top {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -318,6 +320,7 @@
     &__down {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
+      margin-top: 30px;
     }
     &__button {
       display: none;
@@ -348,10 +351,10 @@
         width: 18px;
         height: 18px;
       }
-      &__ins-color {
-        width: 18px;
-        height: 18px;
-      }
+      // &__ins-color {
+      //   width: 18px;
+      //   height: 18px;
+      // }
       &__vk {
         width: 23px;
         height: 13px;
