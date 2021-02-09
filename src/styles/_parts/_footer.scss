@@ -23,8 +23,10 @@
 .phone {
   font-weight: 700;
   line-height: 15px;
-  opacity: 0.5;
   color: $black;
+}
+.phone-down {
+  opacity: 0.5;
 }
 .copyright {
   opacity: 0.5;
@@ -160,10 +162,10 @@
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
-      // gap: 15px;
     }
     &__down-line {
       margin-bottom: 15px;
+      opacity: 0.5;
     }
     .copyright {
       font-size: 11px;
@@ -299,7 +301,7 @@
   .footer {
     display: grid;
     grid-template-rows: auto auto;
-    margin-left: 50px;
+    // margin-left: 50px;
     margin-bottom: 50px;
     &__top {
       display: grid;
