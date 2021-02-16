@@ -171,9 +171,8 @@ img {
     display: none; }
   .header {
     display: grid;
-    grid-template-columns: 160px auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "a . . i i i i i i i i n n" "b c d d d d e e e k k k k";
+    grid-template-rows: auto 15px auto;
+    grid-template-areas: "a . . i i i i i i i i n n" ". . . . . . . . . . . . ." "b c d d d d e e e k k k k";
     justify-content: space-between; }
     .header__location {
       grid-area: a; }
