@@ -1,5 +1,8 @@
 
-@include media-down(sm) {
+@include media-down(lg) {
+  .catalog, .profile {
+    display: none;
+  }
   .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -171,52 +174,156 @@
       box-shadow: 0px 0px 0px 1px $outline;
     }
   }
-  .none-sm {
+}
+@include media-up(lg) {
+  .catalog, .profile, .big-none {
     display: none;
   }
-}
-@include media-only(md) {}
-@include media-up(lg) {
   .header {
     display: grid;
+    grid-template-columns: 160px auto;
+    grid-template-rows: auto auto;
     grid-template-areas: 
-    "a . . c c c c c c"
-    "b z d d d e e e e";
+    "a . . i i i i i i i i n n"
+    "b c d d d d e e e k k k k";
+    justify-content: space-between;
     &__location {
       grid-area: a;
     }
     &__logo {
       grid-area: b;
     }
-    &__menu {
-      grid-area: c;
-      display: grid;
-      // grid-template-areas: "a b c d e";
-      grid-template-columns: auto auto auto auto auto;
-    }
     &__catalog {
-      grid-area: z;
+      grid-area: c;
     }
     &__search {
       grid-area: d;
+      align-self: center;
     }
-    &__nav {
+    &__phone {
       grid-area: e;
+      justify-self: center;
+      align-self: center;
+    }
+    &__info {
+      grid-area: i;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-between;
+    }
+    &__social {
+      grid-area: n;
+      justify-self: end;
+      align-self: center;
+    }
+    &__menu {
+      grid-area: k;
     }
   }
-  .nav {
-    &__items {
+  .location {
+    &__name {
+      border: 0;
+      outline: none;
+      background-color: inherit;
+      position: relative;  
+      font-size: 15px;
+      font-weight: 700;
+      color: $general;
+      padding: 5px 14px 5px 0px;
+      // border: 1px solid dodgerblue;
+    }
+    &__name::after {
+      position: absolute;
+      content: "";
+      background-color: inherit;
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      border-bottom:  2px solid $general;
+      border-right:  2px solid $general;
+      top: 9px;
+      right: -1px;
+    }
+  }
+  .catalog-link {
+    width: 141px;
+    height: 45px;
+    background-color: $general;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-content: center;
+    &__icon {
+      align-self: center;
+      margin-right: 11px;
+    }
+    &__text {
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      align-self: center;
+    }
+  }
+  .catalog-link:hover {
+    background-color: $hover;
+  }
+  .icon-catolog {
+    width: 15px;
+    height: 15px;
+    stroke: #ffffff;
+    stroke-width: 3px;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 
+    "o p r s";
+    justify-content: space-between;
+    align-items: center;
+    &__baying {
+      grid-area: s;
+    }
+    &__profile {
+      grid-area: r;
+    }
+    &__contrast {
+      grid-area: p;
+    }
+    &__favor {
+      grid-area: o;
+    }
+    &__link {
       display: grid;
-      grid-template-areas: "a b c d e";
-      grid-template-columns: auto 60px 60px 60px 60px;
+      font-size: 9px;
+      justify-items: center;
+      position: relative;
+      stroke: $general;
+      fill: $general;
+    }
+    &__link:hover {
+      stroke: $hover;
+      fill: $hover;
+
+    }
+    &__name {
+      opacity: 0.6;
+      color: $general;
+      margin-top: 5px;
+    }
+    &__link:hover &__name {
+      opacity: 1;
+      color: $hover;
+    }
+    &__link:hover .icon-market__count {
+      background-color: $hover;
     }
   }
   .logo {
-    padding: 10px 0px;
     &__img {
       fill: $general;
-      width: 90px;
-      height: 20px;
+      width: 155px;
+      height: 35px;
     }
   }
   .search {
@@ -235,53 +342,57 @@
     &__input:hover {
       background-color: $search-fild;
     }
+    &__link {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
   }
-  .search::after {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    border: 2px solid $general;
-    border-color: $general;
-    border-radius: 50%;
-    top: 10px;
-    right: 16px;
+  .info-menu {
+    font-size: 15px;
+    
+    &__link {
+      color: $black;
+      opacity: 0.3;
+      padding: 5px;
+    }
+    &__link:hover {
+      color: $hover;
+      opacity: 1;
+    }
   }
-  .search::before {
-    position: absolute;
-    content: "";
-    width: 7px;
-    height: 2px;
-    background-color: $general;
-    top: 23px;
-    right: 12px;
-    transform: rotate(45deg);
+  .icon-search {
+    width: 13px;
+    height: 14px;
+    fill: $outline;
+    stroke: $general;
+    stroke-width: 1.5px;
+  }
+  .icon-search:hover {
+    stroke: $hover;
   }
   .icon-menu {
     width: 18px;
     height: 15px;
   }
-  .icon-phone {
-    width: 21px;
-    height: 22px;
-    stroke: initial;
-    fill: $general;
-  }
   .icon-profile {
     width: 18px;
     height: 21px;
+    stroke-width: 1.2px;
+    fill: #ffffff;
   }
   .icon-market {
     width: 23px;
     height: 20px;
     position: relative;
+    fill: #ffffff;
     &__count {
       position: absolute;
       width: auto;
-      min-width: 10px;
+      min-width: 11px;
       height: 10px;
-      padding: 2px;
-      border-radius: 50%;
+      // padding: 1px 3px;
+      border-radius: 5px;
       background-color: $general;
       color: white;
       font-weight: 700;
@@ -289,36 +400,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      top: -1.5px;
-      left: 36px;
+      top: -1px;
+      left: 14px;
       box-shadow: 0px 0px 0px 1px $outline;
     }
   }
   .icon-contrast {
     width: 20px;
     height: 19px;
+    stroke-width: 1.5px;
   }
   .icon-favor {
     width: 22px;
     height: 19px;
     stroke: initial;
-    fill: $general;
-  }
-  .nav {
-    &__link {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      align-items: center;
-      stroke: $general;
-      color: $general;
-      fill: $outline;
-      position: relative;
-      font-size: 9px;
-    }
-  }
-  .none-lg {
-    display: none;
   }
 }

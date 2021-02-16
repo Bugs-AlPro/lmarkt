@@ -36,7 +36,7 @@
     fill: $black;
     opacity: 0.15;
   }
-  &__tg:hover {
+  &__link:hover &__tg {
     fill: #1E96C8;
     opacity: 1;
   }
@@ -45,21 +45,20 @@
     opacity: 0.15;
     position: absolute;
   }
-  &__ins-black:hover {
+  &__link:hover &__ins-black {
     display: none;
-
   }
   &__ins-color {
     opacity: 0;
   }
-  &__ins-color:hover {
+  &__link:hover &__ins-color {
     opacity: 1;
   }
   &__vk {
     fill: $black;
     opacity: 0.15;
   }
-  &__vk:hover {
+  &__link:hover &__vk {
     fill: #5282b8;
     opacity: 1;
   }
@@ -67,12 +66,12 @@
     fill: $black;
     opacity: 0.15;
   }
-  &__fb:hover {
+  &__link:hover &__fb {
     fill: #3b589e;
     opacity: 1;
   }
 }
-@include media-down(sm) {
+@include media-down(lg) {
   .footer {
     display: grid;
     grid-template-rows: auto auto 20px;
@@ -224,79 +223,6 @@
     }
   }
 }
-@include media-only(md) {
-  .footer {
-    display: grid;
-    grid-template-rows: auto auto 20px;
-    margin-left: 40px;
-    &__top {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
-    &__items {
-      display: flex;
-      flex-direction: column;
-    }
-    &__box-tittle {
-      font-size: 22px;
-      font-weight: 700;
-      margin: 20px 0;
-    }
-    &__item {
-      line-height: 33px;
-    }
-    &__link {
-      color: $black;
-    }
-    &__down {
-      display: grid;
-      grid-template-columns: 3fr 2fr 2fr;
-    }
-    &__button {
-      display: none;
-    }
-  }
-  .phone {
-    font-size: 20px;
-}
-.app {
-
-  &__link {
-    opacity: 0.5;
-  }
-  &__link:hover {
-    opacity: 1;
-  }
-}
-.social {
-  display: grid;
-  grid-template-columns: 35px 35px 35px 35px;
-  &__link {
-    height: 18px;
-  }
-  &__tg {
-    width: 20px;
-    height: 17px;
-  }
-  &__ins-black {
-    width: 18px;
-    height: 18px;
-  }
-  &__ins-color {
-    width: 18px;
-    height: 18px;
-  }
-  &__vk {
-    width: 23px;
-    height: 13px;
-  }
-  &__fb {
-    width: 18px;
-    height: 18px;
-  }
-}
-}
 @include media-up(lg) {
   .footer {
     display: grid;
@@ -328,6 +254,9 @@
       grid-template-columns: 2fr 1fr 1fr;
       margin-top: 30px;
     }
+    &__down-line {
+      justify-self: start;
+    }
     &__button {
       display: none;
     }
@@ -345,9 +274,11 @@
     }
     .social {
       display: grid;
-      grid-template-columns: 35px 35px 35px 35px;
+      grid-template-columns: 30px 30px 30px 30px;
+      justify-content: space-between;
       &__link {
-        height: 18px;
+        height: 30px;
+        padding: 5px;
       }
       &__tg {
         width: 20px;
@@ -357,10 +288,6 @@
         width: 18px;
         height: 18px;
       }
-      // &__ins-color {
-      //   width: 18px;
-      //   height: 18px;
-      // }
       &__vk {
         width: 23px;
         height: 13px;

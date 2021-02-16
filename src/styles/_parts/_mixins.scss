@@ -62,7 +62,7 @@
       @content;
     }
   } @else if $point == md {
-    @media (min-width: $screen-sm) and (max-width: $screen-lg - 0.02)  {
+    @media (min-width: $screen-md) and (max-width: $screen-lg - 0.02)  {
       @content;
     }
   } @else if $point == lg {
