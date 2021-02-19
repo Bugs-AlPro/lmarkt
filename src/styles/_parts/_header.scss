@@ -1,67 +1,48 @@
 
 @include media-down(lg) {
-  .catalog, .profile {
+  .catalog, .profile, .smal-none, .menu, .info-menu, .header__social, .header__phone-text {
     display: none;
   }
   .header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr auto;
     grid-template-areas: 
-    "a a"
-    "b c"
-    "d d";
-    &__nav {
+    "a b c d"
+    "e e f f"
+    "g g g g";
+    justify-content: space-between;
+    
+    &__catalog {
       grid-area: a;
-      background-color: $outline; 
     }
-    &__logo {
+    &__phone-img {
       grid-area: b;
     }
-    &__location {
+    &__profile {
       grid-area: c;
+    }
+    &__baying {
+      grid-area: d;
+    }
+    &__logo {
+      grid-area: e;
+    }
+    &__location {
+      grid-area: f;
       justify-self: end;
-
     }
     &__search {
-      grid-area: d;
+      grid-area: g;
       margin: 0px 20px 20px 20px;
-      
     }
   }
-  .nav {
-    &__items {
-      display: flex;
-      justify-content: space-between;
-    }
-    &__item:nth-child(2) .nav__link {
-      padding: 10px 5px;
-    }
-    &__link {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      align-items: center;
-      stroke: $general;
-      color: $general;
-      fill: $outline;
-      position: relative;
-      font-size: 9px;
-      padding: 10px 20px;
-    }
-    &__link:hover {
-      stroke: $hover;
-      color: $hover;
-    }
-    &__link:hover .icon-phone {
-      fill: $hover;
-    }
-    &__link:hover .icon-market__count {
-     background-color: $hover;
-    }
-    &__text {
-      white-space: nowrap;
-    }
+  .header-top {
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    font-size: 9px;
+    padding: 10px;
+
   }
   .logo {
     padding: 10px 20px;
@@ -97,7 +78,7 @@
       border-bottom:  2px solid $general;
       border-right:  2px solid $general;
       top: 3px;
-      right: 2px;
+      right: 4px;
     }
   }
   .search {
@@ -116,31 +97,17 @@
     &__input:hover {
       background-color: $search-fild;
     }
-  }
-  .search::after {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    border: 2px solid $general;
-    border-color: $general;
-    border-radius: 50%;
-    top: 10px;
-    right: 16px;
-  }
-  .search::before {
-    position: absolute;
-    content: "";
-    width: 7px;
-    height: 2px;
-    background-color: $general;
-    top: 23px;
-    right: 12px;
-    transform: rotate(45deg);
+    &__link {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
   }
   .icon-menu {
     width: 18px;
     height: 15px;
+    stroke: $general;
+    stroke-width: 1.5px;
   }
   .icon-phone {
     width: 21px;
@@ -151,17 +118,22 @@
   .icon-profile {
     width: 18px;
     height: 21px;
+    stroke: $general;
+    stroke-width: 1.2px;
+    fill: white;
   }
   .icon-market {
     width: 23px;
     height: 20px;
+    fill: white;
+    stroke: $general;
+    stroke-width: 1.3px;
     &__count {
       position: absolute;
       width: auto;
-      min-width: 10px;
+      min-width: 11px;
       height: 10px;
-      padding: 2px;
-      border-radius: 50%;
+      border-radius: 5px;
       background-color: $general;
       color: white;
       font-weight: 700;
@@ -169,10 +141,26 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      top: 10px;
-      left: 35px;
+      top: 9px;
+      left: 29px;
       box-shadow: 0px 0px 0px 1px $outline;
     }
+  }
+  .icon-search {
+    width: 14px;
+    height: 15px;
+    fill: $outline;
+    stroke: $general;
+    stroke-width: 1.5px;
+  }
+  .catalog-link {
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+  .baying-img {
+    position: relative;
+    padding-right: 20px;
+    padding-left: 15px;
   }
 }
 @include media-up(lg) {
@@ -200,7 +188,7 @@
       grid-area: d;
       align-self: center;
     }
-    &__phone {
+    &__phone-text {
       grid-area: e;
       justify-self: center;
       align-self: center;
@@ -230,7 +218,6 @@
       font-weight: 700;
       color: $general;
       padding: 5px 14px 5px 0px;
-      // border: 1px solid dodgerblue;
     }
     &__name::after {
       position: absolute;

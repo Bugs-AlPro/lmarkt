@@ -21,13 +21,6 @@ img {
   font-size: 15px;
 }
 
-
-@include media-down(sm) {
-
-}
-@include media-only(md) {
-
-}
 @include media-up(lg) {
   .container {
     max-width: 1260px;

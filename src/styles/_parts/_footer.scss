@@ -1,76 +1,4 @@
-.footer-wrap {
-  background-color: $outline;
-}
-.footer {
-  color: $black;
-  &__box-tittle {
-    opacity: 0.5;  
-  }
-  &__img {
-    opacity: 0.5;
-  }
-  &__img:hover {
-    opacity: 1;
-  }
-  &__link {
-    opacity: 0.5;
-  }
-  &__link:hover {
-    color: $hover;
-    opacity: 1;
-  }
-}
-.phone {
-  font-weight: 700;
-  line-height: 15px;
-  color: $black;
-}
-.phone-down {
-  opacity: 0.5;
-}
-.copyright {
-  opacity: 0.5;
-}
-.social {
-  &__tg {
-    fill: $black;
-    opacity: 0.15;
-  }
-  &__link:hover &__tg {
-    fill: #1E96C8;
-    opacity: 1;
-  }
-  &__ins-black {
-    fill: $black;
-    opacity: 0.15;
-    position: absolute;
-  }
-  &__link:hover &__ins-black {
-    display: none;
-  }
-  &__ins-color {
-    opacity: 0;
-  }
-  &__link:hover &__ins-color {
-    opacity: 1;
-  }
-  &__vk {
-    fill: $black;
-    opacity: 0.15;
-  }
-  &__link:hover &__vk {
-    fill: #5282b8;
-    opacity: 1;
-  }
-  &__fb {
-    fill: $black;
-    opacity: 0.15;
-  }
-  &__link:hover &__fb {
-    fill: #3b589e;
-    opacity: 1;
-  }
-}
+
 @include media-down(lg) {
   .footer {
     display: grid;
@@ -222,6 +150,79 @@
       height: 25px;
     }
   }
+  .footer-wrap {
+    background-color: $outline;
+  }
+  .footer {
+    color: $black;
+    &__box-tittle {
+      opacity: 0.5;  
+    }
+    &__img {
+      opacity: 0.5;
+    }
+    &__img:hover {
+      opacity: 1;
+    }
+    &__link {
+      opacity: 0.5;
+    }
+    &__link:hover {
+      color: $hover;
+      opacity: 1;
+    }
+  }
+  .phone {
+    font-weight: 700;
+    line-height: 15px;
+    color: $black;
+  }
+  .phone-down {
+    opacity: 0.5;
+  }
+  .copyright {
+    opacity: 0.5;
+  }
+  .social {
+    &__tg {
+      fill: $black;
+      opacity: 0.15;
+    }
+    &__link:hover &__tg {
+      fill: #1E96C8;
+      opacity: 1;
+    }
+    &__ins-black {
+      fill: $black;
+      opacity: 0.15;
+      position: absolute;
+    }
+    &__link:hover &__ins-black {
+      display: none;
+    }
+    &__ins-color {
+      opacity: 0;
+    }
+    &__link:hover &__ins-color {
+      opacity: 1;
+    }
+    &__vk {
+      fill: $black;
+      opacity: 0.15;
+    }
+    &__link:hover &__vk {
+      fill: #5282b8;
+      opacity: 1;
+    }
+    &__fb {
+      fill: $black;
+      opacity: 0.15;
+    }
+    &__link:hover &__fb {
+      fill: #3b589e;
+      opacity: 1;
+    }
+  }
 }
 @include media-up(lg) {
   .footer {
@@ -295,6 +296,79 @@
       &__fb {
         width: 18px;
         height: 18px;
+      }
+    }
+    .footer-wrap {
+      background-color: $outline;
+    }
+    .footer {
+      color: $black;
+      &__box-tittle {
+        opacity: 0.5;  
+      }
+      &__img {
+        opacity: 0.5;
+      }
+      &__img:hover {
+        opacity: 1;
+      }
+      &__link {
+        opacity: 0.5;
+      }
+      &__link:hover {
+        color: $hover;
+        opacity: 1;
+      }
+    }
+    .phone {
+      font-weight: 700;
+      line-height: 15px;
+      color: $black;
+    }
+    .phone-down {
+      opacity: 0.5;
+    }
+    .copyright {
+      opacity: 0.5;
+    }
+    .social {
+      &__tg {
+        fill: $black;
+        opacity: 0.15;
+      }
+      &__link:hover &__tg {
+        fill: #1E96C8;
+        opacity: 1;
+      }
+      &__ins-black {
+        fill: $black;
+        opacity: 0.15;
+        position: absolute;
+      }
+      &__link:hover &__ins-black {
+        display: none;
+      }
+      &__ins-color {
+        opacity: 0;
+      }
+      &__link:hover &__ins-color {
+        opacity: 1;
+      }
+      &__vk {
+        fill: $black;
+        opacity: 0.15;
+      }
+      &__link:hover &__vk {
+        fill: #5282b8;
+        opacity: 1;
+      }
+      &__fb {
+        fill: $black;
+        opacity: 0.15;
+      }
+      &__link:hover &__fb {
+        fill: #3b589e;
+        opacity: 1;
       }
     }
   }
