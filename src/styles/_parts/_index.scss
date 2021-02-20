@@ -20,10 +20,22 @@ img {
   flex-direction: column;
   font-size: 15px;
 }
-
+.hidden-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0px;
+  white-space: nowrap;
+  border: 0;
+}
 @include media-up(lg) {
   .container {
-    max-width: 1260px;
+    max-width: 1300px;
+    padding: 0px 20px;
     margin: auto;
   }
 }

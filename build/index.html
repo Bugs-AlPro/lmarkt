@@ -13,27 +13,28 @@
 
 <body class="body">
 
-  <div class="header-wrap">
+  <header class="header-wrap">
   <div class="container">
-    <header>
-      <nav class="header">
-        <div class="header__logo logo">
-          <svg class="logo__img">
-            <use xlink:href='img/svg/sprite.svg#logo'></use>
+    <nav class="header">
+      <div class="header__logo logo">
+        <svg class="logo__img">
+          <use xlink:href='img/svg/sprite.svg#logo'></use>
+        </svg>
+        <h1 class="logo__tittle hidden-text">Музыкальный магазин Lmarkt</h1>
+      </div>
+      <div class="header__location location">
+        <button type="button" class="location__name">Москва</button>
+      </div>
+      <div class="header__search search">
+        <input class="search__input" type="text" placeholder="Поиск по сайту">
+        <a href="#" class="search__link">
+          <svg class="search__icon icon-search">
+            <use xlink:href='img/svg/sprite.svg#search'></use>
           </svg>
-        </div>
-        <div class="header__location location">
-          <button type="button" class="location__name">Москва</button>
-        </div>
-        <div class="header__search search">
-          <input type="text" placeholder="Поиск по сайту" class="search__input">
-          <a href="#" class="search__link">
-            <svg class="search__icon icon-search">
-              <use xlink:href='img/svg/sprite.svg#search'></use>
-            </svg>
-          </a>
-        </div>
-        <a href="#" class="header__catalog catalog-link header-top">
+        </a>
+      </div>
+      <div class="header__block sm-top">
+        <a href="#" class="sm-top__item catalog-link">
           <svg class="catalog-link__icon icon-catolog smal-none">
             <use xlink:href='img/svg/sprite.svg#catalog'></use>
           </svg>
@@ -43,19 +44,19 @@
           <span class="catalog-link__text big-none">Меню</span>
           <span class="catalog-link__text smal-none">Каталог</span>
         </a>
-        <a href="#" class="header__phone-img phone-img big-none header-top">
+        <a href="#" class="sm-top__item phone-img big-none">
           <svg class="phone-img__icon icon-phone">
             <use xlink:href='img/svg/sprite.svg#phone'></use>
           </svg>
           <span class="phone-img__text">Позвонить нам</span>
         </a>
-        <a href="#" class="header__profile profile-img big-none header-top">
+        <a href="#" class="sm-top__item profile-img big-none">
           <svg class="profile-img__icon icon-profile">
             <use xlink:href='img/svg/sprite.svg#profile'></use>
           </svg>
           <span class="profile-img__text">Профиль</span>
         </a>
-        <a href="#" class="header__baying baying-img big-none header-top">
+        <a href="#" class="sm-top__item baying-img big-none">
           <svg class="baying-img__icon icon-market">
             <use xlink:href='img/svg/sprite.svg#market'>
             </use>
@@ -63,129 +64,125 @@
           </svg>
           <span class="baying-img__text">Корзина</span>
         </a>
-
-        <ul class="header__menu menu">
-          <li class="menu__item big-none">
-            <a href="#" class="menu__link">
-              <span class="menu__name">Каталог</span>
-            </a>
-            <div class="menu__catalog catalog">
-              <ul class="catalog__items">
-                <li>Гатары</li>
-                <li>Клавишные</li>
-                <li>Ударные</li>
-                <li>Микрофоны</li>
-                <li>DJ оборудование</li>
-                <li>Студийное оборудование</li>
-                <li>Звуковое оборудование</li>
-                <li>Световое оборудование</li>
-                <li>Наушники</li>
-                <li>Коммутация</li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu__baying">
-            <a href="#" class="menu__link">
-              <svg class="menu__svg icon-market">
-                <use xlink:href='img/svg/sprite.svg#market'>
-                </use>
-                <span class="icon-market__count">2</span>
-              </svg>
-              <span class="menu__name">Корзина</span>
-              <span class="menu__name-count big-none">2</span>
-            </a>
-          </li>
-          <li class="menu__profile">
-            <a href="#" class="menu__link">
-              <svg class="menu__svg icon-profile">
-                <use xlink:href='img/svg/sprite.svg#profile'></use>
-              </svg>
-              <span class="menu__name">Профиль</span>
-            </a>
-            <div class="menu__profile profile">
-              <ul class="profile__items">
-                <li>Пртнёрка</li>
-                <li>Операторская</li>
-                <li>Мои заказы</li>
-                <li>Мои данные</li>
-                <li>Партнёрская программа</li>
-                <li>Выход</li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu__contrast">
-            <a href="#" class="menu__link">
-              <svg class="menu__svg icon-contrast">
-                <use xlink:href='img/svg/sprite.svg#contrast'></use>
-              </svg>
-              <span class="menu__name">Сравнение</span>
-            </a>
-          </li>
-          <li class="menu__favor">
-            <a href="#" class="menu__link">
-              <svg class="menu__svg icon-favor">
-                <use xlink:href='img/svg/sprite.svg#favor'></use>
-              </svg>
-              <span class="menu__name">Избранное</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="header__info info-menu">
-          <li class="info-menu__item">
-            <a href="" class="info-menu__link">
-              Пункты выдачи и постаматы
-            </a>
-          </li>
-          <li class="info-menu__item">
-            <a href="" class="info-menu__link">
-              О маркетплейсе
-            </a>
-          </li>
-          <li class="info-menu__item">
-            <a href="" class="info-menu__link">
-              Где мой заказ?
-            </a>
-          </li>
-          <li class="info-menu__item">
-            <a href="" class="info-menu__link">
-              Контакты</a>
-          </li>
-        </ul>
-
-        <a href="#" class="header__phone-text">
-          <div class="phone">8 800 611 00 97</div>
-        </a>
-
-        <div class="header__social">
-          <div class="social">
-            <a href="#" class="social__link">
-              <svg class="social__vk">
-                <use xlink:href='img/svg/sprite.svg#vk'></use>
-              </svg>
-            </a>
-            <a href="#" class="social__link">
-              <svg class="social__fb">
-                <use xlink:href='img/svg/sprite.svg#fb'></use>
-              </svg>
-            </a>
-            <a href="#" class="social__link">
-              <svg class="social__ins-black">
-                <use xlink:href='img/svg/sprite.svg#ins'></use>
-              </svg>
-              <img src="img/ins.svg" alt="ins" class="social__ins-color">
-            </a>
-            <a href="#" class="social__link">
-              <svg class="social__tg">
-                <use xlink:href='img/svg/sprite.svg#tg'></use>
-              </svg>
-            </a>
+      </div>
+      <ul class="header__menu menu">
+        <li class="menu__item big-none">
+          <a href="#" class="menu__link">
+            <span class="menu__name">Каталог</span>
+          </a>
+          <div class="menu__catalog catalog">
+            <ul class="catalog__items">
+              <li>Гатары</li>
+              <li>Клавишные</li>
+              <li>Ударные</li>
+              <li>Микрофоны</li>
+              <li>DJ оборудование</li>
+              <li>Студийное оборудование</li>
+              <li>Звуковое оборудование</li>
+              <li>Световое оборудование</li>
+              <li>Наушники</li>
+              <li>Коммутация</li>
+            </ul>
           </div>
+        </li>
+        <li class="menu__baying">
+          <a href="#" class="menu__link">
+            <svg class="menu__svg icon-market">
+              <use xlink:href='img/svg/sprite.svg#market'>
+              </use>
+              <span class="icon-market__count">2</span>
+            </svg>
+            <span class="menu__name">Корзина</span>
+            <span class="menu__name-count big-none">2</span>
+          </a>
+        </li>
+        <li class="menu__profile">
+          <a href="#" class="menu__link">
+            <svg class="menu__svg icon-profile">
+              <use xlink:href='img/svg/sprite.svg#profile'></use>
+            </svg>
+            <span class="menu__name">Профиль</span>
+          </a>
+          <div class="menu__profile profile">
+            <ul class="profile__items">
+              <li>Пртнёрка</li>
+              <li>Операторская</li>
+              <li>Мои заказы</li>
+              <li>Мои данные</li>
+              <li>Партнёрская программа</li>
+              <li>Выход</li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__contrast">
+          <a href="#" class="menu__link">
+            <svg class="menu__svg icon-contrast">
+              <use xlink:href='img/svg/sprite.svg#contrast'></use>
+            </svg>
+            <span class="menu__name">Сравнение</span>
+          </a>
+        </li>
+        <li class="menu__favor">
+          <a href="#" class="menu__link">
+            <svg class="menu__svg icon-favor">
+              <use xlink:href='img/svg/sprite.svg#favor'></use>
+            </svg>
+            <span class="menu__name">Избранное</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="header__info info-menu">
+        <li class="info-menu__item">
+          <a href="" class="info-menu__link">
+            Пункты выдачи и постаматы
+          </a>
+        </li>
+        <li class="info-menu__item">
+          <a href="" class="info-menu__link">
+            О маркетплейсе
+          </a>
+        </li>
+        <li class="info-menu__item">
+          <a href="" class="info-menu__link">
+            Где мой заказ?
+          </a>
+        </li>
+        <li class="info-menu__item">
+          <a href="" class="info-menu__link">
+            Контакты</a>
+        </li>
+      </ul>
+      <a href="#" class="header__phone-text">
+        <div class="phone">8 800 611 00 97</div>
+      </a>
+      <div class="header__social">
+        <div class="social">
+          <a href="#" class="social__link">
+            <svg class="social__vk">
+              <use xlink:href='img/svg/sprite.svg#vk'></use>
+            </svg>
+          </a>
+          <a href="#" class="social__link">
+            <svg class="social__fb">
+              <use xlink:href='img/svg/sprite.svg#fb'></use>
+            </svg>
+          </a>
+          <a href="#" class="social__link">
+            <svg class="social__ins-black">
+              <use xlink:href='img/svg/sprite.svg#ins'></use>
+            </svg>
+            <img src="img/ins.svg" alt="ins" class="social__ins-color">
+          </a>
+          <a href="#" class="social__link">
+            <svg class="social__tg">
+              <use xlink:href='img/svg/sprite.svg#tg'></use>
+            </svg>
+          </a>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   </div>
-</div>
+</header>
 
   
 
@@ -197,50 +194,66 @@
   <div class="container">
     <footer class="footer">
       <ul class="footer__top">
-        <li class="footer__box footer__box-sm">
-          <div class="footer__box-tittle">
-            <h4 class="tittle">Покупателям</h4>
-          </div>
+        <li class="footer__column footer__column-sm">
+          <h4 class="footer__tittle">Покупателям</h4>
           <ul class="footer__items">
-            <li class="footer__item"><a href="#" class="footer__link">Оплата и доставка</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Обратная связь</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Мои заказы</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Карта скидок</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Правовая информация</a></li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Оплата и доставка</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Обратная связь</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Мои заказы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Карта скидок</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Правовая информация</a>
+            </li>
           </ul>
         </li>
-        <li class="footer__box footer__box-sm">
-          <div class="footer__box-tittle">
-            <h4 class="tittle">Партнёрам</h4>
-          </div>
+        <li class="footer__column footer__column-sm">
+          <h4 class="footer__tittle">Партнёрам</h4>
           <ul class="footer__items">
-            <li class="footer__item"><a href="#" class="footer__link">Начать сотрудничество</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Консультация</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Справка</a></li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Начать сотрудничество</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Консультация</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Справка</a>
+            </li>
           </ul>
         </li>
-        <li class="footer__box footer__box-sm">
-          <div class="footer__box-tittle">
-            <h4 class="tittle">Компания</h4>
-          </div>
+        <li class="footer__column footer__column-sm">
+          <h4 class="footer__tittle">Компания</h4>
           <ul class="footer__items">
-            <li class="footer__item"><a href="#" class="footer__link">О нас</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Реквизиты</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">О нас</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Реквизиты</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Контакты</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Вакансии</a>
+            </li>
           </ul>
         </li>
-        <li class="footer__box">
-          <div class="footer__box-tittle">
-            <h4 class="tittle">Приложение</h4>
-          </div>
+        <li class="footer__column">
+          <h4 class="footer__tittle smal-none">Приложение</h4>
           <ul class="footer__items app">
-            <li class="app__items">
+            <li class="app__item">
               <a href="#" class="app__link">
                 <img src="img/google.png" alt="Google Play" class="app__img app__img-correct">
               </a>
             </li>
-            <li class="app__items">
+            <li class="app__item">
               <a href="#" class="app__link">
                 <img src="img/ios.png" alt="App Store" class="app__img">
               </a>
@@ -248,10 +261,9 @@
           </ul>
         </li>
       </ul>
-
       <ul class="footer__down">
-        <li class="footer__down-line copyright">2008–2020 ООО «ЛМАРКТ».</li>
-        <li class="footer__down-line">
+        <li class="footer__down-item copyright">2008–2020 ООО «ЛМАРКТ».</li>
+        <li class="footer__down-item">
           <div class="social">
             <a href="#" class="social__link">
               <svg class="social__vk">
@@ -276,13 +288,12 @@
             </a>
           </div>
         </li>
-        <li class="footer__down-line">
-          <a href="#" class="header__phone">
-            <div class="phone phone-down">8 800 611 00 97</div>
+        <li class="footer__down-item">
+          <a href="#" class="phone">
+            <div class="phone-down">8 800 611 00 97</div>
           </a>
         </li>
       </ul>
-
     </footer>
   </div>
 </div>

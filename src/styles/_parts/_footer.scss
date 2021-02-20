@@ -1,49 +1,50 @@
-
 @include media-down(lg) {
+  .smal-none {
+    display: none;
+  }
+  .footer-wrap {
+    background-color: $outline;
+  }
   .footer {
     display: grid;
-    grid-template-rows: auto auto 20px;
-    &__box-sm {
+    grid-template-rows: auto auto;
+    margin-bottom: 20px;
+    &__top {
+      padding: 20px 20px 0px 20px;
+      display: grid;
+    }
+    &__column {
+      display: grid
+    }
+    &__column-sm {
       border-left: 1px solid $footer-outline;
       border-right: 1px solid $footer-outline;
       margin: 0;
-      display: flex;
-      flex-direction: column;
     }
-    &__box-sm:first-child {
+    &__column-sm:first-child {
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       border-top: 1px solid $footer-outline;
     }
-    &__box-sm:nth-child(2) {
+    &__column-sm:nth-child(2) {
       border-top: 1px solid $footer-outline;
       border-bottom: 1px solid $footer-outline;
     }
-    &__box-sm:nth-child(3) {
+    &__column-sm:nth-child(3) {
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
       border-bottom: 1px solid $footer-outline;
     }
-    &__box-tittle {
+    &__tittle {
+      position: relative;  
       font-size: 13px;
       font-weight: 600;
       padding: 10px 20px;
       width: 100%;
-      display: flex;
+      opacity: 0.5;  
+      margin: 0;
     }
-    &__button {
-      border: 0;
-      outline: none;
-      background-color: inherit;
-      height: 15px;  
-      position: relative;  
-      font-size: 13px;
-      font-weight: 600;
-      padding: 0;
-      flex-grow: 2;
-      text-align: left;
-    }
-    &__button::after {
+    &__tittle::after {
       width: 7px;
       height: 7px;
       border-bottom:  2px solid $black;
@@ -54,10 +55,10 @@
       content: "";
       background-color: inherit;
       transform: rotate(45deg);
-      top: -1px;
-      right: 4px;
+      top: 12px;
+      right: 10px;
     }
-    &__button-open::after {
+    &__tittle-open::after {
       width: 7px;
       height: 7px;
       border-top:  2px solid $black;
@@ -68,7 +69,7 @@
       content: "";
       background-color: inherit;
       transform: rotate(45deg);
-      top: 6px;
+      top: 5px;
       right: 4px;
     }
     &__items {
@@ -84,22 +85,30 @@
     }
     &__link {
       color: $black;
+      opacity: 0.5;
+      white-space: nowrap;
+    }
+    &__link:hover {
+      color: $hover;
+      opacity: 1;
+    }
+    &__img {
+      opacity: 0.5;
+    }
+    &__img:hover {
+      opacity: 1;
     }
     &__down {
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
     }
-    &__down-line {
+    &__down-item {
       margin-bottom: 15px;
-      opacity: 0.5;
     }
     .copyright {
       font-size: 11px;
     }
-}
-.none {
-  display: none;
 }
 .app {
   display: flex;
@@ -122,6 +131,15 @@
 }
 .phone {
   font-size: 18px; 
+  font-weight: 700;
+  line-height: 15px;
+  color: $black;
+}
+.phone-down {
+  opacity: 0.5;
+}
+.copyright {
+  opacity: 0.5;
 }
   .social {
     display: grid;
@@ -132,59 +150,6 @@
     &__tg {
       width: 28px;
       height: 23px;
-    }
-    &__ins-black {
-      width: 25px;
-      height: 25px;
-    }
-    &__ins-color {
-      width: 25px;
-      height: 25px;
-    }
-    &__vk {
-      width: 31px;
-      height: 18px;
-    }
-    &__fb {
-      width: 25px;
-      height: 25px;
-    }
-  }
-  .footer-wrap {
-    background-color: $outline;
-  }
-  .footer {
-    color: $black;
-    &__box-tittle {
-      opacity: 0.5;  
-    }
-    &__img {
-      opacity: 0.5;
-    }
-    &__img:hover {
-      opacity: 1;
-    }
-    &__link {
-      opacity: 0.5;
-    }
-    &__link:hover {
-      color: $hover;
-      opacity: 1;
-    }
-  }
-  .phone {
-    font-weight: 700;
-    line-height: 15px;
-    color: $black;
-  }
-  .phone-down {
-    opacity: 0.5;
-  }
-  .copyright {
-    opacity: 0.5;
-  }
-  .social {
-    &__tg {
       fill: $black;
       opacity: 0.15;
     }
@@ -193,6 +158,8 @@
       opacity: 1;
     }
     &__ins-black {
+      width: 25px;
+      height: 25px;
       fill: $black;
       opacity: 0.15;
       position: absolute;
@@ -201,12 +168,16 @@
       display: none;
     }
     &__ins-color {
+      width: 25px;
+      height: 25px;
       opacity: 0;
     }
     &__link:hover &__ins-color {
       opacity: 1;
     }
     &__vk {
+      width: 31px;
+      height: 18px;
       fill: $black;
       opacity: 0.15;
     }
@@ -215,6 +186,8 @@
       opacity: 1;
     }
     &__fb {
+      width: 25px;
+      height: 25px;
       fill: $black;
       opacity: 0.15;
     }
@@ -225,11 +198,13 @@
   }
 }
 @include media-up(lg) {
+  .footer-wrap {
+    background-color: $outline;
+  }
   .footer {
     display: grid;
     grid-template-rows: auto auto;
-    // margin-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     &__top {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -239,40 +214,59 @@
       display: flex;
       flex-direction: column;
     }
-    &__box-tittle {
+    &__tittle {
       font-size: 22px;
       font-weight: 700;
       margin: 20px 0;
+      opacity: 0.5;  
+      padding: 0px;
     }
     &__item {
       line-height: 33px;
     }
+    &__img {
+      opacity: 0.5;
+    }
+    &__img:hover {
+      opacity: 1;
+    }
     &__link {
       color: $black;
+      opacity: 0.5;
+    }
+    &__link:hover {
+      color: $hover;
+      opacity: 1;
     }
     &__down {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
       margin-top: 30px;
     }
-    &__down-line {
+    &__down-item {
       justify-self: start;
     }
-    &__button {
-      display: none;
+  }
+  .app {
+    &__link {
+      opacity: 0.5;
+    }
+    &__link:hover {
+      opacity: 1;
     }
   }
   .phone {
     font-size: 22px;
+    font-weight: 700;
+    line-height: 15px;
+    color: $black;
   }
-    .app {
-      &__link {
-        opacity: 0.5;
-      }
-      &__link:hover {
-        opacity: 1;
-      }
-    }
+  .phone-down {
+    opacity: 0.5;
+  }
+  .copyright {
+    opacity: 0.5;
+  }
     .social {
       display: grid;
       grid-template-columns: 30px 30px 30px 30px;
@@ -284,55 +278,6 @@
       &__tg {
         width: 20px;
         height: 17px;
-      }
-      &__ins-black {
-        width: 18px;
-        height: 18px;
-      }
-      &__vk {
-        width: 23px;
-        height: 13px;
-      }
-      &__fb {
-        width: 18px;
-        height: 18px;
-      }
-    }
-    .footer-wrap {
-      background-color: $outline;
-    }
-    .footer {
-      color: $black;
-      &__box-tittle {
-        opacity: 0.5;  
-      }
-      &__img {
-        opacity: 0.5;
-      }
-      &__img:hover {
-        opacity: 1;
-      }
-      &__link {
-        opacity: 0.5;
-      }
-      &__link:hover {
-        color: $hover;
-        opacity: 1;
-      }
-    }
-    .phone {
-      font-weight: 700;
-      line-height: 15px;
-      color: $black;
-    }
-    .phone-down {
-      opacity: 0.5;
-    }
-    .copyright {
-      opacity: 0.5;
-    }
-    .social {
-      &__tg {
         fill: $black;
         opacity: 0.15;
       }
@@ -341,6 +286,8 @@
         opacity: 1;
       }
       &__ins-black {
+        width: 18px;
+        height: 18px;
         fill: $black;
         opacity: 0.15;
         position: absolute;
@@ -355,6 +302,8 @@
         opacity: 1;
       }
       &__vk {
+        width: 23px;
+        height: 13px;
         fill: $black;
         opacity: 0.15;
       }
@@ -363,6 +312,8 @@
         opacity: 1;
       }
       &__fb {
+        width: 18px;
+        height: 18px;
         fill: $black;
         opacity: 0.15;
       }
