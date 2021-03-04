@@ -7,6 +7,30 @@
 </div>
 {% endmacro %}
 
+{% macro promoItem(href, src, category, model, name, newPrice, oldPrice) %}
+<li class="promo__item">
+  <a href="{{ href }}" class="promo__link">
+    <img src="{{ src }}" alt="{{ name }}" class="promo__img">
+    <div class="promo__info">
+      <p class="promo__category">{{ category }}</p>
+      <P class="promo__model">{{ model }}</P>
+      <p class="promo__name">{{ name }}</p>
+      <div class="promo__new-price">{{ newPrice }} ₽</div>
+      <div class="promo__old-price">{{ oldPrice }} ₽</div>
+    </div>
+  </a>
+</li>
+{% endmacro %}
+
+{% macro popCategoryItem(href, src, name) %}
+<li class="pop-category__item">
+  <a href="{{ href }}" class="pop-category__link">
+    <img src="{{ src }}" alt="{{ name }}" class="pop-category__img">
+    <div class="pop-category__name">{{ name }}</div>
+  </a>
+</li>
+{% endmacro %}
+
 {% macro imageJpeg(classPicture, name, classImg, alt="") %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
