@@ -34,6 +34,9 @@ img {
   border: 0;
 }
 @include media-up(lg) {
+  .none-bid {
+    display: none;
+  }
   .container {
     max-width: 1250px;
     padding: 0px 20px;
@@ -325,11 +328,10 @@ img {
     }
     &__item {
       position: relative;
-      border: 3px solid $outline;
+
       border-radius: 3px;
-      width: 283px;
       height: 422px;
-      margin-right: 25px;
+
       display: grid;
 
     }
@@ -342,6 +344,9 @@ img {
       "b b b b b b"
       "c c c e e e";
       grid-template-rows: 50px auto auto 70px;
+      margin-right: 25px;
+      width: 283px;
+      border: 3px solid $outline;
     }
     &__img {
       grid-area: i;
@@ -355,6 +360,7 @@ img {
       align-self: end;
       text-align: center;
       margin-bottom: 20px;
+      color: $black;
     }
     &__price {
       width: 90px;
@@ -362,19 +368,34 @@ img {
       background-color: $outline;
       border-radius: 2px;
       margin-right: 10px;
-      display: grid;
+    
       grid-area: c;
       justify-self: end;
       align-self: start;
+
+      display: grid;
+
     }
     &__new-price {
+      display: none;
+    }
+    .sale {
+      display: grid;
+    }
+    .sale &__new-price {
+      display: grid;
       font-size: 15px;
       font-weight: 700;
       color: $general;
       justify-self: center;
-      padding-top: 5px;
     }
     &__old-price {
+      font-size: 15px;
+      font-weight: 700;
+      align-self: center;
+      text-align: center;
+    }
+    &__old-price .sale {
       font-size: 11px;
       font-weight: 700;
       color: $black;
@@ -420,4 +441,5 @@ img {
       align-self: start;
     }
   }
+
 }

@@ -31,6 +31,41 @@
 </li>
 {% endmacro %}
 
+{% macro popItem(href, src, name, oldPrice, type, newPrice) %}
+<li class="pop-items__item">
+  <div class="pop-items__info">
+    <svg class="pop-items__svg icon-favor">
+      <use xlink:href='img/svg/sprite.svg#favor'></use>
+    </svg>
+    <svg class="pop-items__svg icon-contrast">
+      <use xlink:href='img/svg/sprite.svg#contrast'></use>
+    </svg>
+    <img src="{{ src }}" alt="{{ name }}" class="pop-items__img">
+    <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
+
+    <div class="pop-items__price">
+
+      <div class="none-bid {{ type }}">
+        <div class="pop-items__new-price">{{ newPrice }} ₽</div>
+      </div>
+
+      <div class="pop-items__old-price">
+        <div class="{{ type }}">{{ oldPrice }} ₽</div>
+      </div>
+
+
+    </div>
+
+    <div class="pop-items__market">
+      <svg class="pop-items__svg icon-market">
+        <use xlink:href='img/svg/sprite.svg#market'>
+        </use>
+      </svg>
+    </div>
+  </div>
+</li>
+{% endmacro %}
+
 {% macro imageJpeg(classPicture, name, classImg, alt="") %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
