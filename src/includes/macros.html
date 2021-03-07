@@ -42,20 +42,14 @@
     </svg>
     <img src="{{ src }}" alt="{{ name }}" class="pop-items__img">
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
-
     <div class="pop-items__price">
-
       <div class="none-bid {{ type }}">
         <div class="pop-items__new-price">{{ newPrice }} ₽</div>
       </div>
-
       <div class="pop-items__old-price">
         <div class="{{ type }}">{{ oldPrice }} ₽</div>
       </div>
-
-
     </div>
-
     <div class="pop-items__market">
       <svg class="pop-items__svg icon-market">
         <use xlink:href='img/svg/sprite.svg#market'>
