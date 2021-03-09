@@ -3,6 +3,9 @@
 {% extends "templates/default.html" %}
 {% import "includes/macros.html" as variable %}
 
+exemple - item card = [{id: "", type: "", category: "", brand: "", name: "", model: "", imgSrc: "",
+oldPrice: "", typeDiscout: "", newPrice: ""}]
+
 {% set promo = [
 {href: "#", src: "img/ad810-bks.jpg", category: "Акустическая гитара 1", model: "ad810-bks", name: "Standart series",
 newPrice: "12 350", oldPrice: "16 350"},
@@ -29,23 +32,59 @@ newPrice: "16 350", oldPrice: "16 350"}
 
 {% set popItems = [
 {href: "#", src: "img/pop-items1.jpg", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
-"18 980", type: "sale", newPrice: "15 980"},
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
 {href: "#", src: "img/pop-items2.jpg", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
-"18 980", type: "", newPrice: ""},
+"18 980", typeDiscout: "", newPrice: ""},
 {href: "#", src: "img/pop-items3.jpg", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная",
 oldPrice:
-"18 980", type: "sale", newPrice: "15 980"},
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
 {href: "#", src: "img/pop-items4.jpg", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
-"18 980", type: "sale", newPrice: "15 980"},
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
 {href: "#", src: "img/pop-items1.jpg", name: "011C Гитара <br> классическая 4/4, Doff", newPrice: "15 980", oldPrice:
-"18 980", type: "", newPrice: ""},
+"18 980", typeDiscout: "", newPrice: ""},
 {href: "#", src: "img/pop-items2.jpg", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
-"18 980", type: "sale", newPrice: "15 980"},
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
 {href: "#", src: "img/pop-items3.jpg", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная", oldPrice:
-"18 980", type: "", newPrice: ""},
+"18 980", typeDiscout: "", newPrice: ""},
 {href: "#", src: "img/pop-items4.jpg", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
-"18 980", type: "", newPrice: ""}
+"18 980", typeDiscout: "", newPrice: ""}
 ]%}
+
+{% set toolsTypeStrings = [
+{category: "Классические гитары"}, {category: "Акустические гитары"}, {category: "Акустические бас-гитары"}, {category:
+"Электрогитары"}, {category: "Бас-гитары"}, {category: "Укулеле"}
+]%}
+
+{% set toolsTypeKeyboards = [
+{category: "Синтезаторы"}, {category: "Цифровые пианино"}, {category: "Цифровые органы"}, {category:
+"Акустические клавишные инструменты"}, {category: "MIDI-клавиатуры"}
+]%}
+
+{% set toolsTypeDrum = [
+{category: "Акустические ударные"}, {category: "Электронные ударные"}, {category: "Тарелки"}, {category:
+"Стойки"}, {category: "Рамы"}, {category: "Педали"}
+]%}
+
+{% set toolsTypeBrass = [
+{category: "Блок-флейты"}, {category: "Флейты"}, {category: "Саксофоны"}, {category:
+"Кларнеты"}, {category: "Трубы"}, {category: "Трамбоны"}
+]%}
+
+{% set toolsTypeTongue = [
+{category: "Блок-флейты"}, {category: "Флейты"}, {category: "Саксофоны"}, {category:
+"Кларнеты"}, {category: "Трубы"}, {category: "Трамбоны"}
+]%}
+
+{% set suggestion = [
+{position: "left", name: "Selmer Super Action 80", category: "Саксофон", price: "16 450", src:
+"img/selmer-super-action-80.jpg", href: "#"},
+{position: "center", name: "CASIO CDP 320k", category: "Электронное пианино", price: "38 890", src:
+"img/casio-cdp-320k.jpg", href: "#"},
+{position: "right", name: "Ibanez RG450 Japan 2001", category: "Электрогитара", price: "49 990", src:
+"img/ibanez-rg450.jpg", href: "#"}
+]%}
+
+
 
 {% block content %}
 
@@ -89,6 +128,7 @@ oldPrice:
       <input type="radio" id="slider-btn7" class="slider__input" name="slider-pop-category">
       <input type="radio" id="slider-btn8" class="slider__input" name="slider-pop-category">
       <input type="radio" id="slider-btn9" class="slider__input" name="slider-pop-category">
+      <input type="radio" id="slider-btn10" class="slider__input" name="slider-pop-category">
       <a href="#" class="slider__back-link slider__link-pop">
         <svg class="slider__icon icon-slider-link">
           <use xlink:href='img/svg/sprite.svg#slider-link'></use>
@@ -139,7 +179,7 @@ oldPrice:
       <div class="slider__content pop-items">
         <ul class="pop-items__list">
           {% for item in popItems %}
-          {{ variable.popItem(item.href, item.src, item.name, item.oldPrice, item.type, item.newPrice) }}
+          {{ variable.popItem(item.href, item.src, item.name, item.oldPrice, item.typeDiscout, item.newPrice) }}
           {% endfor %}
         </ul>
       </div>
@@ -148,11 +188,11 @@ oldPrice:
   <section class="tools-type-wrap">
     <h2 class="tools-type-wrap__tittle">Инструменты по видам</h2>
     <div class="tools-type-wrap__slider slider">
-      <input type="radio" id="slider-btn16" class="slider__input" name="slider-pop-items" checked>
-      <input type="radio" id="slider-btn17" class="slider__input" name="slider-pop-items">
-      <input type="radio" id="slider-btn18" class="slider__input" name="slider-pop-items">
-      <input type="radio" id="slider-btn19" class="slider__input" name="slider-pop-items">
-      <input type="radio" id="slider-btn20" class="slider__input" name="slider-pop-items">
+      <input type="radio" id="slider-btn16" class="slider__input" name="slider-tools-type" checked>
+      <input type="radio" id="slider-btn17" class="slider__input" name="slider-tools-type">
+      <input type="radio" id="slider-btn18" class="slider__input" name="slider-tools-type">
+      <input type="radio" id="slider-btn19" class="slider__input" name="slider-tools-type">
+      <input type="radio" id="slider-btn20" class="slider__input" name="slider-tools-type">
       <a href="#" class="slider__back-link slider__link-tools">
         <svg class="slider__icon icon-slider-link">
           <use xlink:href='img/svg/sprite.svg#slider-link'></use>
@@ -168,6 +208,12 @@ oldPrice:
           <use xlink:href='img/svg/sprite.svg#slider-link'></use>
         </svg>
       </a>
+      <input type="checkbox" id="slider-btn21" class="slider__input" name="slider-tools-type-height">
+      <label class="slider__down-link" for="slider-btn21">
+        <svg class="slider__icon icon-slider-link">
+          <use xlink:href='img/svg/sprite.svg#slider-link'></use>
+        </svg>
+      </label>
       <div class="slider__content tools-type">
         <ul class="tools-type__list">
           <li class="tools-type__item">
@@ -177,18 +223,61 @@ oldPrice:
               </svg>
               <tittle class="tools-type__tittle">Струнные</tittle>
               <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
+                {% for item in toolsTypeStrings %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          <li class="tools-type__item">
+            <div class="tools-type__section">
+              <svg class="tools-type__icon icon-type-keyboards">
+                <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
+              </svg>
+              <tittle class="tools-type__tittle">Клавишные</tittle>
+              <ul class="tools-type__group">
+                {% for item in toolsTypeKeyboards %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          <li class="tools-type__item">
+            <div class="tools-type__section">
+              <svg class="tools-type__icon icon-type-drum">
+                <use xlink:href='img/svg/sprite.svg#type-drum'></use>
+              </svg>
+              <tittle class="tools-type__tittle">Ударные</tittle>
+              <ul class="tools-type__group">
+                {% for item in toolsTypeDrum %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          <li class="tools-type__item">
+            <div class="tools-type__section">
+              <svg class="tools-type__icon icon-type-brass">
+                <use xlink:href='img/svg/sprite.svg#type-brass'></use>
+              </svg>
+              <tittle class="tools-type__tittle">Духовые</tittle>
+              <ul class="tools-type__group">
+                {% for item in toolsTypeBrass %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          <li class="tools-type__item">
+            <div class="tools-type__section">
+              <svg class="tools-type__icon icon-type-tongue">
+                <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
+              </svg>
+              <tittle class="tools-type__tittle">Язычковые</tittle>
+              <ul class="tools-type__group">
+                {% for item in toolsTypeTongue %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
               </ul>
             </div>
           </li>
@@ -199,181 +288,77 @@ oldPrice:
               </svg>
               <tittle class="tools-type__tittle">Струнные</tittle>
               <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
+                {% for item in toolsTypeStrings %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
+              <svg class="tools-type__icon icon-type-keyboards">
+                <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
               </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
+              <tittle class="tools-type__tittle">Клавишные</tittle>
               <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
+                {% for item in toolsTypeKeyboards %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
+              <svg class="tools-type__icon icon-type-drum">
+                <use xlink:href='img/svg/sprite.svg#type-drum'></use>
               </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
+              <tittle class="tools-type__tittle">Ударные</tittle>
               <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
+                {% for item in toolsTypeDrum %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
+              <svg class="tools-type__icon icon-type-brass">
+                <use xlink:href='img/svg/sprite.svg#type-brass'></use>
               </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
+              <tittle class="tools-type__tittle">Духовые</tittle>
               <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
+                {% for item in toolsTypeBrass %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
+              <svg class="tools-type__icon icon-type-tongue">
+                <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
               </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
+              <tittle class="tools-type__tittle">Язычковые</tittle>
               <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
+                {% for item in toolsTypeTongue %}
+                {{ variable.toolsType(item.category) }}
+                {% endfor %}
               </ul>
             </div>
           </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
-              <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
-              <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
-              <ul class="tools-type__group">
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Классические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
-                </li>
-                <li class="tools-type__element">
-                  <a href="#" class="tools-type__link">Электрогитары</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
         </ul>
       </div>
     </div>
   </section>
-  <section class="suggestion"></section>
+  <section class="suggestion-wrap">
+    <div class="suggestion">
+      <div class="suggestion__container">
+        {% for item in suggestion %}
+        {{ variable.suggestion(item.position, item.name, item.category, item.price, item.src, item.href) }}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
   <section class="pop-brand"></section>
 </main>
 

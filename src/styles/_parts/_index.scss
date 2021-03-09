@@ -158,11 +158,27 @@ img {
       transform: rotate(180deg);
       display: grid;
     }
+    &__down-link {
+      width: 100%;
+      height: 110px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), #fff);
+      justify-self: center;
+      align-self: end;
+      z-index: 2;
+
+      display: grid;
+
+      position: absolute;
+      bottom: 30px;
+    }
+    &__down-link &__icon {
+      transform: rotate(90deg);
+    }
     &__link-pop {
       margin-bottom: 40px;
     }
     &__link-tools {
-      margin-bottom: 240px;
+      margin-bottom: 170px;
     }
     &__icon {
       justify-self: center;
@@ -288,6 +304,7 @@ img {
     transition: 1s;
     transform: translateX(-980px);
   }
+
   .icon-slider-link {
     width: 12px;
     height: 24px;
@@ -483,7 +500,8 @@ img {
     &__slider {
       margin-top: 30px;
       width: 96vw;
-      height: 500px;
+      height: 430px;
+      // padding-bottom: 20px;
       min-width: 952px;
       max-width: 1210px;
       border-radius: 3px;
@@ -493,22 +511,25 @@ img {
       text-transform: uppercase;
     }
   }
-  .icon-type-guitar {
+  #slider-btn21:checked ~ .slider__down-link[for="slider-btn21"] {
+    transform: rotate(180deg);
+    height: 25px;
+  }
+  .icon-type-guitar, .icon-type-keyboards, .icon-type-drum, .icon-type-brass, .icon-type-tongue {
     width: 65px;
     height: 65px;
     fill: $general;
   }
   .tools-type {
+    height: 400px;
     &__list {
       display: flex;
       position: absolute;
-      // width: 100%;
     }
     &__item {
       padding: 0 25px;
       margin-right: 15px;
       width: 230px;
-      // border: 1px solid black;
     }
     &__section {
       display: grid;
@@ -525,13 +546,87 @@ img {
       justify-self: center;
       align-self: center;
     }
+    &__group {
+      margin-top: 15px;
+    }
     &__element {
       text-align: center;
+      margin-bottom: 10px;
     }
     &__link {
       color: $black;
       opacity: 0.5;
       font-size: 15px;
+    }
+  }
+  .suggestion {
+    margin-top: 50px;
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 30px;
+    }
+    &__item {
+      height: 422px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      display: grid;
+    }
+    &__img {
+      position: absolute;
+    }
+    &__img--left {
+      left: -50px;
+    }
+    &__img--center {
+      left: -5px;
+    }
+    &__img--right {
+      left: -200px;
+    }
+    &__content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-rows: 70px auto 100px;
+      // align-content: space-between;
+    }
+    &__category {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      justify-self: center;
+      align-self: end;
+    }
+    &__name {
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      justify-self: center;
+      align-self: start;
+      text-align: center;
+      padding: 0 15px;
+    }
+    &__name-left {
+      font-size: 30px;
+    }
+    &__name-center {
+      font-size: 50px;
+    }
+    &__name-right {
+      font-size: 30px;
+    }
+    &__price {
+      color: $general;
+      font-size: 20px;
+      font-weight: 700;
+      background-color: #fff;
+      padding: 5px 10px;
+      justify-self: center;
+      align-self: start;
+      border-radius: 2px;
     }
   }
 }

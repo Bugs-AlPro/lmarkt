@@ -31,7 +31,7 @@
 </li>
 {% endmacro %}
 
-{% macro popItem(href, src, name, oldPrice, type, newPrice) %}
+{% macro popItem(href, src, name, oldPrice, typeDiscout, newPrice) %}
 <li class="pop-items__item">
   <div class="pop-items__info">
     <svg class="pop-items__svg icon-favor">
@@ -43,11 +43,11 @@
     <img src="{{ src }}" alt="{{ name }}" class="pop-items__img">
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
     <div class="pop-items__price">
-      <div class="none-bid {{ type }}">
+      <div class="none-bid {{ typeDiscout }}">
         <div class="pop-items__new-price">{{ newPrice }} ₽</div>
       </div>
       <div class="pop-items__old-price">
-        <div class="{{ type }}">{{ oldPrice }} ₽</div>
+        <div class="{{ typeDiscout }}">{{ oldPrice }} ₽</div>
       </div>
     </div>
     <div class="pop-items__market">
@@ -58,6 +58,23 @@
     </div>
   </div>
 </li>
+{% endmacro %}
+
+{% macro toolsType(category) %}
+<li class="tools-type__element">
+  <a href="#" class="tools-type__link">{{ category }}</a>
+</li>
+{% endmacro %}
+
+{% macro suggestion(position, name, category, price, src, href) %}
+<div class="suggestion__item">
+  <img src="{{ src }}" alt="{{  name }}" class="suggestion__img suggestion__img--{{ position }}">
+  <a href="{{ href }}" class="suggestion__content">
+    <div class="suggestion__category">{{ category }}</div>
+    <div class="suggestion__name suggestion__name-{{ position }}">{{ name }}</div>
+    <div class="suggestion__price">{{ price }} ₽</div>
+  </a>
+</div>
 {% endmacro %}
 
 {% macro imageJpeg(classPicture, name, classImg, alt="") %}
