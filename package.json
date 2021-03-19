@@ -22,6 +22,7 @@
     "gulp-webp": "^4.0.1"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "gulp-cheerio": "^1.0.0"
   }
 }

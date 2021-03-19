@@ -1,10 +1,14 @@
+{% macro imageSvg(name, class) %}
+<svg class="{{ class }}">
+  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
+
 <header class="header-wrap">
   <div class="container">
     <nav class="header">
       <div class="header__logo logo">
-        <svg class="logo__img">
-          <use xlink:href='img/svg/sprite.svg#logo'></use>
-        </svg>
+        {{ imageSvg('logo', 'logo__img') }}
         <h1 class="logo__tittle hidden-text">Музыкальный магазин Lmarkt</h1>
       </div>
       <div class="header__location location">
@@ -20,25 +24,17 @@
       </div>
       <div class="header__block sm-top">
         <a href="#" class="sm-top__link catalog-link">
-          <svg class="sm-top__icon icon-catolog smal-none">
-            <use xlink:href='img/svg/sprite.svg#catalog'></use>
-          </svg>
-          <svg class="sm-top__icon icon-menu big-none">
-            <use xlink:href='img/svg/sprite.svg#menu'></use>
-          </svg>
+          {{ imageSvg('catalog', 'sm-top__icon icon-catolog smal-none') }}
+          {{ imageSvg('menu', 'sm-top__icon icon-menu big-none') }}
           <span class="sm-top__text big-none">Меню</span>
           <span class="sm-top__text smal-none">Каталог</span>
         </a>
         <a href="#" class="sm-top__link phone-img big-none">
-          <svg class="sm-top__icon icon-phone">
-            <use xlink:href='img/svg/sprite.svg#phone'></use>
-          </svg>
+          {{ imageSvg('phone', 'sm-top__icon icon-phone') }}
           <span class="sm-top__text">Позвонить нам</span>
         </a>
         <a href="#" class="sm-top__link profile-img big-none">
-          <svg class="sm-top__icon icon-profile">
-            <use xlink:href='img/svg/sprite.svg#profile'></use>
-          </svg>
+          {{ imageSvg('profile', 'sm-top__icon icon-profile') }}
           <span class="sm-top__text">Профиль</span>
         </a>
         <a href="#" class="sm-top__link baying-img big-none">
@@ -83,9 +79,7 @@
         </li>
         <li class="menu__profile">
           <a href="#" class="menu__link">
-            <svg class="menu__svg icon-profile">
-              <use xlink:href='img/svg/sprite.svg#profile'></use>
-            </svg>
+            {{ imageSvg('profile', 'menu__svg icon-profile') }}
             <span class="menu__name">Профиль</span>
           </a>
           <div class="menu__profile profile">
@@ -101,17 +95,13 @@
         </li>
         <li class="menu__contrast">
           <a href="#" class="menu__link">
-            <svg class="menu__svg icon-contrast">
-              <use xlink:href='img/svg/sprite.svg#contrast'></use>
-            </svg>
+            {{ imageSvg('contrast', 'menu__svg icon-contrast') }}
             <span class="menu__name">Сравнение</span>
           </a>
         </li>
         <li class="menu__favor">
           <a href="#" class="menu__link">
-            <svg class="menu__svg icon-favor">
-              <use xlink:href='img/svg/sprite.svg#favor'></use>
-            </svg>
+            {{ imageSvg('favor', 'menu__svg icon-favor') }}
             <span class="menu__name">Избранное</span>
           </a>
         </li>
@@ -143,25 +133,17 @@
       <div class="header__social">
         <div class="social">
           <a href="#" class="social__link">
-            <svg class="social__vk">
-              <use xlink:href='img/svg/sprite.svg#vk'></use>
-            </svg>
+            {{ imageSvg('vk', 'social__vk') }}
           </a>
           <a href="#" class="social__link">
-            <svg class="social__fb">
-              <use xlink:href='img/svg/sprite.svg#fb'></use>
-            </svg>
+            {{ imageSvg('fb', 'social__fb') }}
           </a>
           <a href="#" class="social__link">
-            <svg class="social__ins-black">
-              <use xlink:href='img/svg/sprite.svg#ins'></use>
-            </svg>
+            {{ imageSvg('ins', 'social__ins-black') }}
             <img src="img/ins.svg" alt="ins" class="social__ins-color">
           </a>
           <a href="#" class="social__link">
-            <svg class="social__tg">
-              <use xlink:href='img/svg/sprite.svg#tg'></use>
-            </svg>
+            {{ imageSvg('tg', 'social__tg') }}
           </a>
         </div>
       </div>
