@@ -1,3 +1,130 @@
+@include media-down(lg) {
+  .glide {
+    position: relative;
+    // width: 96vw;
+    min-width: 250px;
+    max-width: 951px;
+    &__arrow {
+      position: absolute;
+      z-index: 2;
+      width: 30px;
+      height: 28px;
+      background-color: $outline;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+    }
+    &__arrow:hover {
+      background-color: $market-hover;
+    }
+    &__arrow:hover .icon-slider-link {
+      fill: $market-hover;
+      stroke: $hover;
+    }
+     &__arrow:focus {
+      outline: none;
+    }
+     &__arrow--left {
+      left: 0;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+     }
+     &__arrow--right {
+      right: 0;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+     }
+     &__bullets {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      position: relative;
+      // left: 40%;
+      z-index: 2;
+    }
+    &__bullet {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      appearance: none;
+      font-size: 0;
+      border: 0;
+      list-style: none;
+      margin: 8px;
+      padding: 0;
+      cursor: pointer;
+      background-color: $general;
+      opacity: 0.15;
+    }
+    &__bullet:hover {
+      opacity: 0.6;
+    }
+    &__bullet:focus {
+      outline: none;
+    }
+    &__bullet--active {
+      background-color: $general;
+      scale: 1.1;
+      opacity: 1;
+     }
+     &__icon--right {
+       transform: rotate(180deg);
+     }
+
+     &__arrow--promo {
+      top: 40%;
+     }
+     &__bullets--promo {
+      bottom: 35px;
+    }
+    &__bullet--promo:hover {
+      background-color: $hover;
+    }
+     &__bullet--promo {
+      background-color: #fff;
+      opacity: 0.3;
+     }
+     &__bullets--promo &__bullet--active {
+      opacity: 1;
+     }
+
+
+     &__arrow--pop {
+      top: 40%;
+     }
+     &__bullets--pop {
+      bottom: -50px;
+    }
+
+    &__arrow--type {
+      top: 28%;
+    }
+    &__down-btn {
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      bottom: 10px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7), #fff);
+      width: 100%;
+      height: 80px;
+      display: grid;
+    }
+    &__icon--down {
+      transform: rotate(-90deg);
+      justify-self: center;
+      align-self: center;
+    }
+
+  }
+
+   .icon-slider-link {
+    width: 10px;
+    height: 14px;
+    stroke: $general;
+    stroke-width: 2.5px;
+    fill: $outline;
+  }
+}
 @include media-up(lg) {
   .glide {
     position: relative;
@@ -13,6 +140,13 @@
       border: none;
       box-shadow: none;
       cursor: pointer;
+    }
+    &__arrow:hover {
+      background-color: $market-hover;
+    }
+    &__arrow:hover .icon-slider-link {
+      fill: $market-hover;
+      stroke: $hover;
     }
      &__arrow:focus {
       outline: none;
@@ -49,6 +183,9 @@
       background-color: $general;
       opacity: 0.15;
     }
+    &__bullet:hover {
+      opacity: 0.6;
+    }
     &__bullet:focus {
       outline: none;
     }
@@ -68,6 +205,9 @@
      &__bullets--promo {
       bottom: 50px;
     }
+    &__bullet--promo:hover {
+      background-color: $hover;
+    }
      &__bullet--promo {
       background-color: #fff;
       opacity: 0.3;
@@ -81,7 +221,26 @@
       top: 40%;
      }
      &__bullets--pop {
-      bottom: -40px;
+      bottom: -50px;
+    }
+
+    &__arrow--type {
+      top: 28%;
+    }
+    &__down-btn {
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      bottom: 10px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7), #fff);
+      width: 100%;
+      height: 80px;
+      display: grid;
+    }
+    &__icon--down {
+      transform: rotate(-90deg);
+      justify-self: center;
+      align-self: center;
     }
 
   }

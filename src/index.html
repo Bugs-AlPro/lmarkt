@@ -99,6 +99,14 @@ oldPrice:
           item.oldPrice) }}
           {% endfor %}
         </ul>
+
+        <div class="glide__bullets glide__bullets--promo" data-glide-el="controls[nav]">
+          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=0"></button>
+          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=1"></button>
+          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=2"></button>
+          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=3"></button>
+          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=4"></button>
+        </div>
         <div class="glide__arrows" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--promo glide__arrow--left" data-glide-dir="<">
             <svg class="glide__icon--left icon-slider-link">
@@ -110,13 +118,6 @@ oldPrice:
               <use xlink:href='img/svg/sprite.svg#slider-link'></use>
             </svg>
           </button>
-        </div>
-        <div class="glide__bullets glide__bullets--promo" data-glide-el="controls[nav]">
-          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=0"></button>
-          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=1"></button>
-          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=2"></button>
-          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=3"></button>
-          <button class="glide__bullet glide__bullet--promo" data-glide-dir="=4"></button>
         </div>
       </div>
     </div>
@@ -188,35 +189,10 @@ oldPrice:
 
   <section class="tools-type-wrap">
     <h2 class="tools-type-wrap__tittle">Инструменты по видам</h2>
-    <div class="tools-type-wrap__slider slider">
-      <input type="radio" id="slider-btn16" class="slider__input" name="slider-tools-type" checked>
-      <input type="radio" id="slider-btn17" class="slider__input" name="slider-tools-type">
-      <input type="radio" id="slider-btn18" class="slider__input" name="slider-tools-type">
-      <input type="radio" id="slider-btn19" class="slider__input" name="slider-tools-type">
-      <input type="radio" id="slider-btn20" class="slider__input" name="slider-tools-type">
-      <a href="#" class="slider__back-link slider__link-tools">
-        <svg class="slider__icon icon-slider-link">
-          <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-        </svg>
-      </a>
-      <label class="slider__label slider__label-pop" for="slider-btn16"></label>
-      <label class="slider__label slider__label-pop" for="slider-btn17"></label>
-      <label class="slider__label slider__label-pop" for="slider-btn18"></label>
-      <label class="slider__label slider__label-pop" for="slider-btn19"></label>
-      <label class="slider__label slider__label-pop" for="slider-btn20"></label>
-      <a href="#" class="slider__next-link slider__link-tools">
-        <svg class="slider__icon icon-slider-link">
-          <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-        </svg>
-      </a>
-      <input type="checkbox" id="slider-btn21" class="slider__input" name="slider-tools-type-height">
-      <label class="slider__down-link" for="slider-btn21">
-        <svg class="slider__icon icon-slider-link">
-          <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-        </svg>
-      </label>
-      <div class="slider__content tools-type">
-        <ul class="tools-type__list">
+
+    <div class="tools-type-slider glide">
+      <div div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides tools-type">
           <li class="tools-type__item">
             <div class="tools-type__section">
               <svg class="tools-type__icon icon-type-guitar">
@@ -348,9 +324,36 @@ oldPrice:
             </div>
           </li>
         </ul>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--type glide__arrow--left" data-glide-dir="<">
+            <svg class="glide__icon--left icon-slider-link">
+              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
+            </svg>
+          </button>
+          <button class="glide__arrow glide__arrow--type glide__arrow--right" data-glide-dir=">">
+            <svg class="glide__icon--right icon-slider-link">
+              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
+            </svg>
+          </button>
+
+        </div>
+        <div class="glide__down-btn">
+          <svg class="glide__icon--down icon-slider-link">
+            <use xlink:href='img/svg/sprite.svg#slider-link'></use>
+          </svg>
+        </div>
+        <div class="glide__bullets glide__bullets--pop" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
+        </div>
       </div>
     </div>
+
   </section>
+
   <section class="suggestion-wrap">
     <div class="suggestion">
       <div class="suggestion__container">
@@ -360,6 +363,7 @@ oldPrice:
       </div>
     </div>
   </section>
+
   <section class="pop-brand">
     <h2 class="pop-brand__tittle">Популярные бренды</h2>
     <div class="pop-brand__content">

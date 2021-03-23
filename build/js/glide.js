@@ -18,3 +18,11 @@ new Glide('.pop-items-slider', {
   animationDuration: 1000,
   perView: 4
 }).mount()
+
+new Glide('.tools-type-slider', {
+  type: 'carousel',
+  startAt: 0,
+  animationDuration: 1000,
+  perView: 5
+}).mount()
+

@@ -31,6 +31,84 @@ img {
   white-space: nowrap;
   border: 0;
 }
+@include media-down(lg) {
+  .promo-wrap {
+    margin: 20px;
+  }
+  .promo {
+    border-radius: 3px;
+    &__item {
+      display: grid;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+    }
+    &__link {
+      position: relative;
+      display: grid;
+      height: 180px;
+    }
+
+    &__img {
+      position: absolute;
+      width: 150%;
+      min-height: 180px;
+      min-width: 500px;
+      max-width: 990px;
+      // margin: auto;
+      right: -40px;
+      // left: 0;
+      bottom: 0;
+      // scale: 0.9;
+      }
+    &__info {
+      display: grid;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      z-index: 2;
+      margin: 20px 0 30px 0;
+    }
+    &__category {
+      font-size: 15px;
+      justify-self: center;
+      // padding: 5px;
+      margin: 0px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    &__model {
+      font-size: 18px;
+      justify-self: center;
+      // padding: 5px;
+      margin: 0px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    &__name {
+      font-size: 18px;
+      justify-self: center;
+      // padding: 5px;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    &__new-price {
+      padding: 3px 10px;
+      background-color: #fff;
+      color: $general;
+      font-size: 15px;
+      border-radius: 2px;
+      margin-top: 5px;
+      font-family: 'Exo 2', sans-serif;
+      justify-self: center;
+    }
+    &__old-price {
+      padding: 5px 10px;
+      font-size: 12px;
+      justify-self: center;
+      text-decoration-line: line-through;
+      font-family: 'Exo 2', sans-serif;
+    }
+  }
+}
 @include media-up(lg) {
   .none-bid {
     display: none;
@@ -41,7 +119,7 @@ img {
     margin: auto;
   }
   .promo-wrap {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .promo {
     &__item {
@@ -50,8 +128,10 @@ img {
     &__link {
       position: relative;
     }
+
     &__img {
       width: 100%;
+      border-radius: 3px;
     }
     &__info {
       display: grid;
@@ -101,12 +181,14 @@ img {
       font-family: 'Exo 2', sans-serif;
     }
   }
+
   .pop-category-wrap {
-    margin: 30px 0 60px 0;
+    margin: 50px 0 100px 0;
     &__tittle {
       font-size: 30px;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
+      margin-bottom: 50px;
     }
   }
   .pop-category {
@@ -134,11 +216,12 @@ img {
     }
   }
   .pop-items-wrap {
-    margin: 30px 0 60px 0;
+    margin: 50px 0 100px 0;
     &__tittle {
       font-size: 30px;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
+      margin-bottom: 50px;
     }
   }
   .pop-items {
@@ -178,6 +261,9 @@ img {
       height: 45px;
       font-family: 'Open Sans', sans-serif;
     }
+    &__name:hover {
+      color: $hover;
+    }
     &__price {
       width: 90px;
       height: 45px;
@@ -197,19 +283,21 @@ img {
     }
     .sale {
       display: grid;
+      align-self: end;
+      justify-self: center;
     }
     .sale &__new-price {
       display: grid;
       font-size: 15px;
       font-weight: 700;
       color: $general;
-      justify-self: center;
+      text-align: center;
       font-family: 'Exo 2', sans-serif;
     }
     &__old-price {
+      display: grid;
       font-size: 15px;
       font-weight: 700;
-      align-self: center;
       text-align: center;
       font-family: 'Exo 2', sans-serif;
     }
@@ -248,6 +336,7 @@ img {
       stroke: $general;
       justify-self: center;
       align-self: center;
+
     }
     &__market {
       width: 45px;
@@ -260,206 +349,37 @@ img {
       align-self: start;
       cursor: pointer;
     }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .slider {
-    display: grid;
-    grid-template-columns: auto 20px 20px 20px 20px 20px auto;
-    position: relative;
-    overflow: hidden;
-    &__input {
-      display: none;
+    &__market:hover {
+      background-color: $market-hover;
+      border: none;
     }
-    &__label {
-      display: inline-block;
-      padding: 5px;
-      margin: 5px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: opacity 0.2s;
-      justify-items: center;
-      z-index: 2;
-      align-self: end;
-    }
-    &__label-promo {
-      background-color: #fff;
-      opacity: 0.3;
-      margin-bottom: 40px;
-    }
-    &__label-pop {
-      background-color: $general;
-      opacity: 0.15;
-    }
-    &__back-link {
-      width: 45px;
-      height: 45px;
-      background-color: $outline;
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
-      justify-self: start;
-      align-self: center;
-      z-index: 2;
-      display: grid;
-    }
-    &__next-link {
-      width: 45px;
-      height: 45px;
-      background-color: $outline;
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
-      justify-self: end;
-      align-self: center;
-      z-index: 2;
-      transform: rotate(180deg);
-      display: grid;
-    }
-    &__down-link {
-      width: 100%;
-      height: 110px;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9), #fff);
-      justify-self: center;
-      align-self: end;
-      z-index: 2;
-
-      display: grid;
-
-      position: absolute;
-      bottom: 30px;
-    }
-    &__down-link &__icon {
-      transform: rotate(90deg);
-    }
-    &__link-pop {
-      margin-bottom: 40px;
-    }
-    &__link-tools {
-      margin-bottom: 170px;
-    }
-    &__icon {
-      justify-self: center;
-      align-self: center;
-    }
-    &__content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    &__market:hover .icon-market  {
+      fill: $market-hover;
     }
   }
-  
-  
-  #slider-btn11:checked ~ .slider__label[for="slider-btn11"],
-  #slider-btn12:checked ~ .slider__label[for="slider-btn12"],
-  #slider-btn13:checked ~ .slider__label[for="slider-btn13"],
-  #slider-btn14:checked ~ .slider__label[for="slider-btn14"],
-  #slider-btn15:checked ~ .slider__label[for="slider-btn15"] {
-    scale: 1.1;
-    opacity: 1;
-  }
-  #slider-btn11:checked ~ .slider__content{
-    transition: 1s;
-    transform: translateX(0px);
-  }
-  #slider-btn12:checked ~ .slider__content{
-    transition: 1s;
-    transform: translateX(-308px);
-  }
-  #slider-btn13:checked ~ .slider__content {
-    transition: 1s;
-    transform: translateX(-616px);
-  }
-  #slider-btn14:checked ~ .slider__content {
-    transition: 1s;
-    transform: translateX(-924px);
-  }
-  #slider-btn15:checked ~ .slider__content {
-    transition: 1s;
-    transform: translateX(-1232px);
-  }
-  #slider-btn16:checked ~ .slider__label[for="slider-btn16"],
-  #slider-btn17:checked ~ .slider__label[for="slider-btn17"],
-  #slider-btn18:checked ~ .slider__label[for="slider-btn18"],
-  #slider-btn19:checked ~ .slider__label[for="slider-btn19"],
-  #slider-btn20:checked ~ .slider__label[for="slider-btn20"] {
-    scale: 1.1;
-    opacity: 1;
-  }
-  #slider-btn16:checked ~ .slider__content{
-    transition: 1s;
-    transform: translateX(0px);
-  }
-  #slider-btn17:checked ~ .slider__content{
-    transition: 1s;
-    transform: translateX(-245px);
-  }
-  #slider-btn18:checked ~ .slider__content {
-    transition: 1s;
-    transform: translateX(-490px);
-  }
-  #slider-btn19:checked ~ .slider__content {
-    transition: 1s;
-    transform: translateX(-735px);
-  }
-  #slider-btn20:checked ~ .slider__content {
-    transition: 1s;
-    transform: translateX(-980px);
-  }
-
-
-
   .tools-type-wrap {
-    margin-top: 30px;
-    &__slider {
-      margin-top: 30px;
-      width: 96vw;
-      height: 430px;
-      min-width: 952px;
-      max-width: 1210px;
-      border-radius: 3px;
-    }
+    margin: 50px 0 100px 0;
     &__tittle {
       font-size: 30px;
       text-transform: uppercase;
+      font-family: 'Exo 2', sans-serif;
+      margin-bottom: 50px;
     }
   }
-  #slider-btn21:checked ~ .slider__down-link[for="slider-btn21"] {
-    transform: rotate(180deg);
-    height: 25px;
-  }
-  .icon-type-guitar, .icon-type-keyboards, .icon-type-drum, .icon-type-brass, .icon-type-tongue {
+  .icon-type-guitar, 
+  .icon-type-keyboards, 
+  .icon-type-drum, 
+  .icon-type-brass, 
+  .icon-type-tongue {
     width: 65px;
     height: 65px;
     fill: $general;
   }
   .tools-type {
-    height: 400px;
-    &__list {
-      display: flex;
-      position: absolute;
-    }
-    &__item {
-      padding: 0 25px;
-      margin-right: 15px;
-      width: 230px;
-    }
+    display: flex;
     &__section {
       display: grid;
-      grid-template-rows: auto 50px auto;
+      grid-template-rows: auto 60px auto;
     }
     &__icon {
       margin: 20px 0px;
@@ -471,22 +391,32 @@ img {
       font-size: 22px;
       justify-self: center;
       align-self: center;
+      font-family: 'Open Sans', sans-serif;
     }
     &__group {
-      margin-top: 15px;
+      display: grid;
+
     }
     &__element {
       text-align: center;
-      margin-bottom: 10px;
+      padding: 5px 5px;
+
     }
     &__link {
       color: $black;
+      font-family: 'Open Sans', sans-serif;
       opacity: 0.5;
       font-size: 15px;
+      padding: 5px 5px;
+
+    }
+    &__link:hover {
+      color: $hover;
+      opacity: 1;
     }
   }
   .suggestion {
-    margin-top: 50px;
+    margin-top: 130px;
     &__container {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
@@ -516,7 +446,7 @@ img {
       z-index: 2;
       display: grid;
       grid-template-rows: 70px auto 100px;
-      // align-content: space-between;
+      font-family: 'Open Sans', sans-serif;
     }
     &__category {
       color: #fff;
@@ -556,10 +486,12 @@ img {
     }
   }
   .pop-brand {
-    margin: 50px 0;
+    margin: 50px 0 100px 0;
     &__tittle {
       font-size: 30px;
       text-transform: uppercase;
+      font-family: 'Exo 2', sans-serif; 
+      margin-bottom: 50px;
     }
     &__list {
       display: grid;
@@ -567,12 +499,14 @@ img {
     }
     &__column {
       display: grid;
+      grid-template-rows: 70px auto;
     }
     &__name {
       font-size: 15px;
       font-weight: 700;
       text-align: center;
       padding: 30px 0;
+      font-family: 'Open Sans', sans-serif;
     }
     &__group {
       justify-self: center;
@@ -582,7 +516,7 @@ img {
     &__element {
       justify-self: center;
       align-self: center;
-      margin-bottom: 40px;
+      margin: 20px 0;
     }
   }
 }
