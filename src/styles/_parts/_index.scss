@@ -48,18 +48,14 @@ img {
       display: grid;
       height: 180px;
     }
-
     &__img {
       position: absolute;
       width: 150%;
       min-height: 180px;
       min-width: 500px;
       max-width: 990px;
-      // margin: auto;
       right: -40px;
-      // left: 0;
       bottom: 0;
-      // scale: 0.9;
       }
     &__info {
       display: grid;
@@ -72,21 +68,18 @@ img {
     &__category {
       font-size: 15px;
       justify-self: center;
-      // padding: 5px;
       margin: 0px;
       font-family: 'Open Sans', sans-serif;
     }
     &__model {
       font-size: 18px;
       justify-self: center;
-      // padding: 5px;
       margin: 0px;
       font-family: 'Open Sans', sans-serif;
     }
     &__name {
       font-size: 18px;
       justify-self: center;
-      // padding: 5px;
       margin: 0;
       font-family: 'Open Sans', sans-serif;
     }
@@ -108,7 +101,245 @@ img {
       font-family: 'Exo 2', sans-serif;
     }
   }
+  .pop-category-wrap {
+    margin: 20px 0px 20px 20px;
+    &__tittle {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: 'Exo 2', sans-serif;
+      text-align: center;
+    }
+  }
+  .pop-category {
+    &__item {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid black;
+      width: 110px;
+    }
+    &__link {
+      position: relative;
+      border: 1px solid black;
+      width: 110px;
+    }
+    &__img {
+      border-radius: 3px;
+      width: 100px;
+    }
+    &__name {
+      color: $general;
+      
+      // font-weight: 700;
+      font-size: 13px;
+      // text-transform: uppercase;
+      // width: 100px;
+      margin: 5px;
+      padding: 5px;
+
+      width: 100px;
+      height: 50px;
+      word-wrap: break-word;
+      box-sizing: border-box;
+      // height: 40px;
+      // font-family: 'Open Sans', sans-serif;
+      border: 1px solid black;
+     
+    }
+  }
+  .pop-items-wrap {
+    margin: 20px 20px 20px 20px;
+    &__tittle {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: 'Exo 2', sans-serif;
+      text-align: center;
+    }
+  }
+  .pop-items {
+    &__item {
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    &__info {
+      display: grid;
+      grid-template-areas: 
+      ". . . . a d"
+      "i i i i i i"
+      "b b b b b b"
+      "c c c e e e";
+      grid-template-rows: auto auto auto auto;
+      border: 3px solid $outline;
+    }
+    &__img {
+      grid-area: i;
+      justify-self: center;
+      height: 30vw;
+    }
+    &__name {
+      font-size: 13px;
+      font-weight: 700;
+      grid-area: b;
+      justify-self: center;
+      align-self: end;
+      text-align: center;
+      color: $black;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      // width: 230px;
+      // height: 45px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    &__name:hover {
+      color: $hover;
+    }
+    &__price {
+      width: 100%;
+      height: 45px;
+      background-color: $outline;
+      border-radius: 2px;
+      grid-area: c;
+      justify-self: end;
+      align-self: start;
+
+      display: grid;
+
+    }
+    &__new-price {
+      display: none;
+    }
+    .sale {
+      display: grid;
+      align-self: end;
+      justify-self: center;
+    }
+    .sale &__new-price {
+      display: grid;
+      font-size: 15px;
+      font-weight: 700;
+      color: $general;
+      text-align: center;
+      font-family: 'Exo 2', sans-serif;
+    }
+    &__old-price {
+      display: grid;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      font-family: 'Exo 2', sans-serif;
+    }
+    &__old-price .sale {
+      font-size: 11px;
+      font-weight: 700;
+      color: $black;
+      opacity: 0.3;
+      justify-self: center;
+      text-decoration-line: line-through;
+      font-family: 'Exo 2', sans-serif;
+    }
+    &__svg.icon-favor {
+      width: 23px;
+      height: 19px;
+      fill: $general;
+      opacity: 0.3;
+      grid-area: a;
+      margin: 5px;  
+      justify-self: center;
+      align-self: center;
+      cursor: pointer;
+    }
+    &__svg.icon-contrast {
+      width: 20px;
+      height: 15px;
+      stroke: $general;
+      opacity: 0.3;
+      grid-area: d;
+      margin: 5px; 
+      justify-self: center;
+      align-self: center;
+      cursor: pointer;
+    }
+    &__svg.icon-market {
+      width: 23px;
+      height: 20px;
+      stroke: $general;
+      justify-self: center;
+      align-self: center;
+
+    }
+    &__market {
+      width: 100%;
+      height: 45px;
+      border-radius: 2px;
+      border: 3px solid $outline;
+      background-color: $outline;
+      display: grid;
+      grid-area: e;
+      justify-self: start;
+      align-self: start;
+      cursor: pointer;
+    }
+    &__market:hover {
+      background-color: $market-hover;
+      border: none;
+    }
+    &__market:hover .icon-market  {
+      fill: $market-hover;
+    }
+  }
+  .tools-type-wrap {
+    margin: 20px 20px 20px 20px;
+    &__tittle {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: 'Exo 2', sans-serif;
+      text-align: center;
+    }
+  }
+  .icon-type-guitar, 
+  .icon-type-keyboards, 
+  .icon-type-drum, 
+  .icon-type-brass, 
+  .icon-type-tongue {
+    width: 35px;
+    height: 35px;
+    fill: $general;
+  }
+  .tools-type {
+    display: flex;
+    &__section {
+      display: grid;
+      grid-template-rows: auto auto;
+    }
+    &__icon {
+      margin: 20px 0px;
+      justify-self: center;
+      align-self: center;
+    }
+    &__tittle {
+      font-weight: 700;
+      font-size: 13px;
+      justify-self: center;
+      align-self: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+    &__group {
+      display: none;
+
+    }
+  }
+
 }
+
+
+
+
+
+
+
+
+
 @include media-up(lg) {
   .none-bid {
     display: none;

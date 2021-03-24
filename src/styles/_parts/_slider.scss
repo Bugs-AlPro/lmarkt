@@ -4,6 +4,9 @@
     // width: 96vw;
     min-width: 250px;
     max-width: 951px;
+    // &__slide{
+    //   overflow: hidden;
+    // }
     &__arrow {
       position: absolute;
       z-index: 2;
@@ -89,11 +92,18 @@
      }
 
 
+     &__bullets--pop-cat,
+     &__arrows--pop-cat,
+     &__arrows--tools-type,
+     &__bullets--tools-type {
+       display: none;
+     }
+
      &__arrow--pop {
       top: 40%;
      }
      &__bullets--pop {
-      bottom: -50px;
+      bottom: 1px;
     }
 
     &__arrow--type {
@@ -114,7 +124,9 @@
       justify-self: center;
       align-self: center;
     }
-
+    &__down-btn--tools-type {
+      display: none;
+    }
   }
 
    .icon-slider-link {
@@ -124,6 +136,7 @@
     stroke-width: 2.5px;
     fill: $outline;
   }
+
 }
 @include media-up(lg) {
   .glide {

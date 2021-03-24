@@ -132,7 +132,7 @@ oldPrice:
           {{ variable.popCategoryItem(item.href, item.src, item.name) }}
           {% endfor %}
         </ul>
-        <div class="glide__arrows" data-glide-el="controls">
+        <div class="glide__arrows glide__arrows--pop-cat" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<">
             <svg class="glide__icon--left icon-slider-link">
               <use xlink:href='img/svg/sprite.svg#slider-link'></use>
@@ -144,7 +144,7 @@ oldPrice:
             </svg>
           </button>
         </div>
-        <div class="glide__bullets glide__bullets--pop" data-glide-el="controls[nav]">
+        <div class="glide__bullets glide__bullets--pop glide__bullets--pop-cat" data-glide-el="controls[nav]">
           <button class="glide__bullet" data-glide-dir="=0"></button>
           <button class="glide__bullet" data-glide-dir="=1"></button>
           <button class="glide__bullet" data-glide-dir="=2"></button>
@@ -324,7 +324,7 @@ oldPrice:
             </div>
           </li>
         </ul>
-        <div class="glide__arrows" data-glide-el="controls">
+        <div class="glide__arrows  glide__arrows--tools-type" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--type glide__arrow--left" data-glide-dir="<">
             <svg class="glide__icon--left icon-slider-link">
               <use xlink:href='img/svg/sprite.svg#slider-link'></use>
@@ -337,12 +337,12 @@ oldPrice:
           </button>
 
         </div>
-        <div class="glide__down-btn">
+        <div class="glide__down-btn glide__down-btn--tools-type">
           <svg class="glide__icon--down icon-slider-link">
             <use xlink:href='img/svg/sprite.svg#slider-link'></use>
           </svg>
         </div>
-        <div class="glide__bullets glide__bullets--pop" data-glide-el="controls[nav]">
+        <div class="glide__bullets glide__bullets--tools-type" data-glide-el="controls[nav]">
           <button class="glide__bullet" data-glide-dir="=0"></button>
           <button class="glide__bullet" data-glide-dir="=1"></button>
           <button class="glide__bullet" data-glide-dir="=2"></button>
