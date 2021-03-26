@@ -159,7 +159,7 @@ oldPrice:
     <h2 class="pop-items-wrap__tittle">Популярные товары</h2>
     <div class="pop-items-slider glide">
       <div div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides pop-category">
+        <ul class="glide__slides pop-items">
           {% for item in popItems %}
           {{ variable.popItem(item.href, item.src, item.name, item.oldPrice, item.typeDiscout, item.newPrice) }}
           {% endfor %}
@@ -195,10 +195,12 @@ oldPrice:
         <ul class="glide__slides tools-type">
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-guitar">
+                  <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Струнные</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeStrings %}
                 {{ variable.toolsType(item.category) }}
@@ -208,10 +210,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-keyboards">
-                <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Клавишные</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-keyboards">
+                  <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Клавишные</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeKeyboards %}
                 {{ variable.toolsType(item.category) }}
@@ -221,10 +225,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-drum">
-                <use xlink:href='img/svg/sprite.svg#type-drum'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Ударные</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-drum">
+                  <use xlink:href='img/svg/sprite.svg#type-drum'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Ударные</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeDrum %}
                 {{ variable.toolsType(item.category) }}
@@ -234,10 +240,13 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-brass">
-                <use xlink:href='img/svg/sprite.svg#type-brass'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Духовые</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-brass">
+                  <use xlink:href='img/svg/sprite.svg#type-brass'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Духовые</tittle>
+              </a>
+
               <ul class="tools-type__group">
                 {% for item in toolsTypeBrass %}
                 {{ variable.toolsType(item.category) }}
@@ -247,10 +256,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-tongue">
-                <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Язычковые</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-tongue">
+                  <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Язычковые</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeTongue %}
                 {{ variable.toolsType(item.category) }}
@@ -260,10 +271,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-guitar">
-                <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Струнные</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-guitar">
+                  <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Струнные</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeStrings %}
                 {{ variable.toolsType(item.category) }}
@@ -273,10 +286,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-keyboards">
-                <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Клавишные</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-keyboards">
+                  <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Клавишные</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeKeyboards %}
                 {{ variable.toolsType(item.category) }}
@@ -286,10 +301,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-drum">
-                <use xlink:href='img/svg/sprite.svg#type-drum'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Ударные</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-drum">
+                  <use xlink:href='img/svg/sprite.svg#type-drum'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Ударные</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeDrum %}
                 {{ variable.toolsType(item.category) }}
@@ -299,10 +316,13 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-brass">
-                <use xlink:href='img/svg/sprite.svg#type-brass'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Духовые</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-brass">
+                  <use xlink:href='img/svg/sprite.svg#type-brass'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Духовые</tittle>
+              </a>
+
               <ul class="tools-type__group">
                 {% for item in toolsTypeBrass %}
                 {{ variable.toolsType(item.category) }}
@@ -312,10 +332,12 @@ oldPrice:
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
-              <svg class="tools-type__icon icon-type-tongue">
-                <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
-              </svg>
-              <tittle class="tools-type__tittle">Язычковые</tittle>
+              <a href="#" class="tools-type__head-link">
+                <svg class="tools-type__icon icon-type-tongue">
+                  <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
+                </svg>
+                <tittle class="tools-type__tittle">Язычковые</tittle>
+              </a>
               <ul class="tools-type__group">
                 {% for item in toolsTypeTongue %}
                 {{ variable.toolsType(item.category) }}
@@ -355,11 +377,32 @@ oldPrice:
   </section>
 
   <section class="suggestion-wrap">
-    <div class="suggestion">
-      <div class="suggestion__container">
-        {% for item in suggestion %}
-        {{ variable.suggestion(item.position, item.name, item.category, item.price, item.src, item.href) }}
-        {% endfor %}
+    <div class="suggestion-slider glide">
+      <div div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides suggestion">
+          {% for item in suggestion %}
+          {{ variable.suggestion(item.position, item.name, item.category, item.price, item.src, item.href) }}
+          {% endfor %}
+        </ul>
+        <div class="glide__arrows glide__arrows--suggestion" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<">
+            <svg class="glide__icon--left icon-slider-link">
+              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
+            </svg>
+          </button>
+          <button class="glide__arrow glide__arrow--pop glide__arrow--right" data-glide-dir=">">
+            <svg class="glide__icon--right icon-slider-link">
+              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
+            </svg>
+          </button>
+        </div>
+        <div class="glide__bullets glide__bullets--suggestion" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__bullet" data-glide-dir="=4"></button>
+        </div>
       </div>
     </div>
   </section>

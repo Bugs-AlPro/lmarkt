@@ -37,9 +37,24 @@ new Glide('.tools-type-slider', {
   animationDuration: 1000,
   breakpoints: {
     992: {
-      perView: 3
+      perView: 3,
+      peek: {
+        before: 0,
+        after: 60
+      }
     }
   },
   perView: 5
+}).mount()
+
+new Glide('.suggestion-slider', {
+  breakpoints: {
+    992: {
+      perView: 1,
+      type: 'carousel',
+      startAt: 0,
+      animationDuration: 1000
+    }
+  }
 }).mount()
 

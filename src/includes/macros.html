@@ -58,14 +58,14 @@
 {% endmacro %}
 
 {% macro suggestion(position, name, category, price, src, href) %}
-<div class="suggestion__item">
+<li class="suggestion__item">
   <img src="{{ src }}" alt="{{  name }}" class="suggestion__img suggestion__img--{{ position }}">
   <a href="{{ href }}" class="suggestion__content">
     <div class="suggestion__category">{{ category }}</div>
     <div class="suggestion__name suggestion__name-{{ position }}">{{ name }}</div>
     <div class="suggestion__price">{{ price }} ₽</div>
   </a>
-</div>
+</li>
 {% endmacro %}
 
 {% macro imageJpeg(classPicture, name, classImg, alt="") %}
