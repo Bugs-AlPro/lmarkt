@@ -76,20 +76,25 @@
        transform: rotate(180deg);
      }
 
-     &__arrow--promo {
+     &__arrow--promo,
+     &__arrow--suggestion {
       top: 40%;
      }
-     &__bullets--promo {
+     &__bullets--promo,
+     &__bullets--suggestion {
       bottom: 25px;
     }
-    &__bullet--promo:hover {
+    &__bullet--promo:hover,
+    &__bullet--suggestion:hover {
       background-color: $hover;
     }
-     &__bullet--promo {
+     &__bullet--promo,
+     &__bullet--suggestion {
       background-color: #fff;
-      opacity: 0.3;
+      opacity: 0.4;
      }
-     &__bullets--promo &__bullet--active {
+     &__bullets--promo &__bullet--active,
+     &__bullets--suggestion &__bullet--active {
       opacity: 1;
      }
 
