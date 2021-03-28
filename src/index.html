@@ -92,7 +92,7 @@ oldPrice:
 <main class="container">
   <section class="promo-wrap">
     <div class="promo-slider glide">
-      <div div class="glide__track" data-glide-el="track">
+      <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides promo">
           {% for item in promo %}
           {{ variable.promoItem(item.href, item.src, item.category, item.model, item.name, item.newPrice,
@@ -126,7 +126,7 @@ oldPrice:
   <section class="pop-category-wrap">
     <h2 class="pop-category-wrap__tittle">Популярные категории</h2>
     <div class="pop-category-slider glide">
-      <div div class="glide__track" data-glide-el="track">
+      <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides pop-category">
           {% for item in popCategory %}
           {{ variable.popCategoryItem(item.href, item.src, item.name) }}
@@ -158,7 +158,7 @@ oldPrice:
   <section class="pop-items-wrap">
     <h2 class="pop-items-wrap__tittle">Популярные товары</h2>
     <div class="pop-items-slider glide">
-      <div div class="glide__track" data-glide-el="track">
+      <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides pop-items">
           {% for item in popItems %}
           {{ variable.popItem(item.href, item.src, item.name, item.oldPrice, item.typeDiscout, item.newPrice) }}
@@ -191,7 +191,7 @@ oldPrice:
     <h2 class="tools-type-wrap__tittle">Инструменты по видам</h2>
 
     <div class="tools-type-slider glide">
-      <div div class="glide__track" data-glide-el="track">
+      <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides tools-type">
           <li class="tools-type__item">
             <div class="tools-type__section">
@@ -373,12 +373,11 @@ oldPrice:
         </div>
       </div>
     </div>
-
   </section>
 
   <section class="suggestion-wrap">
     <div class="suggestion-slider glide">
-      <div div class="glide__track" data-glide-el="track">
+      <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides suggestion">
           {% for item in suggestion %}
           {{ variable.suggestion(item.position, item.name, item.category, item.price, item.src, item.href) }}
