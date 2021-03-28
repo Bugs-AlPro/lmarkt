@@ -48,20 +48,19 @@ new Glide('.tools-type-slider', {
   perView: 5
 }).mount()
 
-new Glide('.suggestion-slider', {
-  breakpoints: {
-    992: {
-      perView: 1,
-      type: 'carousel',
-      startAt: 0,
-      animationDuration: 1000
-    }
-  }
-}).mount()
+// new Glide('.suggestion-slider', {
 
-if (window.width() < 992) {
+//   breakpoints: {
+//     992: {
+//       perView: 1,
+//       type: 'carousel',
+//       startAt: 0,
+//       animationDuration: 1000
+//     }
+//   }
+// }).mount()
 
-}
+
 
 
 

@@ -673,7 +673,8 @@ img {
     display: grid; }
   .pop-category__link {
     position: relative;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background-image: linear-gradient(red, green); }
   .pop-category__img {
     width: 100%; }
   .pop-category__name {
@@ -683,10 +684,17 @@ img {
     text-transform: uppercase;
     position: absolute;
     z-index: 2;
-    top: 80%;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     text-align: center;
+    padding-top: 60%;
+    background-image: linear-gradient(180.17deg, rgba(82, 0, 71, 0) 39.47%, #52004750 67.19%);
     font-family: 'Open Sans', sans-serif; }
+  .pop-category__name:hover {
+    color: #FFCBF8;
+    background-image: linear-gradient(180.17deg, rgba(82, 0, 71, 0) 39.47%, #52004785 67.19%); }
   .pop-items-wrap {
     margin: 50px 0 100px 0; }
     .pop-items-wrap__tittle {
@@ -770,6 +778,9 @@ img {
     justify-self: center;
     align-self: center;
     cursor: pointer; }
+  .pop-items__svg.icon-favor:hover, .pop-items__svg.icon-contrast:hover {
+    fill: #D866C9;
+    opacity: 1; }
   .pop-items__svg.icon-contrast {
     width: 20px;
     height: 15px;
@@ -819,9 +830,14 @@ img {
     display: flex; }
     .tools-type__head-link {
       display: grid; }
+    .tools-type__head-link:hover .tools-type__tittle {
+      color: #A0148E; }
+    .tools-type__head-link:hover .tools-type__icon {
+      fill: #D866C9; }
     .tools-type__section {
       display: grid;
-      grid-template-rows: auto auto; }
+      grid-template-rows: auto auto;
+      gap: 15px; }
     .tools-type__icon {
       margin: 20px 0px;
       justify-self: center;
@@ -843,7 +859,8 @@ img {
       font-family: 'Open Sans', sans-serif;
       opacity: 0.5;
       font-size: 15px;
-      padding: 5px 5px; }
+      white-space: normal;
+      line-height: 30px; }
     .tools-type__link:hover {
       color: #D866C9;
       opacity: 1; }
@@ -871,7 +888,10 @@ img {
       display: grid;
       grid-template-rows: 70px auto 100px;
       font-family: 'Open Sans', sans-serif;
-      white-space: normal; }
+      white-space: normal;
+      background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%); }
+    .suggestion__content:hover {
+      background-color: #d866c950; }
     .suggestion__category {
       color: #fff;
       font-size: 20px;
@@ -1360,7 +1380,7 @@ img {
     .app__img {
       scale: 0.8; }
     .app__img-correct {
-      padding-top: 3px; }
+      margin-top: 3.5px; }
     .app__link:hover {
       opacity: 1; }
   .phone {
