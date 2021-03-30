@@ -63,7 +63,11 @@ img {
       font-weight: 700;
       text-transform: uppercase;
       z-index: 2;
-      margin: 20px 0 30px 0;
+      padding: 20px 0 30px 0;
+      height: 100%;
+    }
+    &__info:hover {
+      background-color: #d866c950;
     }
     &__category {
       font-size: 15px;
@@ -106,25 +110,26 @@ img {
     
     
     &__tittle {
-      font-size: 18px;
+      font-size: 2.4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       text-align: center;
     }
   }
   .pop-category {
-position: relative;
+    position: relative;
     &__item {
       display: grid;
       overflow: hidden;
-      // border: 1px solid bslack;
-      width: 110px;
+      // width: 110px;
+      height: 34vw;
+
     }
     &__link {
       position: relative;
-      // border: 1px solid black;
-      // width: 110px;
       width: 30vw;
+      // background-image: linear-gradient(180.17deg, rgba(82, 0, 71, 0) 39.47%, #52004750 67.19%);
+      
     }
     &__img {
       border-radius: 3px;
@@ -134,22 +139,13 @@ position: relative;
       color: $general;
       font-weight: 700;
       font-size: 11px;
-      // text-transform: uppercase;
-      // width: 100px;
-      // margin: 5px;
       padding: 5px;
-
-      // width: 100px;
-      // height: 50px;
       white-space: normal;
       word-wrap: break-word;
-      // box-sizing: border-box;
-      // height: 40px;
       text-align: center;
       font-family: 'Open Sans', sans-serif;
-      // border: 1px solid black;
-     
     }
+
   }
   .pop-category-slider::after {
     content: "";
@@ -164,7 +160,7 @@ position: relative;
     margin: 20px 20px 20px 20px;
     padding-bottom: 10px;
     &__tittle {
-      font-size: 18px;
+      font-size: 2.4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       text-align: center;
@@ -265,6 +261,11 @@ position: relative;
       align-self: center;
       cursor: pointer;
     }
+    &__svg.icon-favor:hover,
+    &__svg.icon-contrast:hover {
+      fill: $hover;
+      opacity: 1;
+    }
     &__svg.icon-contrast {
       width: 20px;
       height: 15px;
@@ -308,7 +309,7 @@ position: relative;
     position: relative;
     margin: 20px 0px 20px 20px;
     &__tittle {
-      font-size: 18px;
+      font-size: 2.4ch;
       margin-right: 20px;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
@@ -340,6 +341,12 @@ position: relative;
       grid-template-rows: 50px 30px;
       grid-template-columns: 70px;
     }
+    &__head-link:hover &__tittle {
+      color: $general;
+    }
+    &__head-link:hover &__icon {
+      fill: $hover;
+    }
     &__icon {
       // margin: 10% 0px;
       justify-self: center;
@@ -361,6 +368,7 @@ position: relative;
     margin: 20px 20px 20px 20px;
   }
   .suggestion {
+    height: 70vw;
     &__item {
       height: 70vw;
       position: relative;
@@ -389,10 +397,14 @@ position: relative;
       grid-template-rows: auto auto auto;
       font-family: 'Open Sans', sans-serif;
       white-space: normal;
+      background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%);
+    }
+    &__content:hover {
+      background-color: #d866c950;
     }
     &__category {
       color: #fff;
-      font-size: 15px;
+      font-size: 1.8ch;
       font-weight: 700;
       text-transform: uppercase;
       justify-self: center;
@@ -405,7 +417,7 @@ position: relative;
       justify-self: center;
       align-self: start;
       text-align: center;
-      // padding: 0 15px;
+      font-size: 2.4ch;
       width: 80%;
     }
     &__name-left {
@@ -419,7 +431,7 @@ position: relative;
     }
     &__price {
       color: $general;
-      font-size: 18px;
+      font-size: 2.8ch;
       font-weight: 700;
       background-color: #fff;
       padding: 5px 10px;
@@ -431,7 +443,7 @@ position: relative;
   .pop-brand {
     margin: 20px 20px 20px 20px;
     &__tittle {
-      font-size: 18px;
+      font-size: 2.4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       text-align: center;
@@ -458,7 +470,8 @@ position: relative;
       display: none;
     }
     &__img {
-      width: 25vw;
+      width: 20vw;
+      max-width: 150px;
     }
 
   }
@@ -491,64 +504,87 @@ position: relative;
     &__link {
       position: relative;
     }
-
     &__img {
       width: 100%;
       border-radius: 3px;
     }
     &__info {
       display: grid;
-      grid-template-areas: 
-      "a a a"
-      "b b b"
-      "c c c"
-      "d e .";
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 10vw 10vw auto;      
+      width: 100%;
+      height: 100%;
       color: #ffffff;
       font-weight: 700;
       text-transform: uppercase;
       position: absolute;
-      left: 10%;
-      top: 15%;
+      left: 0;
+      top: 0;
+      padding: 5% 5% 7% 10%;
+    }
+    &__info:hover {
+      background-color: #d866c950;
     }
     &__category {
-      font-size: 30px;
-      grid-area: a;
+      font-size: 4ch;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
       margin: 0px;
       font-family: 'Open Sans', sans-serif;
     }
     &__model {
-      font-size: 46px;
-      grid-area: b;
+      font-size: 5ch;
       margin: 0px;
       font-family: 'Open Sans', sans-serif;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
     }
     &__name {
-      font-size: 46px;
-      grid-area: c;
+      font-size: 6ch;
       margin: 0px 0px 15px 0px;
       font-family: 'Open Sans', sans-serif;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
     }
     &__new-price {
       padding: 5px 10px;
       background-color: #fff;
       color: $general;
-      font-size: 30px;
+      font-size: 4ch;
       border-radius: 2px;
       margin-right: 10px;
       font-family: 'Exo 2', sans-serif;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      justify-self: center;
+      align-self: center;
     }
     &__old-price {
       padding: 5px 10px;
-      font-size: 30px;
+      font-size: 4ch;
       text-decoration-line: line-through;
       font-family: 'Exo 2', sans-serif;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      justify-self: center;
+      align-self: center;
     }
   }
 
   .pop-category-wrap {
     margin: 50px 0 100px 0;
     &__tittle {
-      font-size: 30px;
+      font-size: 4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       margin-bottom: 50px;
@@ -561,16 +597,17 @@ position: relative;
     &__link {
       position: relative;
       border-radius: 3px;
-      background-image: linear-gradient(red, green);
     }
     &__img {
       width: 100%;
-
+    }
+    &__sourse {
+      width: 100%;
     }
     &__name {
       color: #fff;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 2.1ch;
       text-transform: uppercase;
       position: absolute;
       z-index: 2;
@@ -591,7 +628,7 @@ position: relative;
   .pop-items-wrap {
     margin: 50px 0 100px 0;
     &__tittle {
-      font-size: 30px;
+      font-size: 4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       margin-bottom: 50px;
@@ -601,7 +638,6 @@ position: relative;
     &__item {
       position: relative;
       border-radius: 3px;
-      height: 422px;
       display: grid;
     }
     &__info {
@@ -611,21 +647,22 @@ position: relative;
       "i i i i i i"
       "b b b b b b"
       "c c c e e e";
-      grid-template-rows: 50px auto auto 70px;
+      grid-template-rows: 50px auto 70px 70px;
       border: 3px solid $outline;
     }
     &__img {
       grid-area: i;
       justify-self: center;
+      height: 90%;
     }
     &__name {
-      font-size: 15px;
+      font-size: 2ch;
+      padding: 5px;
       font-weight: 700;
       grid-area: b;
       justify-self: center;
-      align-self: end;
+      align-self: center;
       text-align: center;
-      margin-bottom: 20px;
       color: $black;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -643,13 +680,11 @@ position: relative;
       background-color: $outline;
       border-radius: 2px;
       margin-right: 10px;
-    
       grid-area: c;
       justify-self: end;
       align-self: start;
-
       display: grid;
-
+      padding: 5px;
     }
     &__new-price {
       display: none;
@@ -661,7 +696,7 @@ position: relative;
     }
     .sale &__new-price {
       display: grid;
-      font-size: 15px;
+      font-size: 1.8ch;
       font-weight: 700;
       color: $general;
       text-align: center;
@@ -669,13 +704,13 @@ position: relative;
     }
     &__old-price {
       display: grid;
-      font-size: 15px;
+      font-size: 1.8ch;
       font-weight: 700;
       text-align: center;
       font-family: 'Exo 2', sans-serif;
     }
     &__old-price .sale {
-      font-size: 11px;
+      font-size: 1.2ch;
       font-weight: 700;
       color: $black;
       opacity: 0.3;
@@ -714,7 +749,6 @@ position: relative;
       stroke: $general;
       justify-self: center;
       align-self: center;
-
     }
     &__market {
       width: 45px;
@@ -738,7 +772,7 @@ position: relative;
   .tools-type-wrap {
     margin: 50px 0 100px 0;
     &__tittle {
-      font-size: 30px;
+      font-size: 4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       margin-bottom: 50px;
@@ -776,12 +810,11 @@ position: relative;
     }
     &__tittle {
       font-weight: 700;
-      font-size: 22px;
+      font-size: 2.3ch;
       justify-self: center;
       align-self: center;
       font-family: 'Open Sans', sans-serif;
       color: $black;
-
     }
     &__group {
       display: grid;
@@ -789,16 +822,14 @@ position: relative;
     &__element {
       text-align: center;
       padding: 5px 5px;
-
     }
     &__link {
       color: $black;
       font-family: 'Open Sans', sans-serif;
       opacity: 0.5;
-      font-size: 15px;
-      // padding: 5px 5px;
+      font-size: 2ch;
       white-space: normal;
-      line-height: 30px;
+      line-height: 3.2ch;
     }
     &__link:hover {
       color: $hover;
@@ -810,7 +841,8 @@ position: relative;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 30px;
     &__item {
-      height: 422px;
+      height: 35vw;
+      max-height: 420px;
       position: relative;
       overflow: hidden;
       border-radius: 3px;
@@ -818,16 +850,18 @@ position: relative;
     }
     &__img {
       position: absolute;
-      
     }
     &__img--left {
       left: -50px;
+      height: 100%;
     }
     &__img--center {
       left: -5px;
+      height: 100%;
     }
     &__img--right {
       left: -200px;
+      height: 100%;
     }
     &__content {
       position: relative;
@@ -839,12 +873,11 @@ position: relative;
       background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%);
     }
     &__content:hover {
-      // background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%);
       background-color: #d866c950;
     }
     &__category {
       color: #fff;
-      font-size: 20px;
+      font-size: 3ch;
       font-weight: 700;
       text-transform: uppercase;
       justify-self: center;
@@ -860,17 +893,17 @@ position: relative;
       padding: 0 15px;
     }
     &__name-left {
-      font-size: 30px;
+      font-size: 3ch;
     }
     &__name-center {
-      font-size: 50px;
+      font-size: 5ch;
     }
     &__name-right {
-      font-size: 30px;
+      font-size: 3ch;
     }
     &__price {
       color: $general;
-      font-size: 20px;
+      font-size: 3ch;
       font-weight: 700;
       background-color: #fff;
       padding: 5px 10px;
@@ -882,7 +915,7 @@ position: relative;
   .pop-brand {
     margin: 50px 0 100px 0;
     &__tittle {
-      font-size: 30px;
+      font-size: 4ch;
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif; 
       margin-bottom: 50px;
@@ -894,7 +927,7 @@ position: relative;
       grid-auto-flow: column;
     }
     &__name {
-      font-size: 15px;
+      font-size: 2ch;
       font-weight: 700;
       text-align: center;
       padding: 30px 0;
@@ -904,6 +937,9 @@ position: relative;
       justify-self: center;
       align-self: center;
       margin: 20px 0;
+    }
+    &__img {
+      width: 100%;
     }
   }
 }

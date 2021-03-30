@@ -17,9 +17,7 @@
       <div class="header__search search">
         <input class="search__input" type="text" placeholder="Поиск по сайту">
         <a href="#" class="search__link">
-          <svg class="search__icon icon-search">
-            <use xlink:href='img/svg/sprite.svg#search'></use>
-          </svg>
+          {{ imageSvg('search', 'search__icon icon-search') }}
         </a>
       </div>
       <div class="header__block sm-top">
@@ -38,10 +36,7 @@
           <span class="sm-top__text">Профиль</span>
         </a>
         <a href="#" class="sm-top__link baying-img big-none">
-          <svg class="sm-top__icon icon-market">
-            <use xlink:href='img/svg/sprite.svg#market'>
-            </use>
-          </svg>
+          {{ imageSvg('market', 'sm-top__icon icon-market') }}
           <span class="icon-market__count">2</span>
           <span class="sm-top__text">Корзина</span>
         </a>
@@ -68,11 +63,7 @@
         </li>
         <li class="menu__baying">
           <a href="#" class="menu__link">
-            <svg class="menu__svg icon-market">
-              <use xlink:href='img/svg/sprite.svg#market'>
-              </use>
-
-            </svg>
+            {{ imageSvg('market', 'menu__svg icon-market') }}
             <span class="icon-market__count">2</span>
             <span class="menu__name">Корзина</span>
             <span class="menu__name-count big-none">2</span>

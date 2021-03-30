@@ -1,7 +1,7 @@
-{% macro promoItem(href, src, category, model, name, newPrice, oldPrice) %}
+{% macro promoItem(href, nameImg, category, model, name, newPrice, oldPrice) %}
 <li class="promo__item">
   <a href="{{ href }}" class="promo__link">
-    <img src="{{ src }}" alt="{{ name }}" class="promo__img">
+    {{ imageJpeg('promo__img', nameImg, 'promo__sourse', name) }}
     <div class="promo__info">
       <p class="promo__category">{{ category }}</p>
       <P class="promo__model">{{ model }}</P>
@@ -13,25 +13,21 @@
 </li>
 {% endmacro %}
 
-{% macro popCategoryItem(href, src, name) %}
+{% macro popCategoryItem(href, nameImg, name) %}
 <li class="pop-category__item">
   <a href="{{ href }}" class="pop-category__link">
-    <img src="{{ src }}" alt="{{ name }}" class="pop-category__img">
+    {{ imageJpeg('pop-category__img', nameImg, 'pop-category__sourse', name) }}
     <div class="pop-category__name">{{ name }}</div>
   </a>
 </li>
 {% endmacro %}
 
-{% macro popItem(href, src, name, oldPrice, typeDiscout, newPrice) %}
+{% macro popItem(href, nameImg, name, oldPrice, typeDiscout, newPrice) %}
 <li class="pop-items__item">
   <div class="pop-items__info">
-    <svg class="pop-items__svg icon-favor">
-      <use xlink:href='img/svg/sprite.svg#favor'></use>
-    </svg>
-    <svg class="pop-items__svg icon-contrast">
-      <use xlink:href='img/svg/sprite.svg#contrast'></use>
-    </svg>
-    <img src="{{ src }}" alt="{{ name }}" class="pop-items__img">
+    {{ imageSvg('favor', 'pop-items__svg icon-favor') }}
+    {{ imageSvg('contrast', 'pop-items__svg icon-contrast') }}
+    {{ imageJpeg('pop-items__img', nameImg, 'pop-items__sourse', name) }}
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
     <div class="pop-items__price">
       <div class="none-big {{ typeDiscout }}">
@@ -42,24 +38,15 @@
       </div>
     </div>
     <div class="pop-items__market">
-      <svg class="pop-items__svg icon-market">
-        <use xlink:href='img/svg/sprite.svg#market'>
-        </use>
-      </svg>
+      {{ imageSvg('market', 'pop-items__svg icon-market') }}
     </div>
   </div>
 </li>
 {% endmacro %}
 
-{% macro toolsType(category) %}
-<li class="tools-type__element">
-  <a href="#" class="tools-type__link">{{ category }}</a>
-</li>
-{% endmacro %}
-
-{% macro suggestion(position, name, category, price, src, href) %}
+{% macro suggestion(position, name, category, price, nameImg, href) %}
 <li class="suggestion__item">
-  <img src="{{ src }}" alt="{{  name }}" class="suggestion__img suggestion__img--{{ position }}">
+  {{ imageJpeg('suggestion__img suggestion__img--{{ position }}', nameImg, 'suggestion__sourse', name) }}
   <a href="{{ href }}" class="suggestion__content">
     <div class="suggestion__category">{{ category }}</div>
     <div class="suggestion__name suggestion__name-{{ position }}">{{ name }}</div>

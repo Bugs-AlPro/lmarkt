@@ -1,12 +1,7 @@
 @include media-down(lg) {
   .glide {
     position: relative;
-    // width: 96vw;
     min-width: 250px;
-    max-width: 951px;
-    // &__slide{
-    //   overflow: hidden;
-    // }
     &__arrow {
       position: absolute;
       z-index: 2;
@@ -24,37 +19,32 @@
       fill: $market-hover;
       stroke: $hover;
     }
-     &__arrow:focus {
+    &__arrow:focus {
       outline: none;
     }
-     &__arrow--left {
+    &__arrow--left {
       left: 0;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
-     }
-     &__arrow--right {
+    }
+    &__arrow--right {
       right: 0;
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
-     }
-     &__bullets {
+    }
+    &__bullets {
       display: flex;
-      // align-items: center;
       justify-content: center;
       position: relative;
-      // left: 40%;
       z-index: 2;
       height: 30px;
-      // border: 1px solid black;
     }
     &__bullet {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       appearance: none;
-      font-size: 0;
       border: 0;
-      list-style: none;
       margin: 5px;
       padding: 0;
       cursor: pointer;
@@ -71,48 +61,45 @@
       background-color: $general;
       scale: 1.1;
       opacity: 1;
-     }
-     &__icon--right {
-       transform: rotate(180deg);
-     }
-
-     &__arrow--promo,
-     &__arrow--suggestion {
-      top: 40%;
-     }
-     &__bullets--promo,
-     &__bullets--suggestion {
-      bottom: 25px;
+    }
+    &__icon--right {
+      transform: rotate(180deg);
+    }
+    &__arrow--promo {
+    top: 40%;
+    }
+    &__bullets--promo,
+    &__bullets--suggestion {
+    bottom: 25px;
+    }
+    &__arrow--suggestion {
+    top: 40%;
     }
     &__bullet--promo:hover,
     &__bullet--suggestion:hover {
       background-color: $hover;
     }
-     &__bullet--promo,
-     &__bullet--suggestion {
-      background-color: #fff;
-      opacity: 0.4;
-     }
-     &__bullets--promo &__bullet--active,
-     &__bullets--suggestion &__bullet--active {
-      opacity: 1;
-     }
-
-
-     &__bullets--pop-cat,
-     &__arrows--pop-cat,
-     &__arrows--tools-type,
-     &__bullets--tools-type {
-       display: none;
-     }
-
-     &__arrow--pop {
-      top: 35%;
-     }
-     &__bullets--pop {
-      bottom: -10px;
+    &__bullet--promo,
+    &__bullet--suggestion {
+    background-color: #fff;
+    opacity: 0.4;
     }
-
+    &__bullets--promo &__bullet--active,
+    &__bullets--suggestion &__bullet--active {
+    opacity: 1;
+    }
+    &__bullets--pop-cat,
+    &__arrows--pop-cat,
+    &__arrows--tools-type,
+    &__bullets--tools-type {
+      display: none;
+    }
+    &__arrow--pop {
+    top: 35%;
+    }
+    &__bullets--pop {
+    bottom: -10px;
+    }
     &__arrow--type {
       top: 28%;
     }
@@ -135,15 +122,13 @@
       display: none;
     }
   }
-
-   .icon-slider-link {
+    .icon-slider-link {
     width: 10px;
     height: 14px;
     stroke: $general;
     stroke-width: 2.5px;
     fill: $outline;
   }
-
 }
 @include media-up(lg) {
   .glide {
@@ -196,7 +181,6 @@
       appearance: none;
       font-size: 0;
       border: 0;
-      list-style: none;
       margin: 8px;
       padding: 0;
       cursor: pointer;
@@ -217,8 +201,6 @@
      &__icon--right {
        transform: rotate(180deg);
      }
-
-
      &__arrow--promo {
       top: 45%;
      }
@@ -235,15 +217,12 @@
      &__bullets--promo &__bullet--active {
       opacity: 1;
      }
-
-
      &__arrow--pop {
       top: 40%;
      }
      &__bullets--pop {
       bottom: -50px;
     }
-
     &__arrow--type {
       top: 28%;
     }
@@ -269,7 +248,6 @@
       display: none;
     }
   }
-
    .icon-slider-link {
     width: 12px;
     height: 24px;
@@ -277,5 +255,4 @@
     stroke-width: 2.5px;
     fill: $outline;
   }
-
 }

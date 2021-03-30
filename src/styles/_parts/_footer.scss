@@ -37,12 +37,13 @@
     }
     &__tittle {
       position: relative;  
-      font-size: 13px;
+      font-size: 2ch;
       font-weight: 600;
       padding: 10px 20px;
       width: 100%;
       opacity: 0.5;  
       margin: 0;
+      font-family: 'Exo 2', sans-serif;
     }
     &__tittle::after {
       width: 7px;
@@ -79,7 +80,8 @@
       margin-right: 10px;
     }
     &__item {
-      font-size: 12px;
+      font-size: 1.5ch;
+      font-family: 'Open Sans', sans-serif;
       line-height: 26px;
       padding-left: 20px;
     }
@@ -107,7 +109,8 @@
       margin-bottom: 15px;
     }
     .copyright {
-      font-size: 11px;
+      font-size: 1ch;
+      font-family: 'Open Sans', sans-serif;
     }
 }
 .app {
@@ -116,6 +119,9 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  &__item {
+    margin-right: 10px;
+  }
   &__link {
     opacity: 0.5;
   }
@@ -130,7 +136,8 @@
   }
 }
 .phone {
-  font-size: 18px; 
+  font-size: 3ch; 
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   line-height: 15px;
   color: $black;
@@ -254,6 +261,9 @@
     }
     &__link:hover {
       opacity: 1;
+    }
+    &__img {
+      height: 100%;
     }
   }
   .phone {

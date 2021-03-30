@@ -7,85 +7,78 @@ exemple - item card = [{id: "", type: "", category: "", brand: "", name: "", mod
 oldPrice: "", typeDiscout: "", newPrice: ""}]
 
 {% set promo = [
-{href: "#", src: "img/ad810-bks.jpg", category: "Акустическая гитара 1", model: "ad810-bks", name: "Standart series",
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 1", model: "ad810-bks", name: "Standart series",
 newPrice: "12 350", oldPrice: "16 350"},
-{href: "#", src: "img/ad810-bks.jpg", category: "Акустическая гитара 2", model: "ad810-bks", name: "Standart series",
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 2", model: "ad810-bks", name: "Standart series",
 newPrice: "13 350", oldPrice: "16 350"},
-{href: "#", src: "img/ad810-bks.jpg", category: "Акустическая гитара 3", model: "ad810-bks", name: "Standart series",
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 3", model: "ad810-bks", name: "Standart series",
 newPrice: "14 350", oldPrice: "16 350"},
-{href: "#", src: "img/ad810-bks.jpg", category: "Акустическая гитара 4", model: "ad810-bks", name: "Standart series",
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 4", model: "ad810-bks", name: "Standart series",
 newPrice: "15 350", oldPrice: "16 350"},
-{href: "#", src: "img/ad810-bks.jpg", category: "Акустическая гитара 5", model: "ad810-bks", name: "Standart series",
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 5", model: "ad810-bks", name: "Standart series",
 newPrice: "16 350", oldPrice: "16 350"}
 ]%}
 
 {% set popCategory = [
-{href: "#", src: "img/classic.jpg", name: "Классические гитары"},
-{href: "#", src: "img/keyboards.jpg", name: "Синтезаторы"},
-{href: "#", src: "img/electric.jpg", name: "Эллектрогитары"},
-{href: "#", src: "img/amplifier.jpg", name: "Усилители"},
-{href: "#", src: "img/classic.jpg", name: "Классические гитары"},
-{href: "#", src: "img/keyboards.jpg", name: "Синтезаторы"},
-{href: "#", src: "img/electric.jpg", name: "Эллектрогитары"},
-{href: "#", src: "img/amplifier.jpg", name: "Усилители"}
+{href: "#", nameImg: "classic", name: "Классические гитары"},
+{href: "#", nameImg: "keyboards", name: "Синтезаторы"},
+{href: "#", nameImg: "electric", name: "Эллектрогитары"},
+{href: "#", nameImg: "amplifier", name: "Усилители"},
+{href: "#", nameImg: "classic", name: "Классические гитары"},
+{href: "#", nameImg: "keyboards", name: "Синтезаторы"},
+{href: "#", nameImg: "electric", name: "Эллектрогитары"},
+{href: "#", nameImg: "amplifier", name: "Усилители"}
 ]%}
 
 {% set popItems = [
-{href: "#", src: "img/pop-items1.jpg", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
+{href: "#", nameImg: "pop-items1", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
 "18 980", typeDiscout: "sale", newPrice: "15 980"},
-{href: "#", src: "img/pop-items2.jpg", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
+{href: "#", nameImg: "pop-items2", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
 "18 980", typeDiscout: "", newPrice: ""},
-{href: "#", src: "img/pop-items3.jpg", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная",
+{href: "#", nameImg: "pop-items3", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная",
 oldPrice:
 "18 980", typeDiscout: "sale", newPrice: "15 980"},
-{href: "#", src: "img/pop-items4.jpg", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
+{href: "#", nameImg: "pop-items4", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
 "18 980", typeDiscout: "sale", newPrice: "15 980"},
-{href: "#", src: "img/pop-items1.jpg", name: "011C Гитара <br> классическая 4/4, Doff", newPrice: "15 980", oldPrice:
+{href: "#", nameImg: "pop-items1", name: "011C Гитара <br> классическая 4/4, Doff", newPrice: "15 980", oldPrice:
 "18 980", typeDiscout: "", newPrice: ""},
-{href: "#", src: "img/pop-items2.jpg", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
+{href: "#", nameImg: "pop-items2", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
 "18 980", typeDiscout: "sale", newPrice: "15 980"},
-{href: "#", src: "img/pop-items3.jpg", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная", oldPrice:
+{href: "#", nameImg: "pop-items3", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная", oldPrice:
 "18 980", typeDiscout: "", newPrice: ""},
-{href: "#", src: "img/pop-items4.jpg", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
+{href: "#", nameImg: "pop-items4", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
 "18 980", typeDiscout: "", newPrice: ""}
 ]%}
 
-{% set toolsTypeStrings = [
-{category: "Классические гитары"}, {category: "Акустические гитары"}, {category: "Акустические бас-гитары"}, {category:
-"Электрогитары"}, {category: "Бас-гитары"}, {category: "Укулеле"}
-]%}
-
-{% set toolsTypeKeyboards = [
-{category: "Синтезаторы"}, {category: "Цифровые пианино"}, {category: "Цифровые органы"}, {category:
-"Акустические клавишные инструменты"}, {category: "MIDI-клавиатуры"}
-]%}
-
-{% set toolsTypeDrum = [
-{category: "Акустические ударные"}, {category: "Электронные ударные"}, {category: "Тарелки"}, {category:
-"Стойки"}, {category: "Рамы"}, {category: "Педали"}
-]%}
-
-{% set toolsTypeBrass = [
-{category: "Блок-флейты"}, {category: "Флейты"}, {category: "Саксофоны"}, {category:
-"Кларнеты"}, {category: "Трубы"}, {category: "Трамбоны"}
-]%}
-
-{% set toolsTypeTongue = [
-{category: "Блок-флейты"}, {category: "Флейты"}, {category: "Саксофоны"}, {category:
-"Кларнеты"}, {category: "Трубы"}, {category: "Трамбоны"}
-]%}
-
 {% set suggestion = [
-{position: "left", name: "Selmer Super Action 80", category: "Саксофон", price: "16 450", src:
-"img/selmer-super-action-80.jpg", href: "#"},
-{position: "center", name: "CASIO CDP 320k", category: "Электронное пианино", price: "38 890", src:
-"img/casio-cdp-320k.jpg", href: "#"},
-{position: "right", name: "Ibanez RG450 Japan 2001", category: "Электрогитара", price: "49 990", src:
-"img/ibanez-rg450.jpg", href: "#"}
+{position: "left", name: "Selmer Super Action 80", category: "Саксофон", price: "16 450", nameImg:
+"selmer-super-action-80", href: "#"},
+{position: "center", name: "CASIO CDP 320k", category: "Электронное пианино", price: "38 890", nameImg:
+"casio-cdp-320k", href: "#"},
+{position: "right", name: "Ibanez RG450 Japan 2001", category: "Электрогитара", price: "49 990", nameImg:
+"ibanez-rg450", href: "#"}
 ]%}
 
 
+{% macro imageJpeg(classPicture, name, classImg, alt) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}">
+</picture>
+{% endmacro %}
 
+{% macro imagePng(classPicture, name, classImg, alt) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}">
+</picture>
+{% endmacro %}
+
+{% macro imageSvg(name, class) %}
+<svg class="{{ class }}">
+  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
 
 {% block content %}
 
@@ -96,7 +89,7 @@ oldPrice:
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides promo">
           {% for item in promo %}
-          {{ variable.promoItem(item.href, item.src, item.category, item.model, item.name, item.newPrice,
+          {{ variable.promoItem(item.href, item.nameImg, item.category, item.model, item.name, item.newPrice,
           item.oldPrice) }}
           {% endfor %}
         </ul>
@@ -109,14 +102,10 @@ oldPrice:
         </div>
         <div class="glide__arrows" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--promo glide__arrow--left" data-glide-dir="<">
-            <svg class="glide__icon--left icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
           </button>
           <button class="glide__arrow glide__arrow--promo glide__arrow--right" data-glide-dir=">">
-            <svg class="glide__icon--right icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
           </button>
         </div>
       </div>
@@ -129,19 +118,15 @@ oldPrice:
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides pop-category">
           {% for item in popCategory %}
-          {{ variable.popCategoryItem(item.href, item.src, item.name) }}
+          {{ variable.popCategoryItem(item.href, item.nameImg, item.name) }}
           {% endfor %}
         </ul>
         <div class="glide__arrows glide__arrows--pop-cat" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<">
-            <svg class="glide__icon--left icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
           </button>
           <button class="glide__arrow glide__arrow--pop glide__arrow--right" data-glide-dir=">">
-            <svg class="glide__icon--right icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
           </button>
         </div>
         <div class="glide__bullets glide__bullets--pop glide__bullets--pop-cat" data-glide-el="controls[nav]">
@@ -161,19 +146,15 @@ oldPrice:
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides pop-items">
           {% for item in popItems %}
-          {{ variable.popItem(item.href, item.src, item.name, item.oldPrice, item.typeDiscout, item.newPrice) }}
+          {{ variable.popItem(item.href, item.nameImg, item.name, item.oldPrice, item.typeDiscout, item.newPrice) }}
           {% endfor %}
         </ul>
         <div class="glide__arrows" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<">
-            <svg class="glide__icon--left icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
           </button>
           <button class="glide__arrow glide__arrow--pop glide__arrow--right" data-glide-dir=">">
-            <svg class="glide__icon--right icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
           </button>
         </div>
         <div class="glide__bullets glide__bullets--pop" data-glide-el="controls[nav]">
@@ -189,180 +170,157 @@ oldPrice:
 
   <section class="tools-type-wrap">
     <h2 class="tools-type-wrap__tittle">Инструменты по видам</h2>
-
     <div class="tools-type-slider glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides tools-type">
           <li class="tools-type__item">
             <div class="tools-type__section">
               <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-guitar">
-                  <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-                </svg>
+                {{ imageSvg('type-guitar', 'tools-type__icon icon-type-guitar') }}
                 <h3 class="tools-type__tittle">Струнные</h3>
               </a>
               <ul class="tools-type__group">
-                {% for item in toolsTypeStrings %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Классические гитары</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Акустические гитары</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Акустические бас-гитары</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Электрогитары</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Бас-гитары</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Укулеле</a>
+                </li>
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
               <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-keyboards">
-                  <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
-                </svg>
+                {{ imageSvg('type-keyboards', 'tools-type__icon icon-type-keyboards') }}
                 <h3 class="tools-type__tittle">Клавишные</h3>
               </a>
               <ul class="tools-type__group">
-                {% for item in toolsTypeKeyboards %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Синтезаторы</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Цифровые пианино</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Цифровые органы</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Акустические клавишные инструменты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">MIDI-клавиатуры</a>
+                </li>
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
               <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-drum">
-                  <use xlink:href='img/svg/sprite.svg#type-drum'></use>
-                </svg>
+                {{ imageSvg('type-drum', 'tools-type__icon icon-type-drum') }}
                 <h3 class="tools-type__tittle">Ударные</h3>
               </a>
               <ul class="tools-type__group">
-                {% for item in toolsTypeDrum %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Акустические ударные</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Электронные ударные</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Тарелки</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Стойки</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Рамы</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Педали</a>
+                </li>
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
               <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-brass">
-                  <use xlink:href='img/svg/sprite.svg#type-brass'></use>
-                </svg>
+                {{ imageSvg('type-brass', 'tools-type__icon icon-type-brass') }}
                 <h3 class="tools-type__tittle">Духовые</h3>
               </a>
-
               <ul class="tools-type__group">
-                {% for item in toolsTypeBrass %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Блок-флейты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Флейты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Саксофоны</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Кларнеты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Трубы</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Трамбоны</a>
+                </li>
               </ul>
             </div>
           </li>
           <li class="tools-type__item">
             <div class="tools-type__section">
               <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-tongue">
-                  <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
-                </svg>
+                {{ imageSvg('type-tongue', 'tools-type__icon icon-type-tongue') }}
                 <h3 class="tools-type__tittle">Язычковые</h3>
               </a>
               <ul class="tools-type__group">
-                {% for item in toolsTypeTongue %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-guitar">
-                  <use xlink:href='img/svg/sprite.svg#type-guitar'></use>
-                </svg>
-                <h3 class="tools-type__tittle">Струнные</h3>
-              </a>
-              <ul class="tools-type__group">
-                {% for item in toolsTypeStrings %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-keyboards">
-                  <use xlink:href='img/svg/sprite.svg#type-keyboards'></use>
-                </svg>
-                <h3 class="tools-type__tittle">Клавишные</h3>
-              </a>
-              <ul class="tools-type__group">
-                {% for item in toolsTypeKeyboards %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-drum">
-                  <use xlink:href='img/svg/sprite.svg#type-drum'></use>
-                </svg>
-                <h3 class="tools-type__tittle">Ударные</h3>
-              </a>
-              <ul class="tools-type__group">
-                {% for item in toolsTypeDrum %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-brass">
-                  <use xlink:href='img/svg/sprite.svg#type-brass'></use>
-                </svg>
-                <h3 class="tools-type__tittle">Духовые</h3>
-              </a>
-
-              <ul class="tools-type__group">
-                {% for item in toolsTypeBrass %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li class="tools-type__item">
-            <div class="tools-type__section">
-              <a href="#" class="tools-type__head-link">
-                <svg class="tools-type__icon icon-type-tongue">
-                  <use xlink:href='img/svg/sprite.svg#type-tongue'></use>
-                </svg>
-                <h3 class="tools-type__tittle">Язычковые</h3>
-              </a>
-              <ul class="tools-type__group">
-                {% for item in toolsTypeTongue %}
-                {{ variable.toolsType(item.category) }}
-                {% endfor %}
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Блок-флейты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Флейты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Саксофоны</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Кларнеты</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Трубы</a>
+                </li>
+                <li class="tools-type__element">
+                  <a href="#" class="tools-type__link">Трамбоны</a>
+                </li>
               </ul>
             </div>
           </li>
         </ul>
         <div class="glide__arrows  glide__arrows--tools-type" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--type glide__arrow--left" data-glide-dir="<">
-            <svg class="glide__icon--left icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
           </button>
           <button class="glide__arrow glide__arrow--type glide__arrow--right" data-glide-dir=">">
-            <svg class="glide__icon--right icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+            {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
           </button>
-
         </div>
         <div class="glide__down-btn glide__down-btn--tools-type">
-          <svg class="glide__icon--down icon-slider-link">
-            <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-          </svg>
+          {{ imageSvg('slider-link', 'glide__icon--down icon-slider-link') }}
         </div>
         <div class="glide__bullets glide__bullets--tools-type" data-glide-el="controls[nav]">
           <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -381,19 +339,15 @@ oldPrice:
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides suggestion">
           {% for item in suggestion %}
-          {{ variable.suggestion(item.position, item.name, item.category, item.price, item.src, item.href) }}
+          {{ variable.suggestion(item.position, item.name, item.category, item.price, item.nameImg, item.href) }}
           {% endfor %}
         </ul>
         <div class="glide__arrows glide__arrows--suggestion" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<">
-            <svg class="glide__icon--left icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+          <button class="glide__arrow glide__arrow--suggestion glide__arrow--left" data-glide-dir="<">
+            {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
           </button>
-          <button class="glide__arrow glide__arrow--pop glide__arrow--right" data-glide-dir=">">
-            <svg class="glide__icon--right icon-slider-link">
-              <use xlink:href='img/svg/sprite.svg#slider-link'></use>
-            </svg>
+          <button class="glide__arrow glide__arrow--suggestion glide__arrow--right" data-glide-dir=">">
+            {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
           </button>
         </div>
         <div class="glide__bullets glide__bullets--suggestion" data-glide-el="controls[nav]">
@@ -414,27 +368,27 @@ oldPrice:
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/yamaha.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'yamaha', 'pop-brand__sourse', 'yamaha') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/shure.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'shure', 'pop-brand__sourse', 'shure') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/casio.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'casio', 'pop-brand__sourse', 'casio') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/ibanez.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'ibanez', 'pop-brand__sourse', 'ibanez') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/korg.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'korg', 'pop-brand__sourse', 'korg') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
@@ -442,27 +396,27 @@ oldPrice:
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/jbl.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'jbl', 'pop-brand__sourse', 'jbl') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/alice.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'alice', 'pop-brand__sourse', 'alice') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/allen-heath.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'allen-heath', 'pop-brand__sourse', 'allen-heath') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/audix.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'audix', 'pop-brand__sourse', 'audix') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/artur.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'artur', 'pop-brand__sourse', 'artur') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
@@ -470,27 +424,27 @@ oldPrice:
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/avid.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'avid', 'pop-brand__sourse', 'avid') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/art.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'art', 'pop-brand__sourse', 'art') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/amg.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'amg', 'pop-brand__sourse', 'amg') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/avagts.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'avagts', 'pop-brand__sourse', 'avagts') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/audio-tehnika.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'audio-tehnika', 'pop-brand__sourse', 'audio-tehnika') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
@@ -498,27 +452,27 @@ oldPrice:
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/shui-garmon.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'shui-garmon', 'pop-brand__sourse', 'shui-garmon') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/tule-garmon.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'tule-garmon', 'pop-brand__sourse', 'tule-garmon') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/mozer.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'mozer', 'pop-brand__sourse', 'mozer') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/xvive.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'xvive', 'pop-brand__sourse', 'xvive') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/viva-rhythm.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'viva-rhythm', 'pop-brand__sourse', 'viva-rhythm') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
@@ -526,27 +480,27 @@ oldPrice:
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/ritmix.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'ritmix', 'pop-brand__sourse', 'ritmix') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/rombica.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'rombica', 'pop-brand__sourse', 'rombica') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/roland.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'roland', 'pop-brand__sourse', 'roland') }}
           </a>
         </li>
         <li class="pop-brand__element">
           <a href="#" class="pop-brand__link">
-            <img src="img/qumo.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'qumo', 'pop-brand__sourse', 'qumo') }}
           </a>
         </li>
         <li class="pop-brand__element smal-none">
           <a href="#" class="pop-brand__link">
-            <img src="img/pioneer.jpg" alt="" class="pop-brand__img">
+            {{ imageJpeg('pop-brand__img', 'pioneer', 'pop-brand__sourse', 'pioneer') }}
           </a>
         </li>
       </ul>
