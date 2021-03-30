@@ -14,7 +14,6 @@ new Glide('.pop-category-slider', {
   breakpoints: {
     992: {
       perView: 3
-
     }
   }
 }).mount();
@@ -38,7 +37,6 @@ new Glide('.tools-type-slider', {
   breakpoints: {
     992: {
       perView: 3,
-      gap: 10,
       peek: {
         before: 0,
         after: 70
