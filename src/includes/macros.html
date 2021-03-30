@@ -1,7 +1,7 @@
 {% macro promoItem(href, nameImg, category, model, name, newPrice, oldPrice) %}
 <li class="promo__item">
   <a href="{{ href }}" class="promo__link">
-    {{ imageJpeg('promo__img', nameImg, 'promo__sourse', name) }}
+    {{ imageJpeg('promo__sourse', nameImg, 'promo__img', name) }}
     <div class="promo__info">
       <p class="promo__category">{{ category }}</p>
       <P class="promo__model">{{ model }}</P>
@@ -16,7 +16,7 @@
 {% macro popCategoryItem(href, nameImg, name) %}
 <li class="pop-category__item">
   <a href="{{ href }}" class="pop-category__link">
-    {{ imageJpeg('pop-category__img', nameImg, 'pop-category__sourse', name) }}
+    {{ imageJpeg('pop-category__sourse', nameImg, 'pop-category__img', name) }}
     <div class="pop-category__name">{{ name }}</div>
   </a>
 </li>
@@ -27,7 +27,7 @@
   <div class="pop-items__info">
     {{ imageSvg('favor', 'pop-items__svg icon-favor') }}
     {{ imageSvg('contrast', 'pop-items__svg icon-contrast') }}
-    {{ imageJpeg('pop-items__img', nameImg, 'pop-items__sourse', name) }}
+    {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name) }}
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
     <div class="pop-items__price">
       <div class="none-big {{ typeDiscout }}">
@@ -46,7 +46,7 @@
 
 {% macro suggestion(position, name, category, price, nameImg, href) %}
 <li class="suggestion__item">
-  {{ imageJpeg('suggestion__img suggestion__img--{{ position }}', nameImg, 'suggestion__sourse', name) }}
+  {{ imageJpeg('suggestion__sourse suggestion__img--{{ position }}', nameImg, 'suggestion__img', name) }}
   <a href="{{ href }}" class="suggestion__content">
     <div class="suggestion__category">{{ category }}</div>
     <div class="suggestion__name suggestion__name-{{ position }}">{{ name }}</div>
@@ -55,14 +55,14 @@
 </li>
 {% endmacro %}
 
-{% macro imageJpeg(classPicture, name, classImg, alt="") %}
+{% macro imageJpeg(classPicture, name, classImg, alt) %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
   <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}">
 </picture>
 {% endmacro %}
 
-{% macro imagePng(classPicture, name, classImg, alt="") %}
+{% macro imagePng(classPicture, name, classImg, alt) %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
   <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}">
