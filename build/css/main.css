@@ -1149,7 +1149,8 @@ img {
     grid-template-rows: auto 15px auto;
     grid-template-areas: "a . . i i i i i i i i n n" ". . . . . . . . . . . . ." "b c d d d d e e e k k k k";
     justify-content: space-between;
-    font-family: 'Open Sans', sans-serif; }
+    font-family: 'Open Sans', sans-serif;
+    position: relative; }
     .header__location {
       grid-area: a; }
     .header__logo {
@@ -1194,30 +1195,40 @@ img {
     border-right: 2px solid #A0148E;
     top: 9px;
     right: -1px; }
-  .sm-top__link {
-    width: 141px;
-    height: 45px;
-    background-color: #A0148E;
-    border-radius: 3px;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-content: center;
-    margin: 0 10px; }
-  .sm-top__icon {
-    align-self: center;
-    margin-right: 11px; }
-  .sm-top__text {
-    font-size: 15px;
-    font-weight: bold;
-    color: #ffffff;
-    align-self: center; }
+  .sm-top {
+    z-index: 4; }
+    .sm-top__link {
+      width: 141px;
+      height: 45px;
+      background-color: #A0148E;
+      border-radius: 3px;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      align-content: center;
+      margin: 0 10px;
+      z-index: 4; }
+    .sm-top__icon {
+      align-self: center;
+      margin-right: 11px;
+      z-index: 4; }
+    .sm-top__text {
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      align-self: center;
+      z-index: 4; }
   .catalog-link:hover {
     background-color: #D866C9; }
   .icon-catolog {
     width: 15px;
     height: 15px;
     stroke: #ffffff;
+    stroke-width: 3px; }
+  .icon-menu-open {
+    width: 15px;
+    height: 15px;
+    stroke: #A0148E;
     stroke-width: 3px; }
   .menu {
     display: grid;
@@ -1328,8 +1339,116 @@ img {
     width: 22px;
     height: 19px;
     stroke: initial; }
-  .catalog, .profile, .big-none {
+  .profile, .big-none {
     display: none; } }
+
+.cklick-open {
+  background-color: #FFF8FE;
+  color: #A0148E;
+  z-index: 4;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.cklick-open:hover {
+  background-color: #FFF8FE; }
+
+.background::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #3F0738;
+  opacity: 0.2;
+  content: "";
+  z-index: 3; }
+
+.icon-menu-link {
+  width: 10px;
+  height: 16px;
+  stroke-width: 3px;
+  stroke: #2D0027;
+  fill: #FFF8FE;
+  transform: rotate(-180deg);
+  opacity: 0.13; }
+
+.svg-none {
+  display: none; }
+
+.catalog {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 3;
+  background-color: white;
+  width: 100%;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 321px 1fr 1fr 1fr; }
+  .catalog__groups {
+    background-color: #FFF8FE;
+    padding: 50px 0 50px 25px;
+    border-radius: 4px; }
+  .catalog__group {
+    font-size: 1.6ch;
+    line-height: 2ch;
+    font-weight: 700;
+    padding: 10px 15px 10px 25px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    color: #2D0027;
+    display: flex;
+    justify-content: space-between; }
+  .catalog__group:hover {
+    color: #A0148E; }
+  .catalog__group:hover .icon-menu-link,
+  .catalog__category:hover .icon-menu-link {
+    stroke: #A0148E;
+    fill: #FFF8FE;
+    opacity: 1; }
+  .catalog__group--active {
+    background-color: white;
+    color: #A0148E; }
+  .catalog__group--active .icon-menu-link {
+    stroke: #A0148E;
+    fill: #FFF8FE;
+    opacity: 1; }
+  .catalog__group-svg {
+    margin-left: 10spx; }
+  .catalog__categories {
+    padding: 50px 0 50px 25px;
+    border-right: 3px solid #FFF8FE; }
+  .catalog__category:hover {
+    color: #A0148E; }
+  .catalog__category--active {
+    background-color: #FFF8FE;
+    color: #A0148E; }
+  .catalog__category {
+    display: none;
+    font-size: 1.6ch;
+    line-height: 2ch;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    color: #2D0027; }
+  .catalog .menu-open {
+    display: block;
+    display: flex;
+    justify-content: space-between; }
+  .catalog__subcategories {
+    padding: 50px 0 50px 25px; }
+  .catalog__subcategory {
+    display: none;
+    font-size: 1.6ch;
+    line-height: 2ch;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    color: #2D0027; }
+  .catalog__subcategory:hover {
+    color: #A0148E; }
+  .catalog__suggestions {
+    padding: 60px 50px 50px 25px; }
 
 @media (max-width: 991.98px) {
   .smal-none {

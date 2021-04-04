@@ -189,6 +189,7 @@
     "b c d d d d e e e k k k k";
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
     &__location {
       grid-area: a;
     }
@@ -247,6 +248,7 @@
     }
   }
   .sm-top {
+    z-index: 4;
     &__link {
       width: 141px;
       height: 45px;
@@ -257,25 +259,35 @@
       justify-content: center;
       align-content: center;
       margin: 0 10px;  
+      z-index: 4;
     }
     &__icon {
       align-self: center;
       margin-right: 11px;
+      z-index: 4;
     }
     &__text {
       font-size: 15px;
       font-weight: bold;
       color: #ffffff;
       align-self: center;
+      z-index: 4;
     }
   }
   .catalog-link:hover {
     background-color: $hover;
   }
+
   .icon-catolog {
     width: 15px;
     height: 15px;
     stroke: #ffffff;
+    stroke-width: 3px;
+  }
+  .icon-menu-open {
+    width: 15px;
+    height: 15px;
+    stroke: $general;
     stroke-width: 3px;
   }
   .menu {
@@ -419,7 +431,7 @@
     height: 19px;
     stroke: initial;
   }
-  .catalog, .profile, .big-none {
+  .profile, .big-none {
     display: none;
   }
 }

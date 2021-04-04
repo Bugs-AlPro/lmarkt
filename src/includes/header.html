@@ -1,13 +1,7 @@
-{% macro imageSvg(name, class) %}
-<svg class="{{ class }}">
-  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
-</svg>
-{% endmacro %}
-
 <header class="header-wrap">
   <div class="container">
     <nav class="header">
-      <div class="header__logo logo">
+      <div class="header__logo logo" id="logo">
         {{ imageSvg('logo', 'logo__img') }}
         <h1 class="logo__tittle hidden-text">Музыкальный магазин Lmarkt</h1>
       </div>
@@ -21,11 +15,12 @@
         </a>
       </div>
       <div class="header__block sm-top">
-        <a href="#" class="sm-top__link catalog-link">
+        <a href="#logo" class="sm-top__link catalog-link">
           {{ imageSvg('catalog', 'sm-top__icon icon-catolog smal-none') }}
+          {{ imageSvg('menu-open', 'sm-top__icon icon-menu-open smal-none svg-none') }}
           {{ imageSvg('menu', 'sm-top__icon icon-menu big-none') }}
           <span class="sm-top__text big-none">Меню</span>
-          <span class="sm-top__text smal-none">Каталог</span>
+          <span class="sm-top__text sm-top__text-menu smal-none">Каталог</span>
         </a>
         <a href="#" class="sm-top__link phone-img big-none">
           {{ imageSvg('phone', 'sm-top__icon icon-phone') }}
@@ -42,24 +37,11 @@
         </a>
       </div>
       <ul class="header__menu menu">
-        <li class="menu__item big-none">
-          <a href="#" class="menu__link">
+        <li class="menu__item">
+          <!-- <a href="#" class="menu__link">
             <span class="menu__name">Каталог</span>
-          </a>
-          <div class="menu__catalog catalog">
-            <ul class="catalog__items">
-              <li>Гатары</li>
-              <li>Клавишные</li>
-              <li>Ударные</li>
-              <li>Микрофоны</li>
-              <li>DJ оборудование</li>
-              <li>Студийное оборудование</li>
-              <li>Звуковое оборудование</li>
-              <li>Световое оборудование</li>
-              <li>Наушники</li>
-              <li>Коммутация</li>
-            </ul>
-          </div>
+          </a> -->
+
         </li>
         <li class="menu__baying">
           <a href="#" class="menu__link">
@@ -138,6 +120,66 @@
             {{ imageSvg('tg', 'social__tg') }}
           </a>
         </div>
+      </div>
+      <div class="header__catalog  big-none">
+        <div class="catalog">
+          <ul class="catalog__groups">
+            {% for item in menuGroups %}
+            {{ variable.menuCatalog(item.type, item.tittle, item.svg) }}
+            {% endfor %}
+          </ul>
+          <ul class="catalog__categories">
+            {% for item in menuCategory %}
+            {{ variable.menuCatalog(item.type, item.tittle, item.svg) }}
+            {% endfor %}
+          </ul>
+          <ul class="catalog__subcategories">
+            {% for item in menuSubategory %}
+            {{ variable.menuCatalog(item.type, item.tittle, item.svg) }}
+            {% endfor %}
+          </ul>
+          <ul class="catalog__suggestions">
+            <li class="catalog__suggestion-item suggestion__item">
+              {{ imageJpeg('suggestion__sourse suggestion__img--right', 'ibanez-rg450', 'suggestion__img', 'Ibanez RG450
+              Japan 2001') }}
+              <a href="#" class="suggestion__content">
+                <div class="suggestion__category">Электрогитара</div>
+                <div class="suggestion__name suggestion__name-right">Ibanez RG450 Japan 2001</div>
+                <div class="suggestion__price">49 990 ₽</div>
+              </a>
+            </li>
+            <li class="catalog__suggestions-brand">
+              <ul class="catalog__brands">
+                <li class="catalog__brand">
+                  <a href="#" class="catalog__brand-link">
+                    {{ imageJpeg('catalog__brand-img', 'yamaha', 'catalog__brand-sourse', 'yamaha') }}
+                  </a>
+                </li>
+                <li class="catalog__brand">
+                  <a href="#" class="catalog__brand-link">
+                    {{ imageJpeg('catalog__brand-img', 'shure', 'catalog__brand-sourse', 'shure') }}
+                  </a>
+                </li>
+                <li class="catalog__brand">
+                  <a href="#" class="catalog__brand-link">
+                    {{ imageJpeg('catalog__brand-img', 'casio', 'catalog__brand-sourse', 'casio') }}
+                  </a>
+                </li>
+                <li class="catalog__brand">
+                  <a href="#" class="catalog__brand-link">
+                    {{ imageJpeg('catalog__brand-img', 'ibanez', 'catalog__brand-sourse', 'ibanez') }}
+                  </a>
+                </li>
+                <li class="catalog__brand">
+                  <a href="#" class="catalog__brand-link">
+                    {{ imageJpeg('catalog__brand-img', 'korg', 'catalog__brand-sourse', 'korg') }}
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </nav>
   </div>

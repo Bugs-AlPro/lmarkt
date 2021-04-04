@@ -55,6 +55,15 @@
 </li>
 {% endmacro %}
 
+{% macro menuCatalog(class, tittle, icon) %}
+<li class="catalog__{{ class }}">{{ tittle }}
+  <div class="catalog__group-svg {{ icon }}">
+    {{ imageSvg('slider-link', 'icon-menu-link') }}
+  </div>
+</li>
+{% endmacro %}
+
+
 {% macro imageJpeg(classPicture, name, classImg, alt) %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">

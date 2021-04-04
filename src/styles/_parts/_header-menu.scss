@@ -1,0 +1,135 @@
+// action after click link .catalog-link
+// svg icon-catolog - add class svg-none
+// svg icon-menu-open - remove class svg-none
+// catalog-link - add class cklick-open
+// sm-top__text - add class cklick-open
+// body - add class background
+// header__catalog - remove big-none
+
+.cklick-open {
+  background-color: $outline;
+  color: $general;
+  z-index: 4;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.cklick-open:hover {
+  background-color: $outline;
+}
+.background::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #3F0738;
+  opacity: 0.2;
+  content: "";
+  z-index: 3;
+}
+.icon-menu-link {
+  width: 10px;
+  height: 16px;
+  stroke-width: 3px;
+  stroke: $black;
+  fill: $outline;
+  transform: rotate(-180deg);
+  opacity: 0.13;
+}
+.svg-none {
+  display: none;
+}
+.catalog {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 3;
+  background-color: white;
+  width: 100%;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 321px 1fr 1fr 1fr;
+  &__groups {
+    background-color: $outline;
+    padding: 50px 0 50px 25px;
+    border-radius: 4px;
+  }
+  &__group {
+    font-size: 1.6ch;
+    line-height: 2ch;
+    font-weight: 700;
+    padding: 10px 15px 10px 25px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    color: $black;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__group:hover {
+    color: $general;
+  }
+  &__group:hover .icon-menu-link,
+  &__category:hover .icon-menu-link {
+    stroke: $general;
+    fill: $outline;
+    opacity: 1;
+  }
+  &__group--active {
+    background-color: white;
+    color: $general;
+  }
+  &__group--active .icon-menu-link {
+    stroke: $general;
+    fill: $outline;
+    opacity: 1;
+  }
+  &__group-svg {
+    margin-left: 10spx;
+  }
+  &__categories {
+    padding: 50px 0 50px 25px;
+    border-right: 3px solid $outline;
+  }
+
+  &__category:hover {
+    color: $general;
+  }
+  &__category--active {
+    background-color: $outline;
+    color: $general;
+  }
+  &__category {
+    display: none;
+    font-size: 1.6ch;
+    line-height: 2ch;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    color: $black;
+  }
+
+  .menu-open {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subcategories {
+    padding: 50px 0 50px 25px;
+  }
+  &__subcategory {
+    display: none;
+    font-size: 1.6ch;
+    line-height: 2ch;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    color: $black;
+  }
+  &__subcategory:hover {
+    color: $general;
+  }
+  &__suggestions {
+    padding: 60px 50px 50px 25px;
+  }
+}
