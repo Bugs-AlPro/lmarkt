@@ -37,23 +37,33 @@ img {
   }
   .promo {
     border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 20px;
     &__item {
       // display: grid;
-      border-radius: 3px;
+      // border-radius: 3px;
       position: relative;
-      overflow: hidden;
-      height: 180px;
+      // overflow: hidden;
+      // height: 180px;
+      width: 260px;
     }
     &__link {
       position: relative;
+      border-radius: 3px;
       display: grid;
       height: 180px;
+      width: 260px;
+      overflow: hidden;
     }
 
     &__sourse {
       position: absolute;
       bottom: 0;
       width: 100%;
+
       }
       &__img {
         position: absolute;
@@ -63,6 +73,7 @@ img {
         min-height: 180px;
         min-width: 500px;
         max-width: 990px;
+
       }
     &__info {
       display: grid;
@@ -123,10 +134,15 @@ img {
   }
   .pop-category {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 20px;
     &__item {
       // display: grid;
-      overflow: hidden;
-      height: 35vw;
+      // overflow: hidden;
+      height: 30%;
       max-height: 200px;
       min-width: 90px;
     }
@@ -136,14 +152,14 @@ img {
     }
     &__sourse {
       border-radius: 3px;
-      width: 30vw;
+      width: 30%;
       min-width: 90px;
       z-index: 1;
       position: relative;
     }
     &__img {
       border-radius: 3px;
-      width: 30vw;
+      width: 30%;
       min-width: 90px;
       max-width: 200px;
       z-index: 1;
@@ -181,11 +197,20 @@ img {
     }
   }
   .pop-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 20px;
+    
     &__item {
       position: relative;
       border-radius: 3px;
-      overflow: hidden;
+      // overflow: hidden;
       max-width: 300px;
+      min-width: 120px;
+      // width: 140px;
+      display: grid;
     }
     &__info {
       display: grid;
@@ -203,7 +228,7 @@ img {
 
     }
     &__img {
-      height: 30vw;
+      height: 100px;
       max-height: 200px;
     }
     &__name {
@@ -352,6 +377,9 @@ img {
   }
   .tools-type {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
     &__head-link {
       display: grid;
       grid-template-rows: 50px 30px;
@@ -384,30 +412,42 @@ img {
     margin: 20px 20px 20px 20px;
   }
   .suggestion {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    overflow: hidden;
+    height: 260px;
+    gap: 20px;
     &__item {
-      height: 70vw;
-      max-height: 300px;
+      height: 260px;
+      width: 260px;
       position: relative;
-      overflow: hidden;
       border-radius: 3px;
       display: grid;
+      // overflow: hidden;
     }
     &__sourse {
       width: 100%; 
       position: absolute;
+      border-radius: 3px;
+      left: 0;
+      top: 0;
+      overflow: hidden;
     }
     &__img {
-      position: absolute;
-      width: 100%;
+      height: 100%;
+      border-radius: 3px;
     }
     &__content {
       position: relative;
-      z-index: 2;
+      border-radius: 3px;
+      z-index: 3;
       display: grid;
       grid-template-rows: auto auto auto;
       font-family: 'Open Sans', sans-serif;
       white-space: normal;
       background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%);
+      width: 260px;
     }
     &__content:hover {
       background-color: #d866c950;
@@ -492,6 +532,7 @@ img {
     margin-top: 50px;
   }
   .promo {
+
     &__item {
       display: grid;
     }
