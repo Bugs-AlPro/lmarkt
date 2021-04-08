@@ -3,6 +3,7 @@
     display: none;
   }
   .header {
+
     display: grid;
     grid-template-areas: 
     "a a a a"
@@ -155,6 +156,9 @@
       background-color: $outline;
       color: $general;
       box-shadow: none;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &__input:hover {
       background-color: $search-fild;

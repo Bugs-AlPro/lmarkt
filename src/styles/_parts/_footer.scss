@@ -44,6 +44,7 @@
       opacity: 0.5;  
       margin: 0;
       font-family: 'Exo 2', sans-serif;
+      box-sizing: border-box;
     }
     &__tittle::after {
       width: 7px;
