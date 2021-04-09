@@ -14,12 +14,12 @@
       display: grid;
     }
     &__column {
-      display: grid
+      display: grid;
     }
     &__column-sm {
       border-left: 1px solid $footer-outline;
       border-right: 1px solid $footer-outline;
-      margin: 0;
+      // margin: 0;
     }
     &__column-sm:first-child {
       border-top-left-radius: 3px;
@@ -37,7 +37,7 @@
     }
     &__tittle {
       position: relative;  
-      font-size: 2ch;
+      font-size: 1em;
       font-weight: 600;
       padding: 10px 20px;
       width: 100%;
@@ -45,6 +45,7 @@
       margin: 0;
       font-family: 'Exo 2', sans-serif;
       box-sizing: border-box;
+      cursor: pointer;
     }
     &__tittle::after {
       width: 7px;
@@ -81,7 +82,7 @@
       margin-right: 10px;
     }
     &__item {
-      font-size: 1.5ch;
+      font-size: 0.8em;
       font-family: 'Open Sans', sans-serif;
       line-height: 26px;
       padding-left: 20px;
@@ -109,22 +110,16 @@
     &__down-item {
       margin-bottom: 15px;
     }
-    .copyright {
-      font-size: 1ch;
-      font-family: 'Open Sans', sans-serif;
-    }
+
 }
 .app {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
-  &__item {
-    margin-right: 10px;
-  }
+  margin: 20px 0;
   &__link {
-    opacity: 0.5;
+    opacity: 0.7;
   }
   &__img {
     scale: 0.8;
@@ -136,8 +131,12 @@
     opacity: 1;
   }
 }
+.copyright {
+  font-size: 0.8em;
+  font-family: 'Open Sans', sans-serif;
+}
 .phone {
-  font-size: 3ch; 
+  font-size: 1.5em; 
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   line-height: 15px;
@@ -145,6 +144,7 @@
 }
 .phone-down {
   opacity: 0.5;
+  margin-bottom: 10px;
 }
 .copyright {
   opacity: 0.5;
@@ -154,12 +154,16 @@
     grid-template-columns: 40px 40px 40px 40px;
     &__link {
       height: 25px;
+      display: grid;
+      justify-self: center;
+      align-self: center;
     }
     &__tg {
       width: 28px;
       height: 23px;
       fill: $black;
       opacity: 0.15;
+      align-self: center;
     }
     &__link:hover &__tg {
       fill: #1E96C8;
@@ -171,6 +175,7 @@
       fill: $black;
       opacity: 0.15;
       position: absolute;
+      align-self: center;
     }
     &__link:hover &__ins-black {
       display: none;
@@ -179,6 +184,7 @@
       width: 25px;
       height: 25px;
       opacity: 0;
+      align-self: center;
     }
     &__link:hover &__ins-color {
       opacity: 1;
@@ -188,6 +194,7 @@
       height: 18px;
       fill: $black;
       opacity: 0.15;
+      align-self: center;
     }
     &__link:hover &__vk {
       fill: #5282b8;
@@ -198,6 +205,7 @@
       height: 25px;
       fill: $black;
       opacity: 0.15;
+      align-self: center;
     }
     &__link:hover &__fb {
       fill: #3b589e;
@@ -224,24 +232,21 @@
       flex-direction: column;
     }
     &__tittle {
-      font-size: 22px;
+      font-size: 1.4em;
       font-weight: 700;
       margin: 20px 0;
       opacity: 0.5;  
-      padding: 0px;
+      padding: 0;
     }
     &__item {
       line-height: 33px;
-    }
-    &__img {
-      opacity: 0.5;
-    }
-    &__img:hover {
-      opacity: 1;
+      margin-bottom: 5px;
     }
     &__link {
       color: $black;
       opacity: 0.5;
+      font-size: 1em;
+
     }
     &__link:hover {
       color: $hover;
@@ -258,7 +263,7 @@
   }
   .app {
     &__link {
-      opacity: 0.5;
+      opacity: 0.7;
     }
     &__link:hover {
       opacity: 1;
@@ -268,7 +273,7 @@
     }
   }
   .phone {
-    font-size: 22px;
+    font-size: 1.3em;
     font-weight: 700;
     line-height: 15px;
     color: $black;
@@ -278,60 +283,72 @@
   }
   .copyright {
     opacity: 0.5;
+    font-size: 1em;
   }
-    .social {
-      display: grid;
-      grid-template-columns: 30px 30px 30px 30px;
-      justify-content: space-between;
-      &__link {
-        height: 30px;
-        padding: 5px;
-      }
-      &__tg {
-        width: 20px;
-        height: 17px;
-        fill: $black;
-        opacity: 0.15;
-      }
-      &__link:hover &__tg {
-        fill: #1E96C8;
-        opacity: 1;
-      }
-      &__ins-black {
-        width: 18px;
-        height: 18px;
-        fill: $black;
-        opacity: 0.15;
-        position: absolute;
-      }
-      &__link:hover &__ins-black {
-        display: none;
-      }
-      &__ins-color {
-        opacity: 0;
-      }
-      &__link:hover &__ins-color {
-        opacity: 1;
-      }
-      &__vk {
-        width: 23px;
-        height: 13px;
-        fill: $black;
-        opacity: 0.15;
-      }
-      &__link:hover &__vk {
-        fill: #5282b8;
-        opacity: 1;
-      }
-      &__fb {
-        width: 18px;
-        height: 18px;
-        fill: $black;
-        opacity: 0.15;
-      }
-      &__link:hover &__fb {
-        fill: #3b589e;
-        opacity: 1;
-      }
+  .social {
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px;
+    justify-content: space-between;
+    &__link {
+      height: 30px;
+      display: flex;
+      justify-self: center;
     }
+    &__tg {
+      width: 20px;
+      height: 17px;
+      fill: $black;
+      opacity: 0.15;
+      justify-self: center;
+      align-self: center;
+    }
+    &__link:hover &__tg {
+      fill: #1E96C8;
+      opacity: 1;
+    }
+    &__ins-black {
+      width: 18px;
+      height: 18px;
+      fill: $black;
+      opacity: 0.15;
+      position: absolute;
+      justify-self: center;
+      align-self: center;
+    }
+    &__link:hover &__ins-black {
+      display: none;
+    }
+    &__ins-color {
+      opacity: 0;
+      justify-self: center;
+      align-self: center;
+    }
+    &__link:hover &__ins-color {
+      opacity: 1;
+    }
+    &__vk {
+      width: 23px;
+      height: 13px;
+      fill: $black;
+      opacity: 0.15;
+      justify-self: center;
+      align-self: center;
+    }
+    &__link:hover &__vk {
+      fill: #5282b8;
+      opacity: 1;
+    }
+    &__fb {
+      width: 18px;
+      height: 18px;
+      fill: $black;
+      opacity: 0.15;
+      justify-self: center;
+      align-self: center;
+    }
+    &__link:hover &__fb {
+      fill: #3b589e;
+      opacity: 1;
+    }
+  }
   }

@@ -46,12 +46,12 @@
 </li>
 {% endmacro %}
 
-{% macro suggestion(position, name, category, price, nameImg, href) %}
+{% macro suggestion(name, category, price, nameImg, href) %}
 <li class="suggestion__item">
-  {{ imageJpeg('suggestion__sourse suggestion__img--{{ position }}', nameImg, 'suggestion__img', name) }}
+  {{ imageJpeg('suggestion__sourse', nameImg, 'suggestion__img', name) }}
   <a href="{{ href }}" class="suggestion__content">
     <div class="suggestion__category">{{ category }}</div>
-    <div class="suggestion__name suggestion__name-{{ position }}">{{ name }}</div>
+    <div class="suggestion__name">{{ name }}</div>
     <div class="suggestion__price">{{ price }} ₽</div>
   </a>
 </li>

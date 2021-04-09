@@ -3,7 +3,6 @@
     display: none;
   }
   .header {
-
     display: grid;
     grid-template-areas: 
     "a a a a"
@@ -27,7 +26,7 @@
   .icon-menu {
     width: 18px;
     height: 16px;
-    stroke: $general;
+    // stroke: $general;
     stroke-width: 1.5px;
   }
   .icon-phone {
@@ -39,7 +38,7 @@
   .icon-profile {
     width: 18px;
     height: 21px;
-    stroke: $general;
+    // stroke: $general;
     stroke-width: 1.2px;
     fill: white;
   }
@@ -47,7 +46,7 @@
     width: 23px;
     height: 20px;
     fill: white;
-    stroke: $general;
+    // stroke: $general;
     stroke-width: 1.3px;
     &__count {
       position: absolute;
@@ -83,16 +82,15 @@
     display: grid;
     justify-items: center;
     align-content: space-around;
-    font-size: 9px;
+    font-size: 0.6em;
     padding: 10px;
+    stroke: $general;
+    color: $general;
     }
     &__text {
       opacity: 0.6;
-      color: $general;
     }
-    &__link:hover .icon-menu,
-    &__link:hover .icon-profile,
-    &__link:hover .icon-market {
+    &__link:hover {
       stroke: $hover;
     }
     &__link:hover .icon-market__count {
@@ -106,7 +104,6 @@
       color: $hover;
     }
   }
-
   .logo {
     padding: 10px 20px;
     &__img {
@@ -118,18 +115,20 @@
   .location {
     padding: 10px 20px;
     &__name {
+
       border: 0;
       outline: none;
       background-color: inherit;
       height: 15px;  
       position: relative;  
-      font-size: 13px;
+      font-size: 0.9em;
       font-weight: 700;
       color: $general;
       padding: 0;
       flex-grow: 2;
       text-align: left;
-      padding-right: 20px;
+      padding: 0 20px;
+      cursor: pointer;
     }
     &__name::after {
       position: absolute;
@@ -140,7 +139,7 @@
       transform: rotate(45deg);
       border-bottom:  2px solid $general;
       border-right:  2px solid $general;
-      top: 3px;
+      top: 4px;
       right: 4px;
     }
   }
@@ -155,7 +154,6 @@
       padding: 10px 0px 10px 20px;
       background-color: $outline;
       color: $general;
-      box-shadow: none;
       box-sizing: border-box;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -169,7 +167,6 @@
       top: 10px;
     }
   }
-
   .catalog-link {
     padding-left: 20px;
     padding-right: 15px;
@@ -184,14 +181,18 @@
   }
 }
 @include media-up(lg) {
+  // .header-wrap {
+  //   max-width: 1290px;
+  //   padding: 0px 20px;
+  //   margin: auto;
+  // }
   .header {
     display: grid;
     grid-template-rows: auto 15px auto;
     grid-template-areas: 
-    "a . . i i i i i i i i n n"
+    "a . i i i i i i i i i n n"
     ". . . . . . . . . . . . ."
     "b c d d d d e e e k k k k";
-    justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
     position: relative;
     &__location {
@@ -228,15 +229,19 @@
     }
   }
   .location {
+    display: grid;
     &__name {
       border: 0;
       outline: none;
       background-color: inherit;
       position: relative;  
-      font-size: 15px;
+      font-size: 1em;
       font-weight: 700;
       color: $general;
-      padding: 5px 14px 5px 0px;
+      padding: 5px 20px 5px 5px;
+      cursor: pointer;
+      justify-self: start;
+      align-self: center;
     }
     &__name::after {
       position: absolute;
@@ -248,7 +253,7 @@
       border-bottom:  2px solid $general;
       border-right:  2px solid $general;
       top: 9px;
-      right: -1px;
+      right: 5px;
     }
   }
   .sm-top {
@@ -271,7 +276,7 @@
       z-index: 4;
     }
     &__text {
-      font-size: 15px;
+      font-size: 1em;
       font-weight: bold;
       color: #ffffff;
       align-self: center;
@@ -281,7 +286,6 @@
   .catalog-link:hover {
     background-color: $hover;
   }
-
   .icon-catolog {
     width: 15px;
     height: 15px;
@@ -315,7 +319,7 @@
     }
     &__link {
       display: grid;
-      font-size: 9px;
+      font-size: 0.7em;
       justify-items: center;
       position: relative;
       stroke: $general;
@@ -324,7 +328,6 @@
     &__link:hover {
       stroke: $hover;
       fill: $hover;
-
     }
     &__name {
       opacity: 0.6;
@@ -354,28 +357,29 @@
       box-shadow: none;
       outline: none;
       border: 3px solid $border-search;
-      padding: 10px 0px 10px 20px;
+      padding: 10px 30px 10px 15px;
       background-color: $outline;
       color: $general;
-      box-shadow: none;
+      box-sizing: border-box;
     }
     &__input:hover {
       background-color: $search-fild;
     }
     &__link {
       position: absolute;
-      right: 15px;
+      right: 5%;
       top: 10px;
     }
   }
   .info-menu {
-    font-size: 15px;
-    
+    font-size: 0.9em;
+    align-items: center;
+
     &__link {
       color: $black;
       opacity: 0.3;
       padding: 5px;
-
+      white-space: nowrap;
     }
     &__link:hover {
       color: $hover;
@@ -421,7 +425,7 @@
       justify-content: center;
       align-items: center;
       top: -1px;
-      left: 14px;
+      left: 20px;
       box-shadow: 0px 0px 0px 1px $outline;
     }
   }
