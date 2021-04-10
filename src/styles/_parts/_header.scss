@@ -66,7 +66,6 @@
       box-shadow: 0px 0px 0px 1px $outline;
     }
   }
-
   .sm-top {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -115,7 +114,7 @@
       background-color: inherit;
       height: 15px;  
       position: relative;  
-      font-size: 0.9em;
+      font-size: 1em;
       font-weight: 700;
       color: $general;
       padding: 0;
@@ -151,6 +150,7 @@
       box-sizing: border-box;
       overflow: hidden;
       text-overflow: ellipsis;
+      font-size: 0.9em;
     }
     &__input:hover {
       background-color: $search-fild;
