@@ -66,13 +66,7 @@
       box-shadow: 0px 0px 0px 1px $outline;
     }
   }
-  .icon-search {
-    width: 14px;
-    height: 15px;
-    fill: $outline;
-    stroke: $general;
-    stroke-width: 1.5px;
-  }
+
   .sm-top {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -151,7 +145,7 @@
       box-shadow: none;
       outline: none;
       border: 3px solid $border-search;
-      padding: 10px 0px 10px 20px;
+      padding: 10px 30px 10px 20px;
       background-color: $outline;
       color: $general;
       box-sizing: border-box;
@@ -163,8 +157,19 @@
     }
     &__link {
       position: absolute;
-      right: 15px;
-      top: 10px;
+      right: 10px;
+      top: 5px;
+      padding: 5px;
+      stroke: $general;
+    }
+    &__link:hover {
+      stroke: $hover;
+    }
+    .icon-search {
+      width: 14px;
+      height: 15px;
+      fill: $outline;
+      stroke-width: 1.5px;
     }
   }
   .catalog-link {
@@ -181,11 +186,6 @@
   }
 }
 @include media-up(lg) {
-  // .header-wrap {
-  //   max-width: 1290px;
-  //   padding: 0px 20px;
-  //   margin: auto;
-  // }
   .header {
     display: grid;
     grid-template-rows: auto 15px auto;
@@ -238,7 +238,7 @@
       font-size: 1em;
       font-weight: 700;
       color: $general;
-      padding: 5px 20px 5px 5px;
+      padding: 5px 20px 5px 0px;
       cursor: pointer;
       justify-self: start;
       align-self: center;
@@ -367,8 +367,25 @@
     }
     &__link {
       position: absolute;
-      right: 5%;
-      top: 10px;
+      right: 3%;
+      top: 5px;
+      padding: 5px;
+      stroke: $general;
+    }
+    &__link:hover {
+      stroke: $hover
+    }
+    &__link:focus {
+      outline: none;
+    }
+    .icon-search {
+      width: 13px;
+      height: 14px;
+      fill: $outline;
+      stroke-width: 1.5px;
+    }
+    .icon-search:hover {
+      stroke: $hover;
     }
   }
   .info-menu {
@@ -385,16 +402,6 @@
       color: $hover;
       opacity: 1;
     }
-  }
-  .icon-search {
-    width: 13px;
-    height: 14px;
-    fill: $outline;
-    stroke: $general;
-    stroke-width: 1.5px;
-  }
-  .icon-search:hover {
-    stroke: $hover;
   }
   .icon-menu {
     width: 18px;

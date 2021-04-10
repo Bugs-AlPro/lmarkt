@@ -1,0 +1,36 @@
+{% set suggestion = [
+{name: "Selmer Super Action 80", category: "Саксофон", price: "16 450", nameImg:
+"selmer-super-action-80", href: "#"},
+{name: "CASIO CDP 320k", category: "Электронное пианино", price: "38 890", nameImg:
+"casio-cdp-320k", href: "#"},
+{name: "Ibanez RG450 Japan 2001", category: "Электрогитара", price: "49 990", nameImg:
+"ibanez-rg450", href: "#"}
+]%}
+
+<section class="suggestion-wrap">
+  <h2 class="hidden-text suggestion-wrap__tittle">Актуальные предложения</h2>
+  <div class="suggestion-slider glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides suggestion">
+        {% for item in suggestion %}
+        {{ variable.suggestion(item.name, item.category, item.price, item.nameImg, item.href) }}
+        {% endfor %}
+      </ul>
+      <div class="glide__arrows glide__arrows--suggestion" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--suggestion glide__arrow--left" data-glide-dir="<"
+          aria-label="Предидущий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
+        </button>
+        <button class="glide__arrow glide__arrow--suggestion glide__arrow--right" data-glide-dir=">"
+          aria-label="Следующий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
+        </button>
+      </div>
+      <div class="glide__bullets glide__bullets--suggestion" data-glide-el="controls[nav]">
+        <button class="glide__bullet glide__bullet--suggestion" data-glide-dir="=0" aria-label="Первый слайд"></button>
+        <button class="glide__bullet glide__bullet--suggestion" data-glide-dir="=1" aria-label="Второй слайд"></button>
+        <button class="glide__bullet glide__bullet--suggestion" data-glide-dir="=2" aria-label="Третий слайд"></button>
+      </div>
+    </div>
+  </div>
+</section>

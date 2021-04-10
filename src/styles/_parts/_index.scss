@@ -7,6 +7,9 @@
     a {
       text-decoration: none;
     }
+    a:focus {
+      outline: none;
+    }
     img {
       display: block;
     }    
@@ -551,38 +554,41 @@
   }
 }
 @include media-up(lg) {
-  ul, li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    }
-    a {
-      text-decoration: none;
-      display: inline-block;
-    }
-    img {
-      display: block;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    .body {
-      margin: auto; 
-      display: flex;
-      flex-direction: column;
-    }
-    .hidden-text {
-      position: absolute;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      clip-path: inset(100%);
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0px;
-      white-space: nowrap;
-      border: 0;
-    }
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:focus {
+    outline: none;
+  }
+  img {
+    display: block;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .body {
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+  }
+  .hidden-text {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0px;
+    white-space: nowrap;
+    border: 0;
+  }
   .none-bid {
     display: none;
   }
@@ -605,8 +611,8 @@
       position: relative;
     }
     &__img {
-      max-height: 410px;
-      // width: 96vw;
+      height: 410px;
+      width: auto;
       border-radius: 3px;
     }
     &__info {
@@ -767,6 +773,7 @@
       grid-area: i;
       justify-self: center;
       display: grid;
+      margin: 5px;
     }
     &__img {
       height: 20vw;
@@ -788,7 +795,7 @@
       white-space: nowrap;
       width: 21.8vw;
       min-width: 200px;
-      max-width: 282px;
+      max-width: 280px;
       font-family: 'Open Sans', sans-serif;
     }
     &__name:hover {

@@ -1,0 +1,49 @@
+{% set popItems = [
+{href: "#", nameImg: "pop-items1", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
+{href: "#", nameImg: "pop-items2", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
+"18 980", typeDiscout: "", newPrice: ""},
+{href: "#", nameImg: "pop-items3", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная",
+oldPrice:
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
+{href: "#", nameImg: "pop-items4", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
+{href: "#", nameImg: "pop-items1", name: "011C Гитара <br> классическая 4/4, Doff", newPrice: "15 980", oldPrice:
+"18 980", typeDiscout: "", newPrice: ""},
+{href: "#", nameImg: "pop-items2", name: "011C Гитара <br> классическая 4/4, Doff", oldPrice:
+"18 980", typeDiscout: "sale", newPrice: "15 980"},
+{href: "#", nameImg: "pop-items3", name: "185-STAY 1100/02 Slim <br> Стойка-колонна для клавишная", oldPrice:
+"18 980", typeDiscout: "", newPrice: ""},
+{href: "#", nameImg: "pop-items4", name: "438PIA0703 Stage Studio <br> Цифровое пианино, черное", oldPrice:
+"18 980", typeDiscout: "", newPrice: ""}
+]%}
+
+<section class="pop-items-wrap">
+  <h2 class="pop-items-wrap__tittle">Популярные товары</h2>
+  <div class="pop-items-slider glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides pop-items">
+        {% for item in popItems %}
+        {{ variable.popItem(item.href, item.nameImg, item.name, item.oldPrice, item.typeDiscout, item.newPrice) }}
+        {% endfor %}
+      </ul>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<"
+          aria-label="Предидущий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
+        </button>
+        <button class="glide__arrow glide__arrow--pop glide__arrow--right" data-glide-dir=">"
+          aria-label="Следующий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
+        </button>
+      </div>
+      <div class="glide__bullets glide__bullets--pop" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0" aria-label="Первый слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=1" aria-label="Второй слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=2" aria-label="Третий слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=3" aria-label="Четвёртый слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=4" aria-label="Пятый слайд"></button>
+      </div>
+    </div>
+  </div>
+</section>

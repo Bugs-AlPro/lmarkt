@@ -1,0 +1,43 @@
+{% set promo = [
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 1", model: "ad810-bks", name: "Standart series",
+newPrice: "12 350", oldPrice: "16 350"},
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 2", model: "ad810-bks", name: "Standart series",
+newPrice: "13 350", oldPrice: "16 350"},
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 3", model: "ad810-bks", name: "Standart series",
+newPrice: "14 350", oldPrice: "16 350"},
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 4", model: "ad810-bks", name: "Standart series",
+newPrice: "15 350", oldPrice: "16 350"},
+{href: "#", nameImg: "ad810-bks", category: "Акустическая гитара 5", model: "ad810-bks", name: "Standart series",
+newPrice: "16 350", oldPrice: "16 350"}
+]%}
+
+<section class="promo-wrap">
+  <h2 class="hidden-text promo-wrap__tittle">Интересные предложения</h2>
+  <div class="promo-slider glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides promo">
+        {% for item in promo %}
+        {{ variable.promoItem(item.href, item.nameImg, item.category, item.model, item.name, item.newPrice,
+        item.oldPrice) }}
+        {% endfor %}
+      </ul>
+      <div class="glide__bullets glide__bullets--promo" data-glide-el="controls[nav]">
+        <button class="glide__bullet glide__bullet--promo" data-glide-dir="=0" aria-label="Первый слайд"></button>
+        <button class="glide__bullet glide__bullet--promo" data-glide-dir="=1" aria-label="Второй слайд"></button>
+        <button class="glide__bullet glide__bullet--promo" data-glide-dir="=2" aria-label="Третий слайд"></button>
+        <button class="glide__bullet glide__bullet--promo" data-glide-dir="=3" aria-label="Четвёртый слайд"></button>
+        <button class="glide__bullet glide__bullet--promo" data-glide-dir="=4" aria-label="Пятый слайд"></button>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--promo glide__arrow--left" data-glide-dir="<"
+          aria-label="Предидущий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
+        </button>
+        <button class="glide__arrow glide__arrow--promo glide__arrow--right" data-glide-dir=">"
+          aria-label="Следующий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

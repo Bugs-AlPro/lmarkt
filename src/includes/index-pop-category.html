@@ -1,0 +1,40 @@
+{% set popCategory = [
+{href: "#", nameImg: "classic", name: "Классические гитары"},
+{href: "#", nameImg: "keyboards", name: "Синтезаторы"},
+{href: "#", nameImg: "electric", name: "Эллектро-гитары"},
+{href: "#", nameImg: "amplifier", name: "Усилители"},
+{href: "#", nameImg: "classic", name: "Классические гитары"},
+{href: "#", nameImg: "keyboards", name: "Синтезаторы"},
+{href: "#", nameImg: "electric", name: "Эллектро-гитары"},
+{href: "#", nameImg: "amplifier", name: "Усилители"}
+]%}
+
+<section class="pop-category-wrap">
+  <h2 class="pop-category-wrap__tittle">Популярные категории</h2>
+  <div class="pop-category-slider glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides pop-category">
+        {% for item in popCategory %}
+        {{ variable.popCategoryItem(item.href, item.nameImg, item.name) }}
+        {% endfor %}
+      </ul>
+      <div class="glide__arrows glide__arrows--pop-cat" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--pop glide__arrow--left" data-glide-dir="<"
+          aria-label="Предидущий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
+        </button>
+        <button class="glide__arrow glide__arrow--pop glide__arrow--right" data-glide-dir=">"
+          aria-label="Следующий слайд">
+          {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
+        </button>
+      </div>
+      <div class="glide__bullets glide__bullets--pop glide__bullets--pop-cat" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0" aria-label="Первый слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=1" aria-label="Второй слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=2" aria-label="Третьий слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=3" aria-label="Четвёртый слайд"></button>
+        <button class="glide__bullet" data-glide-dir="=4" aria-label="Пятый слайд"></button>
+      </div>
+    </div>
+  </div>
+</section>

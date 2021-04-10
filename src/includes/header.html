@@ -1,3 +1,49 @@
+{% set menuGroups = [
+{type: "group guitar", tittle: "Гитары", svg: ""},
+{type: "group keyboards", tittle: "Клавишные инструменты", svg: ""},
+{type: "group drums", tittle: "Ударные инструменты", svg: ""},
+{type: "group microphone", tittle: "Микрофоны и радиосистемы", svg: ""},
+{type: "group dj", tittle: "DJ оборудование", svg: "big-none"},
+{type: "group studio", tittle: "Студийное оборудование", svg: ""},
+{type: "group sound", tittle: "Звуковое оборудование", svg: ""},
+{type: "group light", tittle: "Световое оборудование", svg: "big-none"},
+{type: "group haedphons", tittle: "Наушники и гарнитуры", svg: "big-none"},
+{type: "group comutation", tittle: "Коммутация", svg: ""},
+{type: "group brass", tittle: "Духовые инструменты", svg: "big-none"},
+{type: "group harmonica", tittle: "Губные гармошки и мелодики", svg: ""},
+{type: "group hiola", tittle: "Смычковые и щипковые", svg: "big-none"},
+{type: "group accord", tittle: "Аккордеоны и баяны", svg: "big-none"}
+]%}
+
+{% set menuCategory = [
+{type: "category guitar menu-open classic-guitar", svg: "", tittle: "Классические гитары"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Акустические гитары"},
+{type: "category guitar menu-open bass-accoustic", svg: "", tittle: "Акустические бас-гитары"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Электрогитары"},
+{type: "category guitar menu-open bass", svg: "", tittle: "Бас-гитары"},
+{type: "category guitar menu-open ukulele", svg: "", tittle: "Укулеле"},
+{type: "category guitar menu-open people-item", svg: "", tittle: "Народные инструменты"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Наборы и компоненты"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Гитарное усиление"},
+{type: "category guitar menu-open prots", svg: "", tittle: "Процессоры и педали эффектов"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Тюнеры и метрономы"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Струны"},
+{type: "category guitar menu-open", svg: "svg-none", tittle: "Гитарные аксесуары"}
+]%}
+
+{% set menuSubategory = [
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Медиаторы"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Тренажёры для пальцев"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Стулья"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Слайды и каподастры"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Стойки и держатели"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Ремни для гитар"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Чехлы и кейсы"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Звукосниматели"},
+{type: "subcategory menu-open", svg: "svg-none", tittle: "Комплектующие"}
+]%}
+
+
 <header class="header-wrap">
   <div class="container">
     <nav class="header">
@@ -6,7 +52,7 @@
         <h1 class="logo__tittle hidden-text">Музыкальный магазин Lmarkt</h1>
       </div>
       <div class="header__location location">
-        <button type="button" class="location__name">Москва</button>
+        <button type="button" class="location__name" aria-label="Город">Москва</button>
       </div>
       <div class="header__search search">
         <input class="search__input" type="text" placeholder="Поиск по сайту">
