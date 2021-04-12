@@ -198,6 +198,7 @@ ul, li {
       font-weight: 700;
       font-size: 0.75em;
       // border: 1px solid red;
+      border-radius: 3px;
       padding: 5px 0;
       white-space: normal;
       hyphens: auto;
@@ -711,14 +712,21 @@ ul, li {
       position: relative;
       border-radius: 3px;
     }
+    &__div {
+      display: none;
+    }
     &__img {
       width: 18.8vw;
       min-width: 230px;
+      height: 100%;
     }
     &__sourse {
       width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
     &__name {
+      border-radius: 3px;
       color: #fff;
       font-weight: 700;
       font-size: 1.2em;
@@ -764,8 +772,9 @@ ul, li {
       "i i i i i i"
       "b b b b b b"
       "c c c e e e";
-      grid-template-rows: 50px auto 70px 70px;
+      grid-template-rows: 50px 200px 70px 70px;
       border: 3px solid $outline;
+      border-radius: 3px;
     }
     &__info:hover {
       border-color: $market-hover;
@@ -774,17 +783,18 @@ ul, li {
       grid-area: i;
       justify-self: center;
       display: grid;
-      margin: 5px;
+      height: 100%;
+
     }
     &__img {
-      height: 20vw;
-      max-height: 250px;
+      height: 200px;
+      padding: 5px 10px;
       justify-self: center;
     }
 
     &__name {
       font-size: 1em;
-      padding: 5px;
+      padding: 5px 10px;
       font-weight: 700;
       grid-area: b;
       justify-self: center;
@@ -794,9 +804,9 @@ ul, li {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      width: 21.8vw;
+      width: 22vw;
       min-width: 200px;
-      max-width: 280px;
+      max-width: 281.5px;
       font-family: 'Open Sans', sans-serif;
     }
     &__name:hover {

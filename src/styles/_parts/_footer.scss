@@ -118,16 +118,14 @@
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 20px 0;
-  &__link {
-    opacity: 0.7;
-  }
   &__img {
-    scale: 0.8;
+    width: 100px;
+    opacity: 0.7;
   }
   &__img-correct {
     margin-top: 3.5px;
   }
-  &__link:hover {
+  &__link:hover &__img {
     opacity: 1;
   }
 }
