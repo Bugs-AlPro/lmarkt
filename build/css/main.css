@@ -876,10 +876,10 @@
       display: grid;
       grid-template-areas: ". . . . a d" "i i i i i i" "b b b b b b" "c c c e e e";
       grid-template-rows: 50px 200px 70px 70px;
-      border: 3px solid #FFF8FE;
-      border-radius: 3px; }
+      border-radius: 3px;
+      box-shadow: inset 0px 0px 0px 3px #FFF8FE; }
     .pop-items__info:hover {
-      border-color: #ffe3fb; }
+      box-shadow: inset 0px 0px 0px 3px #ffe3fb; }
     .pop-items__sourse {
       grid-area: i;
       justify-self: center;
@@ -901,9 +901,9 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      width: 22vw;
+      width: 22.2vw;
       min-width: 209px;
-      max-width: 281.7px;
+      max-width: 287px;
       font-family: 'Open Sans', sans-serif; }
     .pop-items__name:hover {
       color: #D866C9; }

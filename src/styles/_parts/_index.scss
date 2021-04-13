@@ -775,12 +775,12 @@ ul, li {
       "b b b b b b"
       "c c c e e e";
       grid-template-rows: 50px 200px 70px 70px;
-      border: 3px solid $outline;
+      // border: 3px solid $outline;
       border-radius: 3px;
-
+      box-shadow: inset 0px 0px 0px 3px $outline;
     }
     &__info:hover {
-      border-color: $market-hover;
+      box-shadow: inset 0px 0px 0px 3px $market-hover;
     }
     &__sourse {
       grid-area: i;
@@ -806,9 +806,9 @@ ul, li {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      width: 22vw;
+      width: 22.2vw;
       min-width: 209px;
-      max-width: 281.7px;
+      max-width: 287px;
       font-family: 'Open Sans', sans-serif;
     }
     &__name:hover {
