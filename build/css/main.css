@@ -300,6 +300,7 @@
       bottom: 0;
       width: 150%;
       min-height: 180px;
+      height: 40vw;
       min-width: 500px;
       max-width: 990px; }
     .promo__info {
@@ -374,7 +375,9 @@
       overflow: hidden; }
     .pop-category__div {
       background-image: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 70%);
-      height: 100px;
+      max-height: 100px;
+      height: 25vw;
+      min-height: 70px;
       max-width: 130px;
       width: 30vw;
       min-width: 90px;
@@ -390,7 +393,9 @@
       left: 0; }
     .pop-category__img {
       border-radius: 3px;
-      height: 100px;
+      max-height: 100px;
+      height: 25vw;
+      min-height: 70px;
       max-width: 130px;
       width: 30vw;
       min-width: 90px;

@@ -16,7 +16,7 @@
 {% macro popCategoryItem(href, nameImg, name) %}
 <li class="pop-category__item">
   <a href="{{ href }}" class="pop-category__link">
-    {{ imageJpeg('pop-category__sourse', nameImg, 'pop-category__img', name) }}
+    {{ imageJpeg('pop-category__sourse', nameImg, 'pop-category__img', name, '90', '70') }}
     <div class="pop-category__div">
     </div>
     <div class="pop-category__name">{{ name }}</div>
@@ -29,7 +29,7 @@
   <div class="pop-items__info">
     {{ imageSvg('favor', 'pop-items__svg icon-favor') }}
     {{ imageSvg('contrast', 'pop-items__svg icon-contrast') }}
-    {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name) }}
+    {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name, 'auto', '100') }}
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
     <div class="pop-items__price">
       <div class="none-big {{ typeDiscout }}">
@@ -48,7 +48,7 @@
 
 {% macro suggestion(name, category, price, nameImg, href) %}
 <li class="suggestion__item">
-  {{ imageJpeg('suggestion__sourse', nameImg, 'suggestion__img', name) }}
+  {{ imageJpeg('suggestion__sourse', nameImg, 'suggestion__img', name, 'auto', '260') }}
   <a href="{{ href }}" class="suggestion__content">
     <div class="suggestion__category">{{ category }}</div>
     <div class="suggestion__name">{{ name }}</div>
