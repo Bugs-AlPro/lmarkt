@@ -1,10 +1,3 @@
-{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
-<picture class="{{ classPicture }}">
-  <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
-</picture>
-{% endmacro %}
-
 <section class="pop-brand">
   <h2 class="pop-brand__tittle">Популярные бренды</h2>
   <div class="pop-brand__content">
@@ -14,27 +7,27 @@
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'yamaha', 'pop-brand__sourse', 'yamaha', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'yamaha', 'pop-brand__sourse', 'yamaha', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'shure', 'pop-brand__sourse', 'shure', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'shure', 'pop-brand__sourse', 'shure', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'casio', 'pop-brand__sourse', 'casio', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'casio', 'pop-brand__sourse', 'casio', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'ibanez', 'pop-brand__sourse', 'ibanez', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'ibanez', 'pop-brand__sourse', 'ibanez', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'korg', 'pop-brand__sourse', 'korg', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'korg', 'pop-brand__sourse', 'korg', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
@@ -42,27 +35,27 @@
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'jbl', 'pop-brand__sourse', 'jbl', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'jbl', 'pop-brand__sourse', 'jbl', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'alice', 'pop-brand__sourse', 'alice', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'alice', 'pop-brand__sourse', 'alice', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'allen-heath', 'pop-brand__sourse', 'allen-heath', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'allen-heath', 'pop-brand__sourse', 'allen-heath', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'audix', 'pop-brand__sourse', 'audix', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'audix', 'pop-brand__sourse', 'audix', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'artur', 'pop-brand__sourse', 'artur', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'artur', 'pop-brand__sourse', 'artur', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
@@ -70,27 +63,28 @@
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'avid', 'pop-brand__sourse', 'avid', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'avid', 'pop-brand__sourse', 'avid', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'art', 'pop-brand__sourse', 'art', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'art', 'pop-brand__sourse', 'art', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'amg', 'pop-brand__sourse', 'amg', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'amg', 'pop-brand__sourse', 'amg', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'avagts', 'pop-brand__sourse', 'avagts', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'avagts', 'pop-brand__sourse', 'avagts', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'audio-tehnika', 'pop-brand__sourse', 'audio-tehnika', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'audio-tehnika', 'pop-brand__sourse', 'audio-tehnika', '100', 'auto')
+          }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
@@ -98,27 +92,27 @@
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'shui-garmon', 'pop-brand__sourse', 'shui-garmon', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'shui-garmon', 'pop-brand__sourse', 'shui-garmon', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'tule-garmon', 'pop-brand__sourse', 'tule-garmon', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'tule-garmon', 'pop-brand__sourse', 'tule-garmon', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'mozer', 'pop-brand__sourse', 'mozer', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'mozer', 'pop-brand__sourse', 'mozer', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'xvive', 'pop-brand__sourse', 'xvive', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'xvive', 'pop-brand__sourse', 'xvive', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'viva-rhythm', 'pop-brand__sourse', 'viva-rhythm', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'viva-rhythm', 'pop-brand__sourse', 'viva-rhythm', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
@@ -126,27 +120,27 @@
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'ritmix', 'pop-brand__sourse', 'ritmix', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'ritmix', 'pop-brand__sourse', 'ritmix', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'rombica', 'pop-brand__sourse', 'rombica', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'rombica', 'pop-brand__sourse', 'rombica', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'roland', 'pop-brand__sourse', 'roland', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'roland', 'pop-brand__sourse', 'roland', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'qumo', 'pop-brand__sourse', 'qumo', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'qumo', 'pop-brand__sourse', 'qumo', '100', 'auto') }}
         </a>
       </li>
       <li class="pop-brand__element smal-none">
         <a href="#" class="pop-brand__link">
-          {{ imageJpeg('pop-brand__img', 'pioneer', 'pop-brand__sourse', 'pioneer', '100', 'auto') }}
+          {{ variable.imageJpeg('pop-brand__img', 'pioneer', 'pop-brand__sourse', 'pioneer', '100', 'auto') }}
         </a>
       </li>
     </ul>

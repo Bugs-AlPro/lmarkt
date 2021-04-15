@@ -402,14 +402,14 @@ ul, li {
       text-align: center;
     }
   }
-  .icon-type-guitar, 
-  .icon-type-keyboards, 
-  .icon-type-drum, 
-  .icon-type-brass, 
-  .icon-type-tongue {
-    width: 35px;
-    height: 35px;
-  }
+  // .icon-type-guitar, 
+  // .icon-type-keyboards, 
+  // .icon-type-drum, 
+  // .icon-type-brass, 
+  // .icon-type-tongue {
+  //   width: 35px;
+  //   height: 35px;
+  // }
   .tools-type-slider::after {
     content: "";
     width: 10vw;
@@ -557,7 +557,9 @@ ul, li {
       width: 23vw;
       max-width: 100px;
     }
-
+    &__img {
+      max-width: 100px;
+    }
   }
 }
 @include media-up(lg) {

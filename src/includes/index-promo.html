@@ -11,14 +11,6 @@ newPrice: "15 350", oldPrice: "16 350"},
 newPrice: "16 350", oldPrice: "16 350"}
 ]%}
 
-
-{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
-<picture class="{{ classPicture }}">
-  <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
-</picture>
-{% endmacro %}
-
 <section class="promo-wrap">
   <h2 class="hidden-text promo-wrap__tittle">Интересные предложения</h2>
   <div class="promo-slider glide">
@@ -27,7 +19,7 @@ newPrice: "16 350", oldPrice: "16 350"}
         {% for item in promo %}
         <li class="promo__item">
           <a href="{{ item.href }}" class="promo__link">
-            {{ imageJpeg('promo__sourse', item.nameImg, 'promo__img', item.name, 'auto', '180') }}
+            {{ variable.imageJpeg('promo__sourse', item.nameImg, 'promo__img', item.name, 'auto', '180') }}
             <div class="promo__info">
               <p class="promo__category">{{ item.category }}</p>
               <P class="promo__model">{{ item.model }}</P>
@@ -49,11 +41,11 @@ newPrice: "16 350", oldPrice: "16 350"}
       <div class="glide__arrows" data-glide-el="controls">
         <button class="glide__arrow glide__arrow--promo glide__arrow--left" data-glide-dir="<"
           aria-label="Предидущий слайд">
-          {{ imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
+          {{ variable.imageSvg('slider-link', 'glide__icon--left icon-slider-link', '10', '14') }}
         </button>
         <button class="glide__arrow glide__arrow--promo glide__arrow--right" data-glide-dir=">"
           aria-label="Следующий слайд">
-          {{ imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
+          {{ variable.imageSvg('slider-link', 'glide__icon--right icon-slider-link', '10', '14') }}
         </button>
       </div>
     </div>

@@ -49,13 +49,18 @@
   <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
 </picture>
 {% endmacro %}
+{% macro imageSvg(name, class, width, height) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
+  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
 
 <header class="header-wrap">
   <div class="container">
     <nav class="header">
       <div class="header__logo logo" id="logo">
         <a href="#" class="logo__link">
-          {{ imageSvg('logo', 'logo__img') }}
+          {{ imageSvg('logo', 'logo__img', '90', '20') }}
         </a>
       </div>
       <div class="header__location location">
@@ -64,27 +69,27 @@
       <div class="header__search search">
         <input class="search__input" type="text" placeholder="Поиск по сайту">
         <a href="#" class="search__link">
-          {{ imageSvg('search', 'search__icon icon-search') }}
+          {{ imageSvg('search', 'search__icon icon-search', '14', '15') }}
         </a>
       </div>
       <div class="header__block sm-top">
         <a href="#" class="sm-top__link catalog-link">
           {{ imageSvg('catalog', 'sm-top__icon icon-catolog smal-none') }}
           {{ imageSvg('menu-open', 'sm-top__icon icon-menu-open smal-none svg-none') }}
-          {{ imageSvg('menu', 'sm-top__icon icon-menu big-none') }}
+          {{ imageSvg('menu', 'sm-top__icon icon-menu big-none', '18', '16') }}
           <span class="sm-top__text big-none">Меню</span>
           <span class="sm-top__text sm-top__text-menu smal-none">Каталог</span>
         </a>
         <a href="#" class="sm-top__link phone-img big-none">
-          {{ imageSvg('phone', 'sm-top__icon icon-phone') }}
+          {{ imageSvg('phone', 'sm-top__icon icon-phone', '21', '22') }}
           <span class="sm-top__text">Позвонить нам</span>
         </a>
         <a href="#" class="sm-top__link profile-img big-none">
-          {{ imageSvg('profile', 'sm-top__icon icon-profile') }}
+          {{ imageSvg('profile', 'sm-top__icon icon-profile', '18', '21') }}
           <span class="sm-top__text">Профиль</span>
         </a>
         <a href="#" class="sm-top__link baying-img big-none">
-          {{ imageSvg('market', 'sm-top__icon icon-market') }}
+          {{ imageSvg('market', 'sm-top__icon icon-market', '23', '20') }}
           <span class="icon-market__count">2</span>
           <span class="sm-top__text">Корзина</span>
         </a>
@@ -151,8 +156,8 @@
         </li>
         <li class="info-menu__item">
           <a href="#" class="info-menu__link">
-            Контакты</a>
-
+            Контакты
+          </a>
         </li>
       </ul>
       <a href="#" class="header__phone-text">
@@ -161,17 +166,17 @@
       <div class="header__social">
         <div class="social">
           <a href="#" class="social__link">
-            {{ imageSvg('vk', 'social__vk') }}
+            {{ imageSvg('vk', 'social__vk', '31', '18') }}
           </a>
           <a href="#" class="social__link">
-            {{ imageSvg('fb', 'social__fb') }}
+            {{ imageSvg('fb', 'social__fb', '25', '25') }}
           </a>
           <a href="#" class="social__link">
-            {{ imageSvg('ins', 'social__ins-black') }}
-            <img src="img/ins.svg" alt="ins" class="social__ins-color">
+            {{ imageSvg('ins', 'social__ins-black', '25', '25') }}
+            <img src="img/ins.svg" alt="ins" class="social__ins-color" width="25" height="25">
           </a>
           <a href="#" class="social__link">
-            {{ imageSvg('tg', 'social__tg') }}
+            {{ imageSvg('tg', 'social__tg', '28', '23') }}
           </a>
         </div>
       </div>
