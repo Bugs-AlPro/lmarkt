@@ -135,6 +135,8 @@
     .glide__down-btn--tools-type {
       display: none; }
   .icon-slider-link {
+    width: 10px;
+    height: 14px;
     stroke: #A0148E;
     stroke-width: 2.5px;
     fill: #FFF8FE; } }
@@ -565,6 +567,13 @@
       text-transform: uppercase;
       font-family: 'Exo 2', sans-serif;
       text-align: center; }
+  .icon-type-guitar,
+  .icon-type-keyboards,
+  .icon-type-drum,
+  .icon-type-brass,
+  .icon-type-tongue {
+    width: 35px;
+    height: 35px; }
   .tools-type-slider::after {
     content: "";
     width: 10vw;
@@ -685,8 +694,12 @@
       display: none; }
     .pop-brand__sourse {
       width: 23vw;
+      min-width: 70px;
       max-width: 100px; }
     .pop-brand__img {
+      height: auto;
+      width: 23vw;
+      min-width: 70px;
       max-width: 100px; } }
 
 @media (min-width: 992px) {
@@ -1116,7 +1129,8 @@
     .pop-brand__link:hover {
       opacity: 0.5; }
     .pop-brand__img {
-      width: 100px; } }
+      width: 100px;
+      height: auto; } }
 
 @media (max-width: 991.98px) {
   .catalog, .profile, .smal-none, .menu, .info-menu, .header__social, .header__phone-text {
@@ -1135,14 +1149,22 @@
       grid-area: g;
       margin: 0px 20px 20px 20px; }
   .icon-menu {
+    width: 18px;
+    height: 16px;
     stroke-width: 1.5px; }
   .icon-phone {
+    width: 21px;
+    height: 22px;
     stroke: initial;
     fill: #A0148E; }
   .icon-profile {
+    width: 18px;
+    height: 21px;
     stroke-width: 1.2px;
     fill: white; }
   .icon-market {
+    width: 23px;
+    height: 20px;
     fill: white;
     stroke-width: 1.3px; }
     .icon-market__count {
@@ -1192,7 +1214,9 @@
   .logo {
     padding: 10px 20px; }
     .logo__img {
-      fill: #A0148E; }
+      fill: #A0148E;
+      width: 90px;
+      height: 20px; }
   .location {
     padding: 5px 20px;
     box-sizing: border-box; }
@@ -1245,6 +1269,8 @@
     .search__link:hover {
       stroke: #D866C9; }
     .search .icon-search {
+      width: 14px;
+      height: 15px;
       fill: #FFF8FE;
       stroke-width: 1.5px; }
   .catalog-link {
@@ -1701,6 +1727,8 @@
       justify-self: center;
       align-self: center; }
     .social__tg {
+      width: 28px;
+      height: 23px;
       fill: #2D0027;
       opacity: 0.15;
       align-self: center; }
@@ -1708,6 +1736,8 @@
       fill: #1E96C8;
       opacity: 1; }
     .social__ins-black {
+      width: 25px;
+      height: 25px;
       fill: #2D0027;
       opacity: 0.15;
       position: absolute;
@@ -1715,11 +1745,15 @@
     .social__link:hover .social__ins-black {
       display: none; }
     .social__ins-color {
+      width: 25px;
+      height: 25px;
       opacity: 0;
       align-self: center; }
     .social__link:hover .social__ins-color {
       opacity: 1; }
     .social__vk {
+      width: 31px;
+      height: 18px;
       fill: #2D0027;
       opacity: 0.15;
       align-self: center; }
@@ -1727,6 +1761,8 @@
       fill: #5282b8;
       opacity: 1; }
     .social__fb {
+      width: 25px;
+      height: 25px;
       fill: #2D0027;
       opacity: 0.15;
       align-self: center; }

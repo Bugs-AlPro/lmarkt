@@ -402,14 +402,14 @@ ul, li {
       text-align: center;
     }
   }
-  // .icon-type-guitar, 
-  // .icon-type-keyboards, 
-  // .icon-type-drum, 
-  // .icon-type-brass, 
-  // .icon-type-tongue {
-  //   width: 35px;
-  //   height: 35px;
-  // }
+  .icon-type-guitar, 
+  .icon-type-keyboards, 
+  .icon-type-drum, 
+  .icon-type-brass, 
+  .icon-type-tongue {
+    width: 35px;
+    height: 35px;
+  }
   .tools-type-slider::after {
     content: "";
     width: 10vw;
@@ -554,10 +554,17 @@ ul, li {
       display: none;
     }
     &__sourse {
+      // width: auto;
+      // height: 5vw;
+      // min-height: 16px;
       width: 23vw;
+      min-width: 70px;
       max-width: 100px;
     }
     &__img {
+      height: auto;
+      width: 23vw;
+      min-width: 70px;
       max-width: 100px;
     }
   }
@@ -1084,6 +1091,7 @@ ul, li {
     }
     &__img {
       width: 100px;
+      height: auto;
     }
   }
 }
