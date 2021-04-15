@@ -1,7 +1,7 @@
 {% macro promoItem(href, nameImg, category, model, name, newPrice, oldPrice) %}
 <li class="promo__item">
   <a href="{{ href }}" class="promo__link">
-    {{ imageJpeg('promo__sourse', nameImg, 'promo__img', name) }}
+    {{ imageJpeg('promo__sourse', nameImg, 'promo__img', nam) }}
     <div class="promo__info">
       <p class="promo__category">{{ category }}</p>
       <P class="promo__model">{{ model }}</P>
@@ -66,10 +66,10 @@
 {% endmacro %}
 
 
-{% macro imageJpeg(classPicture, name, classImg, alt) %}
+{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
 </picture>
 {% endmacro %}
 

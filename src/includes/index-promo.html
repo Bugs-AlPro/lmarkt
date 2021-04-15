@@ -11,14 +11,32 @@ newPrice: "15 350", oldPrice: "16 350"},
 newPrice: "16 350", oldPrice: "16 350"}
 ]%}
 
+
+{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
+
 <section class="promo-wrap">
   <h2 class="hidden-text promo-wrap__tittle">Интересные предложения</h2>
   <div class="promo-slider glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides promo">
         {% for item in promo %}
-        {{ variable.promoItem(item.href, item.nameImg, item.category, item.model, item.name, item.newPrice,
-        item.oldPrice) }}
+        <li class="promo__item">
+          <a href="{{ item.href }}" class="promo__link">
+            {{ imageJpeg('promo__sourse', item.nameImg, 'promo__img', item.name, 'auto', '100') }}
+            <div class="promo__info">
+              <p class="promo__category">{{ item.category }}</p>
+              <P class="promo__model">{{ item.model }}</P>
+              <p class="promo__name">{{ item.name }}</p>
+              <div class="promo__new-price">{{ item.newPrice }} ₽</div>
+              <div class="promo__old-price">{{ item.oldPrice }} ₽</div>
+            </div>
+          </a>
+        </li>
         {% endfor %}
       </ul>
       <div class="glide__bullets glide__bullets--promo" data-glide-el="controls[nav]">
