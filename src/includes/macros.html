@@ -16,7 +16,7 @@
 {% macro popCategoryItem(href, nameImg, name) %}
 <li class="pop-category__item">
   <a href="{{ href }}" class="pop-category__link">
-    {{ imageJpeg('pop-category__sourse', nameImg, 'pop-category__img', name, '90', '70') }}
+    {{ imageJpeg('pop-category__sourse', nameImg, 'pop-category__img', name) }}
     <div class="pop-category__div">
     </div>
     <div class="pop-category__name">{{ name }}</div>
@@ -29,7 +29,7 @@
   <div class="pop-items__info">
     {{ imageSvg('favor', 'pop-items__svg icon-favor') }}
     {{ imageSvg('contrast', 'pop-items__svg icon-contrast') }}
-    {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name, 'auto', '100') }}
+    {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name) }}
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
     <div class="pop-items__price">
       <div class="none-big {{ typeDiscout }}">
@@ -48,7 +48,7 @@
 
 {% macro suggestion(name, category, price, nameImg, href) %}
 <li class="suggestion__item">
-  {{ imageJpeg('suggestion__sourse', nameImg, 'suggestion__img', name, 'auto', '260') }}
+  {{ imageJpeg('suggestion__sourse', nameImg, 'suggestion__img', name) }}
   <a href="{{ href }}" class="suggestion__content">
     <div class="suggestion__category">{{ category }}</div>
     <div class="suggestion__name">{{ name }}</div>
@@ -66,22 +66,22 @@
 {% endmacro %}
 
 
-{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
+{% macro imageJpeg(classPicture, name, classImg, alt) %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}">
 </picture>
 {% endmacro %}
 
-{% macro imagePng(classPicture, name, classImg, alt, width, height) %}
+{% macro imagePng(classPicture, name, classImg, alt) %}
 <picture class="{{ classPicture }}">
   <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+  <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}">
 </picture>
 {% endmacro %}
 
-{% macro imageSvg(name, class, width, height) %}
-<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
+{% macro imageSvg(name, class) %}
+<svg class="{{ class }}">
   <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
 </svg>
 {% endmacro %}

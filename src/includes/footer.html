@@ -1,15 +1,3 @@
-{% macro imageSvg(name, class, width, height) %}
-<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
-  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
-</svg>
-{% endmacro %}
-{% macro imagePng(classPicture, name, classImg, alt, width, height) %}
-<picture class="{{ classPicture }}">
-  <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.png" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
-</picture>
-{% endmacro %}
-
 <div class="footer-wrap">
   <div class="container">
     <footer class="footer">
@@ -70,12 +58,12 @@
           <ul class="footer__items app">
             <li class="app__item">
               <a href="#" class="app__link">
-                {{ imagePng('app__sourse', 'google', 'app__img app__img-correct', 'Google Play', '100', 'auto') }}
+                {{ variable.imagePng('app__sourse', 'google', 'app__img app__img-correct', 'Google Play') }}
               </a>
             </li>
             <li class="app__item">
               <a href="#" class="app__link">
-                {{ imagePng('app__sourse', 'ios', 'app__img', 'App Store', '100', 'auto') }}
+                {{ variable.imagePng('app__sourse', 'ios', 'app__img', 'App Store') }}
               </a>
             </li>
           </ul>
@@ -86,17 +74,17 @@
         <li class="footer__down-item">
           <div class="social">
             <a href="#" class="social__link">
-              {{ imageSvg('vk', 'social__vk', '31', '18') }}
+              {{ variable.imageSvg('vk', 'social__vk') }}
             </a>
             <a href="#" class="social__link">
-              {{ imageSvg('fb', 'social__fb', '25', '25') }}
+              {{ variable.imageSvg('fb', 'social__fb') }}
             </a>
             <a href="#" class="social__link">
-              {{ imageSvg('ins', 'social__ins-black', '25', '25') }}
-              <img src="img/ins.svg" alt="ins" class="social__ins-color" width="25" height="25">
+              {{ variable.imageSvg('ins', 'social__ins-black') }}
+              <img src="img/ins.svg" alt="ins" class="social__ins-color">
             </a>
             <a href="#" class="social__link">
-              {{ imageSvg('tg', 'social__tg', '28', '23') }}
+              {{ variable.imageSvg('tg', 'social__tg') }}
             </a>
           </div>
         </li>

@@ -43,24 +43,14 @@
 {type: "subcategory menu-open", svg: "svg-none", tittle: "Комплектующие"}
 ]%}
 
-{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
-<picture class="{{ classPicture }}">
-  <source srcset="img/{{ name }}.webp" type="image/webp">
-  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
-</picture>
-{% endmacro %}
-{% macro imageSvg(name, class, width, height) %}
-<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
-  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
-</svg>
-{% endmacro %}
+
 
 <header class="header-wrap">
   <div class="container">
     <nav class="header">
       <div class="header__logo logo" id="logo">
         <a href="#" class="logo__link">
-          {{ imageSvg('logo', 'logo__img', '90', '20') }}
+          {{ variable.imageSvg('logo', 'logo__img') }}
         </a>
       </div>
       <div class="header__location location">
@@ -69,27 +59,27 @@
       <div class="header__search search">
         <input class="search__input" type="text" placeholder="Поиск по сайту">
         <a href="#" class="search__link">
-          {{ imageSvg('search', 'search__icon icon-search', '14', '15') }}
+          {{ variable.imageSvg('search', 'search__icon icon-search') }}
         </a>
       </div>
       <div class="header__block sm-top">
         <a href="#" class="sm-top__link catalog-link">
-          {{ imageSvg('catalog', 'sm-top__icon icon-catolog smal-none') }}
-          {{ imageSvg('menu-open', 'sm-top__icon icon-menu-open smal-none svg-none') }}
-          {{ imageSvg('menu', 'sm-top__icon icon-menu big-none', '18', '16') }}
+          {{ variable.imageSvg('catalog', 'sm-top__icon icon-catolog smal-none') }}
+          {{ variable.imageSvg('menu-open', 'sm-top__icon icon-menu-open smal-none svg-none') }}
+          {{ variable.imageSvg('menu', 'sm-top__icon icon-menu big-none') }}
           <span class="sm-top__text big-none">Меню</span>
           <span class="sm-top__text sm-top__text-menu smal-none">Каталог</span>
         </a>
         <a href="#" class="sm-top__link phone-img big-none">
-          {{ imageSvg('phone', 'sm-top__icon icon-phone', '21', '22') }}
+          {{ variable.imageSvg('phone', 'sm-top__icon icon-phone') }}
           <span class="sm-top__text">Позвонить нам</span>
         </a>
         <a href="#" class="sm-top__link profile-img big-none">
-          {{ imageSvg('profile', 'sm-top__icon icon-profile', '18', '21') }}
+          {{ variable.imageSvg('profile', 'sm-top__icon icon-profile') }}
           <span class="sm-top__text">Профиль</span>
         </a>
         <a href="#" class="sm-top__link baying-img big-none">
-          {{ imageSvg('market', 'sm-top__icon icon-market', '23', '20') }}
+          {{ variable.imageSvg('market', 'sm-top__icon icon-market') }}
           <span class="icon-market__count">2</span>
           <span class="sm-top__text">Корзина</span>
         </a>
@@ -103,7 +93,7 @@
         </li>
         <li class="menu__baying">
           <a href="#" class="menu__link">
-            {{ imageSvg('market', 'menu__svg icon-market') }}
+            {{ variable.imageSvg('market', 'menu__svg icon-market') }}
             <span class="icon-market__count">2</span>
             <span class="menu__name">Корзина</span>
             <!-- <span class="menu__name-count big-none">2</span> -->
@@ -111,7 +101,7 @@
         </li>
         <li class="menu__profile">
           <a href="#" class="menu__link">
-            {{ imageSvg('profile', 'menu__svg icon-profile') }}
+            {{ variable.imageSvg('profile', 'menu__svg icon-profile') }}
             <span class="menu__name">Профиль</span>
           </a>
           <div class="menu__profile profile">
@@ -127,13 +117,13 @@
         </li>
         <li class="menu__contrast">
           <a href="#" class="menu__link">
-            {{ imageSvg('contrast', 'menu__svg icon-contrast') }}
+            {{ variable.imageSvg('contrast', 'menu__svg icon-contrast') }}
             <span class="menu__name">Сравнение</span>
           </a>
         </li>
         <li class="menu__favor">
           <a href="#" class="menu__link">
-            {{ imageSvg('favor', 'menu__svg icon-favor') }}
+            {{ variable.imageSvg('favor', 'menu__svg icon-favor') }}
             <span class="menu__name">Избранное</span>
           </a>
         </li>
@@ -166,17 +156,17 @@
       <div class="header__social">
         <div class="social">
           <a href="#" class="social__link">
-            {{ imageSvg('vk', 'social__vk', '31', '18') }}
+            {{ variable.imageSvg('vk', 'social__vk') }}
           </a>
           <a href="#" class="social__link">
-            {{ imageSvg('fb', 'social__fb', '25', '25') }}
+            {{ variable.imageSvg('fb', 'social__fb') }}
           </a>
           <a href="#" class="social__link">
-            {{ imageSvg('ins', 'social__ins-black', '25', '25') }}
-            <img src="img/ins.svg" alt="ins" class="social__ins-color" width="25" height="25">
+            {{ variable.imageSvg('ins', 'social__ins-black') }}
+            <img src="img/ins.svg" alt="ins" class="social__ins-color">
           </a>
           <a href="#" class="social__link">
-            {{ imageSvg('tg', 'social__tg', '28', '23') }}
+            {{ variable.imageSvg('tg', 'social__tg') }}
           </a>
         </div>
       </div>
@@ -199,8 +189,9 @@
           </ul>
           <ul class="catalog__suggestions">
             <li class="catalog__suggestion-item suggestion__item">
-              {{ imageJpeg('suggestion__sourse suggestion__img--right', 'ibanez-rg450', 'suggestion__img', 'Ibanez RG450
-              Japan 2001', 'auto', 'auto') }}
+              {{ variable.imageJpeg('suggestion__sourse suggestion__img--right', 'ibanez-rg450', 'suggestion__img',
+              'Ibanez RG450
+              Japan 2001') }}
               <a href="#" class="suggestion__content">
                 <div class="suggestion__category">Электрогитара</div>
                 <div class="suggestion__name suggestion__name-right">Ibanez RG450 Japan 2001</div>
@@ -211,27 +202,27 @@
               <ul class="catalog__brands">
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'yamaha', 'catalog__brand-sourse', 'yamaha', '100', 'auto') }}
+                    {{ variable.imageJpeg('catalog__brand-img', 'yamaha', 'catalog__brand-sourse', 'yamaha') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'shure', 'catalog__brand-sourse', 'shure', '100', 'auto') }}
+                    {{ variable.imageJpeg('catalog__brand-img', 'shure', 'catalog__brand-sourse', 'shure') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'casio', 'catalog__brand-sourse', 'casio', '100', 'auto') }}
+                    {{ variable.imageJpeg('catalog__brand-img', 'casio', 'catalog__brand-sourse', 'casio') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'ibanez', 'catalog__brand-sourse', 'ibanez', '100', 'auto') }}
+                    {{ variable.imageJpeg('catalog__brand-img', 'ibanez', 'catalog__brand-sourse', 'ibanez') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'korg', 'catalog__brand-sourse', 'korg', '100', 'auto') }}
+                    {{ variable.imageJpeg('catalog__brand-img', 'korg', 'catalog__brand-sourse', 'korg') }}
                   </a>
                 </li>
               </ul>
