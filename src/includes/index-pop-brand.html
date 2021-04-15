@@ -1,3 +1,10 @@
+{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
+
 <section class="pop-brand">
   <h2 class="pop-brand__tittle">Популярные бренды</h2>
   <div class="pop-brand__content">

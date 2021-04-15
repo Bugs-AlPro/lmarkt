@@ -43,6 +43,12 @@
 {type: "subcategory menu-open", svg: "svg-none", tittle: "Комплектующие"}
 ]%}
 
+{% macro imageJpeg(classPicture, name, classImg, alt, width, height) %}
+<picture class="{{ classPicture }}">
+  <source srcset="img/{{ name }}.webp" type="image/webp">
+  <img src="img/{{ name }}.jpg" alt="{{ alt }}" class="{{ classImg }}" width="{{ width }}" height="{{ height }}">
+</picture>
+{% endmacro %}
 
 <header class="header-wrap">
   <div class="container">
@@ -189,7 +195,7 @@
           <ul class="catalog__suggestions">
             <li class="catalog__suggestion-item suggestion__item">
               {{ imageJpeg('suggestion__sourse suggestion__img--right', 'ibanez-rg450', 'suggestion__img', 'Ibanez RG450
-              Japan 2001') }}
+              Japan 2001', 'auto', 'auto') }}
               <a href="#" class="suggestion__content">
                 <div class="suggestion__category">Электрогитара</div>
                 <div class="suggestion__name suggestion__name-right">Ibanez RG450 Japan 2001</div>
@@ -200,27 +206,27 @@
               <ul class="catalog__brands">
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'yamaha', 'catalog__brand-sourse', 'yamaha') }}
+                    {{ imageJpeg('catalog__brand-img', 'yamaha', 'catalog__brand-sourse', 'yamaha', '100', 'auto') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'shure', 'catalog__brand-sourse', 'shure') }}
+                    {{ imageJpeg('catalog__brand-img', 'shure', 'catalog__brand-sourse', 'shure', '100', 'auto') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'casio', 'catalog__brand-sourse', 'casio') }}
+                    {{ imageJpeg('catalog__brand-img', 'casio', 'catalog__brand-sourse', 'casio', '100', 'auto') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'ibanez', 'catalog__brand-sourse', 'ibanez') }}
+                    {{ imageJpeg('catalog__brand-img', 'ibanez', 'catalog__brand-sourse', 'ibanez', '100', 'auto') }}
                   </a>
                 </li>
                 <li class="catalog__brand">
                   <a href="#" class="catalog__brand-link">
-                    {{ imageJpeg('catalog__brand-img', 'korg', 'catalog__brand-sourse', 'korg') }}
+                    {{ imageJpeg('catalog__brand-img', 'korg', 'catalog__brand-sourse', 'korg', '100', 'auto') }}
                   </a>
                 </li>
               </ul>
