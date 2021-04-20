@@ -145,13 +145,11 @@
       border: none;
       box-shadow: none;
       cursor: pointer;
+      color: $general;
     }
     &__arrow:hover {
       background-color: $market-hover;
-    }
-    &__arrow:hover .icon-slider-link {
-      fill: $market-hover;
-      stroke: $hover;
+      color: $hover;
     }
      &__arrow:focus {
       outline: none;
@@ -259,8 +257,9 @@
    .icon-slider-link {
     width: 12px;
     height: 24px;
-    stroke: $general;
-    stroke-width: 2.5px;
-    fill: $outline;
+    // stroke: $general;
+    // stroke-width: 2.5px;
+    fill: currentColor;
+
   }
 }

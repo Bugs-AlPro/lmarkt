@@ -271,85 +271,12 @@
     width: auto;
   }
 }
-.phone {
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 15px;
-  color: $black;
-}
+
 .phone-down {
   opacity: 0.5;
 }
 .copyright {
   opacity: 0.5;
   font-size: 1em;
-}
-.social {
-  display: grid;
-  grid-template-columns: 30px 30px 30px 30px;
-  justify-content: space-between;
-  &__link {
-    height: 30px;
-    display: flex;
-    justify-self: center;
-  }
-  &__tg {
-    width: 20px;
-    height: 17px;
-    fill: $black;
-    opacity: 0.15;
-    justify-self: center;
-    align-self: center;
-  }
-  &__link:hover &__tg {
-    fill: #1E96C8;
-    opacity: 1;
-  }
-  &__ins-black {
-    width: 18px;
-    height: 18px;
-    fill: $black;
-    opacity: 0.15;
-    position: absolute;
-    justify-self: center;
-    align-self: center;
-  }
-  &__link:hover &__ins-black {
-    display: none;
-  }
-  &__ins-color {
-    width: 18px;
-    height: 18px;
-    opacity: 0;
-    justify-self: center;
-    align-self: center;
-  }
-  &__link:hover &__ins-color {
-    opacity: 1;
-  }
-  &__vk {
-    width: 23px;
-    height: 13px;
-    fill: $black;
-    opacity: 0.15;
-    justify-self: center;
-    align-self: center;
-  }
-  &__link:hover &__vk {
-    fill: #5282b8;
-    opacity: 1;
-  }
-  &__fb {
-    width: 18px;
-    height: 18px;
-    fill: $black;
-    opacity: 0.15;
-    justify-self: center;
-    align-self: center;
-  }
-  &__link:hover &__fb {
-    fill: #3b589e;
-    opacity: 1;
-  }
 }
 }

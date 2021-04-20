@@ -19,10 +19,9 @@
 
 
 
-
 <header class="header-wrap">
   <div class="container">
-    <nav class="header">
+    <section class="header">
       <div class="header__logo logo" id="logo">
         <a href="#" class="logo__link">
           
@@ -36,24 +35,25 @@
         <button type="button" class="location__name" aria-label="Город">Москва</button>
       </div>
       <div class="header__search search">
-        <input class="search__input" type="text" placeholder="Поиск по сайту">
-        <a href="#" class="search__link">
+        <form class="search__form" action="#">
+          <input class="search__input" type="text" placeholder="Поиск по сайту">
+          <input class="search__submit" type="submit" name="search-submit" value="">
           
-<svg class="search__icon icon-search">
+<svg class="search__icon icon-search ">
   <use xlink:href='img/svg/sprite.svg#search'></use>
 </svg>
 
-        </a>
+        </form>
       </div>
       <div class="header__block sm-top">
-        <a href="#" class="sm-top__link catalog-link">
+        <button type="button" class="sm-top__item catalog-link" aria-label="Каталог">
           
-<svg class="sm-top__icon icon-catolog smal-none">
+<svg class="sm-top__icon icon-catolog smal-none svg">
   <use xlink:href='img/svg/sprite.svg#catalog'></use>
 </svg>
 
           
-<svg class="sm-top__icon icon-menu-open smal-none svg-none">
+<svg class="sm-top__icon icon-menu-open smal-none svg-none svg">
   <use xlink:href='img/svg/sprite.svg#menu-open'></use>
 </svg>
 
@@ -64,7 +64,7 @@
 
           <span class="sm-top__text big-none">Меню</span>
           <span class="sm-top__text sm-top__text-menu smal-none">Каталог</span>
-        </a>
+        </button>
         <a href="#" class="sm-top__link phone-img big-none">
           
 <svg class="sm-top__icon icon-phone">
@@ -101,7 +101,7 @@
         <li class="menu__baying">
           <a href="#" class="menu__link">
             
-<svg class="menu__svg icon-market">
+<svg class="menu__svg icon-market svg">
   <use xlink:href='img/svg/sprite.svg#market'></use>
 </svg>
 
@@ -111,14 +111,14 @@
           </a>
         </li>
         <li class="menu__profile">
-          <a href="#" class="menu__link">
+          <button type="button" aria-label="Профиль" class="menu__link">
             
-<svg class="menu__svg icon-profile">
+<svg class="menu__svg icon-profile svg">
   <use xlink:href='img/svg/sprite.svg#profile'></use>
 </svg>
 
             <span class="menu__name">Профиль</span>
-          </a>
+          </button>
           <div class="menu__profile profile">
             <ul class="profile__items">
               <li>Пртнёрка</li>
@@ -133,7 +133,7 @@
         <li class="menu__contrast">
           <a href="#" class="menu__link">
             
-<svg class="menu__svg icon-contrast">
+<svg class="menu__svg icon-contrast svg">
   <use xlink:href='img/svg/sprite.svg#contrast'></use>
 </svg>
 
@@ -143,7 +143,7 @@
         <li class="menu__favor">
           <a href="#" class="menu__link">
             
-<svg class="menu__svg icon-favor">
+<svg class="menu__svg icon-favor svg">
   <use xlink:href='img/svg/sprite.svg#favor'></use>
 </svg>
 
@@ -151,65 +151,75 @@
           </a>
         </li>
       </ul>
-      <ul class="header__info info-menu">
-        <li class="info-menu__item">
-          <a href="#" class="info-menu__link">
-            Пункты выдачи и постаматы
-          </a>
-        </li>
-        <li class="info-menu__item">
-          <a href="#" class="info-menu__link">
-            О маркетплейсе
-          </a>
-        </li>
-        <li class="info-menu__item">
-          <a href="#" class="info-menu__link">
-            Где мой заказ?
-          </a>
-        </li>
-        <li class="info-menu__item">
-          <a href="#" class="info-menu__link">
-            Контакты
-          </a>
-        </li>
-      </ul>
-      <a href="#" class="header__phone-text">
-        <div class="phone">8 800 611 00 97</div>
+      <nav class="header__info">
+        <ul class="header__info info-menu">
+          <li class="info-menu__item">
+            <a href="#" class="info-menu__link">
+              Пункты выдачи и постаматы
+            </a>
+          </li>
+          <li class="info-menu__item">
+            <a href="#" class="info-menu__link">
+              О маркетплейсе
+            </a>
+          </li>
+          <li class="info-menu__item">
+            <a href="#" class="info-menu__link">
+              Где мой заказ?
+            </a>
+          </li>
+          <li class="info-menu__item">
+            <a href="#" class="info-menu__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__phone-text phone">
+        8 800 611 00 97
       </a>
       <div class="header__social">
-        <div class="social">
-          <a href="#" class="social__link">
-            
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              
 <svg class="social__vk">
   <use xlink:href='img/svg/sprite.svg#vk'></use>
 </svg>
 
-          </a>
-          <a href="#" class="social__link">
-            
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              
 <svg class="social__fb">
   <use xlink:href='img/svg/sprite.svg#fb'></use>
 </svg>
 
-          </a>
-          <a href="#" class="social__link">
-            
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              
 <svg class="social__ins-black">
   <use xlink:href='img/svg/sprite.svg#ins'></use>
 </svg>
 
-            <img src="img/ins.svg" alt="ins" class="social__ins-color">
-          </a>
-          <a href="#" class="social__link">
-            
+              <img src="img/ins.svg" alt="ins" class="social__ins-color">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              
 <svg class="social__tg">
   <use xlink:href='img/svg/sprite.svg#tg'></use>
 </svg>
 
-          </a>
-        </div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="header__catalog  big-none">
+      <div class="header__catalog big-none">
         <div class="catalog">
           <ul class="catalog__groups">
             
@@ -725,7 +735,7 @@
         </div>
 
       </div>
-    </nav>
+    </section>
   </div>
 </header>
 
