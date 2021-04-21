@@ -1,104 +1,60 @@
 @include media-down(lg) {
-  .catalog, .profile, .smal-none, .menu, .info-menu, .header__social, .header__phone-text {
-    display: none;
+  .svg {
+    fill: currentColor;
   }
   .header {
     display: grid;
     grid-template-areas: 
-    "a a a a"
-    "e e f f"
-    "g g g g";
+    "top top"
+    "logo location"
+    "search search";
     &__block {
-      grid-area: a;
+      grid-area: top;
     }
     &__logo {
-      grid-area: e;
+      grid-area: logo;
     }
     &__location {
-      grid-area: f;
+      grid-area: location;
       justify-self: end;
     }
     &__search {
-      grid-area: g;
-      margin: 0px 20px 20px 20px;
-    }
-  }
-  .icon-menu {
-    width: 18px;
-    height: 16px;
-    // stroke: $general;
-    stroke-width: 1.5px;
-  }
-  .icon-phone {
-    width: 21px;
-    height: 22px;
-    stroke: initial;
-    fill: $general;
-  }
-  .icon-profile {
-    width: 18px;
-    height: 21px;
-    // stroke: $general;
-    stroke-width: 1.2px;
-    fill: white;
-  }
-  .icon-market {
-    width: 23px;
-    height: 20px;
-    fill: white;
-    // stroke: $general;
-    stroke-width: 1.3px;
-    &__count {
-      position: absolute;
-      width: auto;
-      min-width: 11px;
-      height: 10px;
-      border-radius: 5px;
-      background-color: $general;
-      font-family: 'Open Sans', sans-serif;
-      color: white;
-      font-weight: 700;
-      font-size: 9px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 9px;
-      right: 32px;
-      box-shadow: 0px 0px 0px 1px $outline;
+      grid-area: search;
     }
   }
   .sm-top {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
     justify-content: space-between;
     background-color: $outline;
-    &__link {
-    display: grid;
-    justify-items: center;
-    align-content: space-around;
+    &__item {
+    text-align: center;
     font-size: 0.6em;
     font-family: 'Open Sans', sans-serif;
     padding: 10px;
-    stroke: $general;
     color: $general;
-    height: 40px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    }
+    &__item:hover {
+      color: $hover;
     }
     &__text {
       opacity: 0.6;
       margin-top: 5px;
+      display: block;
+      white-space: nowrap;
     }
-    &__link:hover {
-      stroke: $hover;
-    }
-    &__link:hover .icon-market__count {
-      background-color: $hover;
-    }
-    &__link:hover .icon-phone {
-      fill: $hover;
-    }
-    &__link:hover &__text {
+    &__item:hover &__text {
       opacity: 1;
       color: $hover;
+    }
+    &__icon {
+      width: 30px;
+      height: 20px;
+    }
+    &__item:hover .icon-market__count {
+      background-color: $hover;
     }
   }
   .logo {
@@ -134,44 +90,81 @@
       transform: rotate(45deg);
       border-bottom:  2px solid $general;
       border-right:  2px solid $general;
-      top: 30%;
+      bottom: 40%;
       right: 4px;
     }
   }
   .search {
+    ::-webkit-input-placeholder {
+      color: $general;
+      opacity: 0.6;
+    }
+    margin: 0px 20px 0px 20px;
     position: relative;
+    &__form {
+      width: 100%;
+      position: relative;
+      color: $general;
+      background-color: $outline;
+      border-radius: 3px;
+    }
+    &__form:hover {
+      background-color: $search-fild;
+      color: $hover;
+    }
     &__input {
       width: 100%;
+      height: 100%;
+      min-width: none;
       border-radius: 3px;
       box-shadow: none;
       outline: none;
       border: 3px solid $border-search;
-      padding: 10px 30px 10px 20px;
-      background-color: $outline;
-      color: $general;
-      box-sizing: border-box;
-      overflow: hidden;
+      padding: 10px 35px 10px 20px;
+      background-color: inherit;
+      color: inherit;
       text-overflow: ellipsis;
+      box-sizing: border-box;
       font-size: 0.9em;
     }
-    &__input:hover {
-      background-color: $search-fild;
-    }
-    &__link {
+    &__submit {
       position: absolute;
-      right: 10px;
-      top: 20%;
+      right: 5px;
+      top: 5px;
       padding: 5px;
-      stroke: $general;
+      width: 30px;
+      height: 80%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
     }
-    &__link:hover {
-      stroke: $hover;
-    }
-    .icon-search {
-      width: 14px;
+    &__icon {
+      position: absolute;
+      right: 15px;
+      top: 13px;
+      width: 15px;
       height: 15px;
-      fill: $outline;
-      stroke-width: 1.5px;
+      z-index: 1;
+    }
+  }
+  .icon-market {
+    &__count {
+      position: absolute;
+      width: auto;
+      min-width: 11px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: $general;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      font-weight: 700;
+      font-size: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 9px;
+      right: 32px;
+      box-shadow: 0px 0px 0px 1px $outline;
     }
   }
   .catalog-link {
@@ -183,11 +176,14 @@
     padding-right: 20px;
     padding-left: 15px;
   }
-  .phone-img {
-    white-space: nowrap;
+  .sm-none {
+    display: none;
   }
 }
 @include media-up(lg) {
+  .lg-none {
+    display: none;
+  }
   .svg {
     fill: currentColor;
   }
@@ -233,8 +229,9 @@
     }
   }
   .location {
+    box-sizing: border-box;
     &__name {
-      border: 0;
+      border: none;
       outline: none;
       background-color: inherit;
       position: relative;  
@@ -243,6 +240,7 @@
       color: $general;
       padding: 5px 20px 5px 0px;
       cursor: pointer;
+      box-sizing: border-box;
     }
     &__name::after {
       position: absolute;
@@ -253,7 +251,7 @@
       transform: rotate(45deg);
       border-bottom:  2px solid $general;
       border-right:  2px solid $general;
-      top: 9px;
+      bottom: 40%;
       right: 5px;
     }
   }
@@ -385,38 +383,36 @@
       align-self: center;
     }
   }
-  .icon-search {
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
-  }
   .search {
     ::-webkit-input-placeholder {
       color: $general;
+      opacity: 0.6;
     }
     &__form {
       width: 100%;
       position: relative;
       color: $general;
       background-color: $outline;
+      border-radius: 3px;
     }
     &__form:hover {
       background-color: $search-fild;
+      color: $hover;
     }
     &__input {
       width: 100%;
+      height: 100%;
       min-width: none;
       border-radius: 3px;
       box-shadow: none;
       outline: none;
       border: 3px solid $border-search;
-      padding: 10px 50px 10px 15px;
+      padding: 10px 35px 10px 15px;
       background-color: inherit;
-      color: $general;
+      color: inherit;
+      text-overflow: ellipsis;
       box-sizing: border-box;
-
     }
-
     &__submit {
       position: absolute;
       right: 1%;
@@ -424,8 +420,6 @@
       padding: 5px;
       width: 30px;
       height: 80%;
-      // background-color: rgba(255, 255, 255, 0);
-      // border: none;
       opacity: 0;
       cursor: pointer;
       z-index: 2;
@@ -436,16 +430,15 @@
       top: 11px;
       width: 15px;
       height: 15px;
-      // cursor: pointer;
       z-index: 1;
     }
   }
-
   .phone {
     font-size: 1.3em;
     font-weight: 700;
     color: $black;
     white-space: nowrap;
+    margin: 0 1vw;
   }
   .menu {
     display: grid;
@@ -473,29 +466,25 @@
       align-content: space-around;
       position: relative;
       border: none;
-      // stroke: $general;
-      // fill: $general;
       background-color: white;
       height: 45px;
       color: $general;
+      cursor: pointer;
+      margin-left: 1vw;
     }
     &__svg {
       width: 30px;
       height: 20px;
     }
-    &__link:hover {
-      // stroke: $hover;
-      // fill: $hover;
-      color: $hover;
-    }
     &__name {
       opacity: 0.6;
-      // color: $general;
-      // margin-top: 5px;
+    }
+    &__link:hover {
+      color: $hover;
+      opacity: 1;
     }
     &__link:hover &__name {
       opacity: 1;
-      // color: $hover;
     }
     &__link:hover .icon-market__count {
       background-color: $hover;
@@ -520,9 +509,5 @@
       right: 15px;
       box-shadow: 0px 0px 0px 1px $outline;
     }
-  }
-
-  .profile, .big-none {
-    display: none;
   }
 }

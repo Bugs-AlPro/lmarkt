@@ -21,8 +21,8 @@
 
 <header class="header-wrap">
   <div class="container">
-    <section class="header">
-      <div class="header__logo logo" id="logo">
+    <div class="header">
+      <div class="header__logo logo">
         <a href="#" class="logo__link">
           
 <svg class="logo__img">
@@ -39,7 +39,7 @@
           <input class="search__input" type="text" placeholder="Поиск по сайту">
           <input class="search__submit" type="submit" name="search-submit" value="">
           
-<svg class="search__icon icon-search ">
+<svg class="search__icon icon-search svg">
   <use xlink:href='img/svg/sprite.svg#search'></use>
 </svg>
 
@@ -48,42 +48,42 @@
       <div class="header__block sm-top">
         <button type="button" class="sm-top__item catalog-link" aria-label="Каталог">
           
-<svg class="sm-top__icon icon-catolog smal-none svg">
+<svg class="sm-top__icon icon-catolog sm-none svg">
   <use xlink:href='img/svg/sprite.svg#catalog'></use>
 </svg>
 
           
-<svg class="sm-top__icon icon-menu-open smal-none svg-none svg">
+<svg class="sm-top__icon icon-menu-open sm-none svg-none svg">
   <use xlink:href='img/svg/sprite.svg#menu-open'></use>
 </svg>
 
           
-<svg class="sm-top__icon icon-menu big-none">
+<svg class="sm-top__icon icon-menu lg-none svg">
   <use xlink:href='img/svg/sprite.svg#menu'></use>
 </svg>
 
-          <span class="sm-top__text big-none">Меню</span>
-          <span class="sm-top__text sm-top__text-menu smal-none">Каталог</span>
+          <span class="sm-top__text lg-none">Меню</span>
+          <span class="sm-top__text sm-none">Каталог</span>
         </button>
-        <a href="#" class="sm-top__link phone-img big-none">
+        <a href="#" class="sm-top__item phone-img lg-none">
           
-<svg class="sm-top__icon icon-phone">
+<svg class="sm-top__icon icon-phone svg">
   <use xlink:href='img/svg/sprite.svg#phone'></use>
 </svg>
 
           <span class="sm-top__text">Позвонить нам</span>
         </a>
-        <a href="#" class="sm-top__link profile-img big-none">
+        <button href="#" class="sm-top__item profile-img lg-none">
           
-<svg class="sm-top__icon icon-profile">
+<svg class="sm-top__icon icon-profile svg">
   <use xlink:href='img/svg/sprite.svg#profile'></use>
 </svg>
 
           <span class="sm-top__text">Профиль</span>
-        </a>
-        <a href="#" class="sm-top__link baying-img big-none">
+        </button>
+        <a href="#" class="sm-top__item baying-img lg-none">
           
-<svg class="sm-top__icon icon-market">
+<svg class="sm-top__icon icon-market svg">
   <use xlink:href='img/svg/sprite.svg#market'></use>
 </svg>
 
@@ -91,7 +91,7 @@
           <span class="sm-top__text">Корзина</span>
         </a>
       </div>
-      <ul class="header__menu menu">
+      <ul class="header__menu menu sm-none">
         <li class="menu__item">
           <!-- <a href="#" class="menu__link">
             <span class="menu__name">Каталог</span>
@@ -119,7 +119,7 @@
 
             <span class="menu__name">Профиль</span>
           </button>
-          <div class="menu__profile profile">
+          <div class="menu__profile profile lg-none">
             <ul class="profile__items">
               <li>Пртнёрка</li>
               <li>Операторская</li>
@@ -151,8 +151,8 @@
           </a>
         </li>
       </ul>
-      <nav class="header__info">
-        <ul class="header__info info-menu">
+      <nav class="header__info sm-none">
+        <ul class="info-menu">
           <li class="info-menu__item">
             <a href="#" class="info-menu__link">
               Пункты выдачи и постаматы
@@ -175,10 +175,10 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__phone-text phone">
+      <a href="#" class="header__phone-text phone sm-none">
         8 800 611 00 97
       </a>
-      <div class="header__social">
+      <div class="header__social sm-none">
         <ul class="social">
           <li class="social__item">
             <a href="#" class="social__link">
@@ -219,7 +219,7 @@
           </li>
         </ul>
       </div>
-      <div class="header__catalog big-none">
+      <div class="header__catalog lg-none sm-none">
         <div class="catalog">
           <ul class="catalog__groups">
             
@@ -735,7 +735,7 @@
         </div>
 
       </div>
-    </section>
+    </div>
   </div>
 </header>
 

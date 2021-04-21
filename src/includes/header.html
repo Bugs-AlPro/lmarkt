@@ -46,8 +46,8 @@
 
 <header class="header-wrap">
   <div class="container">
-    <section class="header">
-      <div class="header__logo logo" id="logo">
+    <div class="header">
+      <div class="header__logo logo">
         <a href="#" class="logo__link">
           {{ variable.imageSvg('logo', 'logo__img') }}
         </a>
@@ -59,32 +59,32 @@
         <form class="search__form" action="#">
           <input class="search__input" type="text" placeholder="Поиск по сайту">
           <input class="search__submit" type="submit" name="search-submit" value="">
-          {{ variable.imageSvg('search', 'search__icon icon-search ') }}
+          {{ variable.imageSvg('search', 'search__icon icon-search svg') }}
         </form>
       </div>
       <div class="header__block sm-top">
         <button type="button" class="sm-top__item catalog-link" aria-label="Каталог">
-          {{ variable.imageSvg('catalog', 'sm-top__icon icon-catolog smal-none svg') }}
-          {{ variable.imageSvg('menu-open', 'sm-top__icon icon-menu-open smal-none svg-none svg') }}
-          {{ variable.imageSvg('menu', 'sm-top__icon icon-menu big-none') }}
-          <span class="sm-top__text big-none">Меню</span>
-          <span class="sm-top__text sm-top__text-menu smal-none">Каталог</span>
+          {{ variable.imageSvg('catalog', 'sm-top__icon icon-catolog sm-none svg') }}
+          {{ variable.imageSvg('menu-open', 'sm-top__icon icon-menu-open sm-none svg-none svg') }}
+          {{ variable.imageSvg('menu', 'sm-top__icon icon-menu lg-none svg') }}
+          <span class="sm-top__text lg-none">Меню</span>
+          <span class="sm-top__text sm-none">Каталог</span>
         </button>
-        <a href="#" class="sm-top__link phone-img big-none">
-          {{ variable.imageSvg('phone', 'sm-top__icon icon-phone') }}
+        <a href="#" class="sm-top__item phone-img lg-none">
+          {{ variable.imageSvg('phone', 'sm-top__icon icon-phone svg') }}
           <span class="sm-top__text">Позвонить нам</span>
         </a>
-        <a href="#" class="sm-top__link profile-img big-none">
-          {{ variable.imageSvg('profile', 'sm-top__icon icon-profile') }}
+        <button href="#" class="sm-top__item profile-img lg-none">
+          {{ variable.imageSvg('profile', 'sm-top__icon icon-profile svg') }}
           <span class="sm-top__text">Профиль</span>
-        </a>
-        <a href="#" class="sm-top__link baying-img big-none">
-          {{ variable.imageSvg('market', 'sm-top__icon icon-market') }}
+        </button>
+        <a href="#" class="sm-top__item baying-img lg-none">
+          {{ variable.imageSvg('market', 'sm-top__icon icon-market svg') }}
           <span class="icon-market__count">2</span>
           <span class="sm-top__text">Корзина</span>
         </a>
       </div>
-      <ul class="header__menu menu">
+      <ul class="header__menu menu sm-none">
         <li class="menu__item">
           <!-- <a href="#" class="menu__link">
             <span class="menu__name">Каталог</span>
@@ -104,7 +104,7 @@
             {{ variable.imageSvg('profile', 'menu__svg icon-profile svg') }}
             <span class="menu__name">Профиль</span>
           </button>
-          <div class="menu__profile profile">
+          <div class="menu__profile profile lg-none">
             <ul class="profile__items">
               <li>Пртнёрка</li>
               <li>Операторская</li>
@@ -128,8 +128,8 @@
           </a>
         </li>
       </ul>
-      <nav class="header__info">
-        <ul class="header__info info-menu">
+      <nav class="header__info sm-none">
+        <ul class="info-menu">
           <li class="info-menu__item">
             <a href="#" class="info-menu__link">
               Пункты выдачи и постаматы
@@ -152,10 +152,10 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__phone-text phone">
+      <a href="#" class="header__phone-text phone sm-none">
         8 800 611 00 97
       </a>
-      <div class="header__social">
+      <div class="header__social sm-none">
         <ul class="social">
           <li class="social__item">
             <a href="#" class="social__link">
@@ -180,7 +180,7 @@
           </li>
         </ul>
       </div>
-      <div class="header__catalog big-none">
+      <div class="header__catalog lg-none sm-none">
         <div class="catalog">
           <ul class="catalog__groups">
             {% for item in menuGroups %}
@@ -241,6 +241,6 @@
         </div>
 
       </div>
-    </section>
+    </div>
   </div>
 </header>
