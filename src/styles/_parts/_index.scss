@@ -605,9 +605,6 @@ ul, li {
     white-space: nowrap;
     border: 0;
   }
-  .none-bid {
-    display: none;
-  }
   .container {
     max-width: 1250px;
     padding: 0px 20px;
@@ -620,9 +617,6 @@ ul, li {
     border-radius: 3px;
     flex-direction: row;
     justify-content: space-between;
-    &__item {
-      display: grid;
-    }
     &__link {
       position: relative;
     }
@@ -632,12 +626,10 @@ ul, li {
       border-radius: 3px;
     }
     &__info {
-      display: grid;
-      grid-template-rows: 50px auto auto auto;
-      grid-template-columns:  150px 150px auto;      
+      display: flex;
+      flex-direction: column;     
       width: 100%;
       height: 100%;
-      color: #ffffff;
       font-weight: 700;
       text-transform: uppercase;
       position: absolute;
@@ -645,37 +637,31 @@ ul, li {
       top: 0;
       padding: 5% 5% 7% 10%;
       background: linear-gradient(to right, #1600133d 0%, rgba(22, 0, 19, 0) 100%);
-      // border: 1px solid black;
     }
     &__info:hover {
       background-color: #d866c950;
     }
     &__category {
+      color: $white;
       font-size: 2em;
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 2;
       margin: 0px;
       font-family: 'Open Sans', sans-serif;
     }
     &__model {
       font-size: 2.5em;
+      color: $white;
       margin: 0px;
       font-family: 'Open Sans', sans-serif;
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 2;
-      grid-row-end: 3;
     }
     &__name {
       font-size: 3em;
+      color: $white;
       margin: 0px 0px 15px 0px;
       font-family: 'Open Sans', sans-serif;
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 3;
-      grid-row-end: 4;
+    }
+    &__price {
+      display: flex;
+      font-family: 'Exo 2', sans-serif;
     }
     &__new-price {
       padding: 5px 10px;
@@ -684,25 +670,12 @@ ul, li {
       font-size: 2em;
       border-radius: 2px;
       margin-right: 10px;
-      font-family: 'Exo 2', sans-serif;
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 4;
-      grid-row-end: 5;
-      justify-self: start;
-      align-self: center;
     }
     &__old-price {
       padding: 5px 10px;
+      color: $white;
       font-size: 2em;
       text-decoration-line: line-through;
-      font-family: 'Exo 2', sans-serif;
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 4;
-      grid-row-end: 5;
-      justify-self: start;
-      align-self: center;
     }
   }
   .pop-category-wrap {
@@ -719,25 +692,20 @@ ul, li {
     flex-direction: row;
     justify-content: space-between;
     &__item {
-      display: grid;
+      display: flex;
       margin-right: 20px;
     }
     &__link {
       position: relative;
       border-radius: 3px;
     }
-    &__div {
+    &__shadow {
       display: none;
     }
     &__img {
       width: 18.8vw;
       min-width: 230px;
       height: 100%;
-    }
-    &__sourse {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
     }
     &__name {
       border-radius: 3px;
@@ -776,57 +744,52 @@ ul, li {
     &__item {
       position: relative;
       border-radius: 3px;
-      display: grid;
       margin-right: 20px;
-      box-sizing: border-box;
-
     }
     &__info {
-      display: grid;
-      grid-template-areas: 
-      ". . . . a d"
-      "i i i i i i"
-      "b b b b b b"
-      "c c c e e e";
-      grid-template-rows: 50px 200px 70px 70px;
-      // border: 3px solid $outline;
+      display: flex;
+      flex-direction: column;
       border-radius: 3px;
       box-shadow: inset 0px 0px 0px 3px $outline;
     }
     &__info:hover {
       box-shadow: inset 0px 0px 0px 3px $market-hover;
     }
+    &__top {
+      align-self: flex-end;
+      padding: 15px;
+      display: flex;
+    }
+    &__svg-top {
+      margin-left: 15px;
+    }
     &__sourse {
-      grid-area: i;
-      justify-self: center;
-      display: grid;
-      height: 100%;
+      align-self: center;
     }
     &__img {
       height: 200px;
       padding: 5px 10px;
-      justify-self: center;
     }
-
     &__name {
       font-size: 1em;
-      padding: 5px 10px;
+      padding: 5px 15px;
       font-weight: 700;
-      grid-area: b;
-      justify-self: center;
-      align-self: center;
       text-align: center;
       color: $black;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       width: 22.2vw;
-      min-width: 209px;
       max-width: 287px;
       font-family: 'Open Sans', sans-serif;
     }
     &__name:hover {
       color: $hover;
+    }
+    &__bottom {
+      display: flex;
+      justify-content: center;
+      margin: 5px 0 15px 0;
     }
     &__price {
       width: 90px;
@@ -834,11 +797,9 @@ ul, li {
       background-color: $outline;
       border-radius: 2px;
       margin-right: 10px;
-      grid-area: c;
-      justify-self: end;
-      align-self: start;
       display: grid;
       padding: 5px;
+      cursor: default;
     }
     &__new-price {
       display: none;
@@ -857,7 +818,6 @@ ul, li {
       font-family: 'Exo 2', sans-serif;
     }
     &__old-price {
-      display: grid;
       font-size: 1em;
       font-weight: 700;
       text-align: center;
@@ -868,59 +828,39 @@ ul, li {
       font-weight: 700;
       color: $black;
       opacity: 0.3;
-      justify-self: center;
       text-decoration-line: line-through;
       font-family: 'Exo 2', sans-serif;
     }
-    &__svg.icon-favor {
+    &__svg-top {
       width: 22px;
       height: 19px;
-      fill: $general;
+      color: $general;
       opacity: 0.3;
-      grid-area: a;
-      justify-self: center;
-      align-self: center;
       cursor: pointer;
     }
-    &__svg.icon-favor:hover,
-    &__svg.icon-contrast:hover {
-      fill: $hover;
+    &__svg-top:hover {
+      color: $hover;
       opacity: 1;
     }
-    &__svg.icon-contrast {
-      width: 20px;
-      height: 15px;
-      stroke: $general;
-      opacity: 0.3;
-      grid-area: d;
-      justify-self: center;
-      align-self: center;
-      cursor: pointer;
-    }
-    &__svg.icon-market {
+    .icon-market {
       width: 23px;
       height: 20px;
-      stroke: $general;
-      justify-self: center;
-      align-self: center;
     }
     &__market {
       width: 45px;
       height: 45px;
       border-radius: 2px;
       border: 3px solid $outline;
-      display: grid;
-      grid-area: e;
-      justify-self: start;
-      align-self: start;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $general;
     }
     &__market:hover {
       background-color: $market-hover;
       border: none;
-    }
-    &__market:hover .icon-market  {
-      fill: $market-hover;
+      color: $hover;
     }
   }
   .tools-type-wrap {
@@ -932,46 +872,30 @@ ul, li {
       margin-bottom: 50px;
     }
   }
-  .icon-type-guitar, 
-  .icon-type-keyboards, 
-  .icon-type-drum, 
-  .icon-type-brass, 
-  .icon-type-tongue {
-    width: 65px;
-    height: 65px;
-    fill: $general;
-  }
   .tools-type {
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     &__head-link {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      color: $general;
+    }
+    &__head-link:hover {
+      color: $hover;
     }
     &__head-link:hover &__tittle {
       color: $general;
     }
-    &__head-link:hover &__icon {
-      fill: $hover;
-    }
-    &__section {
-      display: grid;
-      grid-template-rows: auto auto;
-    }
     &__icon {
-      // margin: 20px 0px;
-      justify-self: center;
+      width: 65px;
+      height: 65px;
       align-self: center;
     }
     &__tittle {
       font-weight: 700;
       font-size: 1.1em;
-      justify-self: center;
       align-self: center;
       font-family: 'Open Sans', sans-serif;
       color: $black;
-    }
-    &__group {
-      display: grid;
     }
     &__element {
       text-align: center;
@@ -1014,14 +938,13 @@ ul, li {
       position: absolute;
       bottom: 0;
       right: -15px;
-      // width: 100%;
       height: 100%;
     }
     &__content {
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-rows: 70px auto 100px;
+      grid-template-rows: 80px auto 140px;
       font-family: 'Open Sans', sans-serif;
       white-space: normal;
       background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%);
@@ -1035,14 +958,12 @@ ul, li {
       font-weight: 700;
       text-transform: uppercase;
       justify-self: center;
-      align-self: end;
+      align-self: center;
     }
     &__name {
       font-weight: 700;
       color: #fff;
       text-transform: uppercase;
-      justify-self: center;
-      align-self: start;
       text-align: center;
       padding: 0 15px;
       font-size: 1.7em;
@@ -1057,7 +978,7 @@ ul, li {
       background-color: #fff;
       padding: 5px 10px;
       justify-self: center;
-      align-self: start;
+      align-self: center;
       border-radius: 2px;
     }
   }
@@ -1071,8 +992,8 @@ ul, li {
     }
     &__list {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-auto-flow: column;
     }
     &__name {

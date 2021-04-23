@@ -222,7 +222,7 @@
   font-family: 'Open Sans', sans-serif;
   &__top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
   }
   &__items {
@@ -244,7 +244,6 @@
     color: $black;
     opacity: 0.5;
     font-size: 1em;
-
   }
   &__link:hover {
     color: $hover;
@@ -254,9 +253,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     margin-top: 30px;
-  }
-  &__down-item {
-    justify-self: start;
   }
 }
 .app {
@@ -271,9 +267,9 @@
     width: auto;
   }
 }
-
 .phone-down {
   opacity: 0.5;
+  margin: 0;
 }
 .copyright {
   opacity: 0.5;

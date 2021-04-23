@@ -24,8 +24,10 @@ newPrice: "16 350", oldPrice: "16 350"}
               <p class="promo__category">{{ item.category }}</p>
               <P class="promo__model">{{ item.model }}</P>
               <p class="promo__name">{{ item.name }}</p>
-              <div class="promo__new-price">{{ item.newPrice }} ₽</div>
-              <div class="promo__old-price">{{ item.oldPrice }} ₽</div>
+              <div class="promo__price">
+                <div class="promo__new-price">{{ item.newPrice }} ₽</div>
+                <div class="promo__old-price">{{ item.oldPrice }} ₽</div>
+              </div>
             </div>
           </a>
         </li>
@@ -41,11 +43,11 @@ newPrice: "16 350", oldPrice: "16 350"}
       <div class="glide__arrows" data-glide-el="controls">
         <button class="glide__arrow glide__arrow--promo glide__arrow--left" data-glide-dir="<"
           aria-label="Предидущий слайд">
-          {{ variable.imageSvg('slider-link', 'glide__icon--left icon-slider-link') }}
+          {{ variable.imageSvg('slider-link', 'glide__icon--left icon-slider-link svg') }}
         </button>
         <button class="glide__arrow glide__arrow--promo glide__arrow--right" data-glide-dir=">"
           aria-label="Следующий слайд">
-          {{ variable.imageSvg('slider-link', 'glide__icon--right icon-slider-link') }}
+          {{ variable.imageSvg('slider-link', 'glide__icon--right icon-slider-link svg') }}
         </button>
       </div>
     </div>

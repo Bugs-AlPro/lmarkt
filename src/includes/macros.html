@@ -17,7 +17,7 @@
 <li class="pop-category__item">
   <a href="{{ href }}" class="pop-category__link">
     {{ imageJpeg('pop-category__sourse', nameImg, 'pop-category__img', name) }}
-    <div class="pop-category__div">
+    <div class="pop-category__shadow">
     </div>
     <div class="pop-category__name">{{ name }}</div>
   </a>
@@ -27,20 +27,24 @@
 {% macro popItem(href, nameImg, name, oldPrice, typeDiscout, newPrice) %}
 <li class="pop-items__item">
   <div class="pop-items__info">
-    {{ imageSvg('favor', 'pop-items__svg icon-favor') }}
-    {{ imageSvg('contrast', 'pop-items__svg icon-contrast') }}
+    <div class="pop-items__top">
+      {{ imageSvg('favor', 'pop-items__svg-top icon-favor svg') }}
+      {{ imageSvg('contrast', 'pop-items__svg-top icon-contrast svg') }}
+    </div>
     {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name) }}
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
-    <div class="pop-items__price">
-      <div class="none-big {{ typeDiscout }}">
-        <div class="pop-items__new-price">{{ newPrice }} ₽</div>
+    <div class="pop-items__bottom">
+      <div class="pop-items__price">
+        <div class="none-big {{ typeDiscout }}">
+          <div class="pop-items__new-price">{{ newPrice }} ₽</div>
+        </div>
+        <div class="pop-items__old-price">
+          <div class="{{ typeDiscout }}">{{ oldPrice }} ₽</div>
+        </div>
       </div>
-      <div class="pop-items__old-price">
-        <div class="{{ typeDiscout }}">{{ oldPrice }} ₽</div>
+      <div class="pop-items__market">
+        {{ imageSvg('market', 'pop-items__svg icon-market svg') }}
       </div>
-    </div>
-    <div class="pop-items__market">
-      {{ imageSvg('market', 'pop-items__svg icon-market') }}
     </div>
   </div>
 </li>
