@@ -1,7 +1,4 @@
 @include media-down(lg) {
-.smal-none {
-  display: none;
-}
 .footer-wrap {
   background-color: $outline;
 }
@@ -11,15 +8,14 @@
   margin-bottom: 20px;
   &__top {
     padding: 20px 20px 0px 20px;
-    display: grid;
   }
   &__column {
-    display: grid;
+    display: flex;
+    flex-direction: column;
   }
   &__column-sm {
     border-left: 1px solid $footer-outline;
     border-right: 1px solid $footer-outline;
-    // margin: 0;
   }
   &__column-sm:first-child {
     border-top-left-radius: 3px;
@@ -57,23 +53,9 @@
     position: absolute;
     content: "";
     background-color: inherit;
-    transform: rotate(45deg);
-    top: 12px;
+    transform: rotate(225deg);
+    top: 17px;
     right: 10px;
-  }
-  &__tittle-open::after {
-    width: 7px;
-    height: 7px;
-    border-top:  2px solid $black;
-    border-left:  2px solid $black;
-    border-bottom:  2px solid $footer-outline-button;
-    border-right:  2px solid $footer-outline-button;
-    position: absolute;
-    content: "";
-    background-color: inherit;
-    transform: rotate(45deg);
-    top: 5px;
-    right: 4px;
   }
   &__items {
     display: flex;
@@ -110,22 +92,20 @@
   &__down-item {
     margin-bottom: 15px;
   }
-
 }
 .app {
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 20px 0;
   &__img {
-    // width: 100px;
     opacity: 0.7;
+    width: 100px;
   }
   &__img-correct {
     margin-top: 3.5px;
   }
-  &__link:hover &__img {
+  &__img:hover  {
     opacity: 1;
   }
 }
@@ -144,23 +124,26 @@
   opacity: 0.5;
   margin-bottom: 10px;
 }
+.phone-down:hover {
+  opacity: 1;
+}
 .copyright {
   opacity: 0.5;
 }
 .social {
-  display: grid;
-  grid-template-columns: 40px 40px 40px 40px;
+  display: flex;
   &__link {
-    height: 25px;
-    display: grid;
-    justify-self: center;
-    align-self: center;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    display: flex;
   }
   &__tg {
     width: 28px;
     height: 23px;
     fill: $black;
     opacity: 0.15;
+    justify-self: center;
     align-self: center;
   }
   &__link:hover &__tg {
@@ -173,6 +156,7 @@
     fill: $black;
     opacity: 0.15;
     position: absolute;
+    justify-self: center;
     align-self: center;
   }
   &__link:hover &__ins-black {
@@ -182,6 +166,7 @@
     width: 25px;
     height: 25px;
     opacity: 0;
+    justify-self: center;
     align-self: center;
   }
   &__link:hover &__ins-color {
@@ -192,6 +177,7 @@
     height: 18px;
     fill: $black;
     opacity: 0.15;
+    justify-self: center;
     align-self: center;
   }
   &__link:hover &__vk {
@@ -203,12 +189,16 @@
     height: 25px;
     fill: $black;
     opacity: 0.15;
+    justify-self: center;
     align-self: center;
   }
   &__link:hover &__fb {
     fill: #3b589e;
     opacity: 1;
   }
+}
+.sm-none {
+  display: none;
 }
 }
 @include media-up(lg) {
@@ -274,5 +264,8 @@
 .copyright {
   opacity: 0.5;
   font-size: 1em;
+}
+.lg-none {
+  display: none;
 }
 }

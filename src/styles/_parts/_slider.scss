@@ -1,6 +1,5 @@
 @include media-down(lg) {
   .glide {
-    // position: relative;
     min-width: 250px;
     &__arrow {
       position: absolute;
@@ -11,13 +10,11 @@
       border: none;
       box-shadow: none;
       cursor: pointer;
+      color: $general;
     }
     &__arrow:hover {
       background-color: $market-hover;
-    }
-    &__arrow:hover .icon-slider-link {
-      fill: $market-hover;
-      stroke: $hover;
+      color: $hover;
     }
     &__arrow:focus {
       outline: none;
@@ -38,6 +35,7 @@
       position: relative;
       z-index: 2;
       height: 30px;
+      margin: 0 30%;
     }
     &__bullet {
       width: 8px;
@@ -91,7 +89,8 @@
     &__bullets--pop-cat,
     &__arrows--pop-cat,
     &__arrows--tools-type,
-    &__bullets--tools-type {
+    &__bullets--tools-type,
+    &__down-btn--tools-type {
       display: none;
     }
     &__arrow--pop {
@@ -100,34 +99,10 @@
     &__bullets--pop {
     bottom: -10px;
     }
-    &__arrow--type {
-      top: 28%;
-    }
-    &__down-btn {
-      cursor: pointer;
-      position: absolute;
-      z-index: 2;
-      bottom: 10px;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7), #fff);
-      width: 100%;
-      height: 80px;
-      display: grid;
-    }
-    &__icon--down {
-      transform: rotate(-90deg);
-      justify-self: center;
-      align-self: center;
-    }
-    &__down-btn--tools-type {
-      display: none;
-    }
   }
     .icon-slider-link {
     width: 10px;
     height: 14px;
-    stroke: $general;
-    stroke-width: 2.5px;
-    fill: $outline;
   }
 }
 @include media-up(lg) {
@@ -136,9 +111,6 @@
     width: 96vw;
     min-width: 952px;
     max-width: 1210px;
-    //  &__track {
-    //   display: flex;
-    // }
     &__arrow {
       position: absolute;
       z-index: 2;
@@ -243,7 +215,6 @@
       transform: rotate(-90deg);
       justify-self: center;
       align-self: center;
-      // stroke: $general;
     }
     &__bullets--suggestion {
       display: none;

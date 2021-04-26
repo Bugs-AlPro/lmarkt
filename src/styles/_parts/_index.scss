@@ -37,48 +37,40 @@ ul, li {
   .promo {
     border-radius: 3px;
     flex-direction: row;
-    justify-content: space-between;
-    // width: 95.8vw;
+    width: 500%;
     &__item {
       border-radius: 3px;
       position: relative;
-      // width: 400px;
-      margin-right: 15px;
+      width: 100%;
     }
     &__link {
       position: relative;
       border-radius: 3px;
-      display: grid;
-      height: 180px;
-      width: 100vw;
+      display: block;
+      
+      text-align: center;
+      height: 200px;
       overflow: hidden;
-      margin-right: 30px;
-      margin-left: -20px;
     }
     &__sourse {
       position: absolute;
       bottom: 0;
-      width: 100%;
-      }
-    &__img {
-      position: absolute;
       right: 0;
-      bottom: 0;
-      width: 150%;
-      min-height: 180px;
-
-      height: 40vw;
-
-      min-width: 500px;
-      max-width: 990px;
+    }
+    &__img {
+      position: relative;
+      min-height: 200px;
+      height: 32.5vw;
     }
     &__info {
-      display: grid;
-      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      color: $white;
+      font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       text-transform: uppercase;
-      // box-sizing: border-box;
-      z-index: 3;
+      position: relative;
       padding: 20px 0 30px 0;
       height: 100%;
       width: 100%;
@@ -90,37 +82,30 @@ ul, li {
     }
     &__category {
       font-size: 0.9em;
-      justify-self: center;
+      align-self: center;
       margin: 0px;
-      font-family: 'Open Sans', sans-serif;
     }
-    &__model {
-      font-size: 1em;
-      justify-self: center;
-      margin: 0px;
-      font-family: 'Open Sans', sans-serif;
-    }
+    &__model,
     &__name {
       font-size: 1em;
-      justify-self: center;
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
+      align-self: center;
+      margin: 0px;
+    }
+    &__price {
+      align-self: center;
     }
     &__new-price {
       padding: 3px 10px;
-      background-color: #fff;
+      background-color: $white;
       color: $general;
       font-size: 1em;
       border-radius: 2px;
       margin-top: 5px;
       font-family: 'Exo 2', sans-serif;
-      justify-self: center;
-      align-self: center;
     }
     &__old-price {
       padding: 5px 10px;
       font-size: 1em;
-      justify-self: center;
       text-decoration-line: line-through;
       font-family: 'Exo 2', sans-serif;
     }
@@ -137,12 +122,7 @@ ul, li {
   }
   .pop-category {
     flex-direction: row;
-    justify-content: space-between;
     &__item {
-      display: grid;
-      // border: 1px solid black;
-      z-index: 5;
-      position: relative;
       margin-right: 10px;
     }
     &__link {
@@ -154,10 +134,9 @@ ul, li {
       max-width: 130px;
       width: 30vw;
       min-width: 90px;
-      // border: 1px solid green;
       overflow: hidden;
     }
-    &__div {
+    &__shadow {
       background-image: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 70%);
       
       max-height: 100px;
@@ -170,13 +149,9 @@ ul, li {
 
       border-radius: 3px;
       z-index: 3;
-      // border: 1px solid rgb(0, 255, 34);
       overflow: hidden;
     }
     &__sourse {
-      border-radius: 3px;
-      z-index: 2;
-      background-color: #fff;;
       position: absolute;
       top: 0;
       left: 0;
@@ -184,7 +159,7 @@ ul, li {
     }
     &__img {
       border-radius: 3px;
-      // border: 1px solid yellow;
+      
       max-height: 100px;
       height: 25vw;
       min-height: 70px;
@@ -194,26 +169,20 @@ ul, li {
       min-width: 90px;
 
       z-index: 1;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
     }
     &__name {
       font-weight: 700;
       font-size: 0.75em;
-      // border: 1px solid red;
-      border-radius: 3px;
       padding: 5px 0;
       white-space: normal;
       hyphens: auto;
-      word-wrap: break-word;
       text-align: center;
       font-family: 'Open Sans', sans-serif;
     }
     &__link:hover {
       color: $hover;
     }
-    &__link:hover &__div {
+    &__link:hover &__shadow {
       background-color: #d866c950;
       background-image: none;
     }
@@ -240,52 +209,47 @@ ul, li {
   .pop-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    overflow: hidden;
     &__item {
       position: relative;
       margin-right: 10px;
     }
     &__info {
-      display: grid;
-      grid-template-areas: 
-      ". . . . a d"
-      "i i i i i i"
-      "b b b b b b"
-      "c c c c c e";
-      grid-template-rows: auto auto 60px auto;
-      border: 3px solid $outline;
+      display: flex;
+      flex-direction: column;
       border-radius: 3px;
+      box-shadow: inset 0px 0px 0px 3px $outline;
+      width: 100%;
     }
     &__info:hover {
-      border-color: $market-hover;
+      box-shadow: inset 0px 0px 0px 3px $market-hover;
+    }
+    &__top {
+      align-self: flex-end;
+      padding: 15px;
+      display: flex;
+    }
+    &__svg-top {
+      margin-left: 15px;
     }
     &__sourse {
-      grid-area: i;
-      justify-self: center;
-      // border: 1px solid black;
-      display: grid;
-      max-width: 300px;
-      width: 25vw;
-      min-width: 120px;
+      align-self: center;
     }
     &__img {
-      justify-self: center;
-      height: 20vw;
-      min-height: 100px;
-      // border: 1px solid red;
+      min-height: 125px;
+      height: 30vw;
+      max-height: 200px;
+      padding: 0px 3px;
     }
     &__name {
       font-size: 0.75em;
       font-weight: 700;
-      grid-area: b;
       text-align: center;
       color: $black;
       white-space: normal;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 300px;
-      width: 25vw;
+      max-width: 250px;
+      width: 30vw;
       min-width: 120px;
       height: 60px;
       padding: 10px 15px;
@@ -294,38 +258,48 @@ ul, li {
     &__name:hover {
       color: $hover;
     }
-    &__price {
-      width: 100%;
-      height: 45px;
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 3px 3px 3px;
       background-color: $outline;
-      border-radius: 2px;
-      grid-area: c;
-      justify-self: end;
-      align-self: start;
-      padding: 5px;
-      display: grid;
+    }
+    &__svg-top {
+      width: 20px;
+      height: 18px;
+      color: $general;
+      opacity: 0.3;
+      cursor: pointer;
+    }
+    &__svg-top:hover {
+      color: $hover;
+      opacity: 1;
+    }
+    .icon-market {
+      width: 23px;
+      height: 20px;
+      margin: 10px;
+    }
+    &__price {
+      height: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 15px;
     }
     &__new-price {
       display: none;
     }
-    .sale {
-      display: grid;
-      align-self: end;
-      justify-self: center;
-    }
     .sale &__new-price {
-      display: grid;
+      display: flex;
       font-size: 0.8em;
       font-weight: 700;
       color: $general;
-      text-align: center;
       font-family: 'Exo 2', sans-serif;
     }
     &__old-price {
-      display: grid;
       font-size: 0.8em;
       font-weight: 700;
-      text-align: center;
       font-family: 'Exo 2', sans-serif;
     }
     &__old-price .sale {
@@ -333,62 +307,20 @@ ul, li {
       font-weight: 700;
       color: $black;
       opacity: 0.3;
-      justify-self: center;
       text-decoration-line: line-through;
       font-family: 'Exo 2', sans-serif;
     }
-    &__svg.icon-favor {
-      width: 23px;
-      height: 19px;
-      fill: $general;
-      opacity: 0.3;
-      grid-area: a;
-      margin: 5px;  
-      justify-self: center;
-      align-self: center;
-      cursor: pointer;
-    }
-    &__svg.icon-favor:hover,
-    &__svg.icon-contrast:hover {
-      fill: $hover;
-      opacity: 1;
-    }
-    &__svg.icon-contrast {
-      width: 20px;
-      height: 15px;
-      stroke: $general;
-      opacity: 0.3;
-      grid-area: d;
-      margin: 5px; 
-      justify-self: center;
-      align-self: center;
-      cursor: pointer;
-    }
-    &__svg.icon-market {
-      width: 23px;
-      height: 20px;
-      stroke: $general;
-      justify-self: center;
-      align-self: center;
-    }
     &__market {
-      width: 100%;
-      height: 45px;
-      border-radius: 2px;
-      border: 3px solid $outline;
       background-color: $outline;
-      display: grid;
-      grid-area: e;
-      justify-self: start;
-      align-self: start;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $general;
     }
     &__market:hover {
       background-color: $market-hover;
-      border: none;
-    }
-    &__market:hover .icon-market  {
-      fill: $market-hover;
+      color: $hover;
     }
   }
   .tools-type-wrap {
@@ -401,14 +333,6 @@ ul, li {
       font-family: 'Exo 2', sans-serif;
       text-align: center;
     }
-  }
-  .icon-type-guitar, 
-  .icon-type-keyboards, 
-  .icon-type-drum, 
-  .icon-type-brass, 
-  .icon-type-tongue {
-    width: 35px;
-    height: 35px;
   }
   .tools-type-slider::after {
     content: "";
@@ -424,26 +348,27 @@ ul, li {
     justify-content: space-between;
     overflow: hidden;
     &__head-link {
-      display: grid;
-      grid-template-rows: 50px 30px;
-      grid-template-columns: 70px;
+      display: flex;
+      flex-direction: column;
       min-width: 70px;
       margin-right: 5px;
-      color: $black;
-      fill: $general;
+      color: $general;
     }
     &__head-link:hover {
+      color: $hover;
+    }
+    &__head-link:hover &__tittle {
       color: $general;
-      fill: $hover;
     }
     &__icon {
-      justify-self: center;
+      width: 35px;
+      height: 35px;
       align-self: center;
     }
     &__tittle {
+      color: $black;
       font-weight: 700;
       font-size: 0.75em;
-      justify-self: center;
       align-self: center;
       font-family: 'Open Sans', sans-serif;
     }
@@ -455,14 +380,13 @@ ul, li {
     margin: 20px 20px 20px 20px;
   }
   .suggestion {
-    flex-direction: row;
-    justify-content: space-between;
     overflow: hidden;
     border-radius: 3px;
+    width: 300%;
     &__item {
       border-radius: 3px;
       position: relative;
-      // width: 94.8vw;      
+      width: 100%;
     }
     &__sourse {
       position: absolute;
@@ -471,21 +395,21 @@ ul, li {
     }
     &__img {
       width: 100%;
-      min-height: 260px;
+      min-height: 240px;
       height: auto;
       border-radius: 3px;
     }
     &__content {
-      height: 260px;
-      width: 100vw;
+      height: 240px;
+      width: 100%;
       overflow: hidden;
-      margin-right: 30px;
-      margin-left: -20px;
+      padding: 5% 0 6% 0;
       overflow: hidden;
       position: relative;
       border-radius: 3px;
-      display: grid;
-      grid-template-rows: auto 35% auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       font-family: 'Open Sans', sans-serif;
       white-space: normal;
       background-image: linear-gradient(180deg, #16001352 0%, rgba(22, 0, 19, 0) 100%);
@@ -498,18 +422,16 @@ ul, li {
       font-size: 1em;
       font-weight: 700;
       text-transform: uppercase;
-      justify-self: center;
-      align-self: end;
+      align-self: center;
     }
     &__name {
       font-weight: 700;
       color: #fff;
       text-transform: uppercase;
-      justify-self: center;
       align-self: center;
       text-align: center;
+      padding: 0 30px;
       font-size: 1.5em;
-      width: 80%;
     }
     &__price {
       color: $general;
@@ -517,8 +439,7 @@ ul, li {
       font-weight: 700;
       background-color: #fff;
       padding: 5px 10px;
-      justify-self: center;
-      align-self: start;
+      align-self: center;
       border-radius: 2px;
     }
   }
@@ -531,20 +452,16 @@ ul, li {
       text-align: center;
     }
     &__list {
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-auto-flow: column;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
-
     &__element {
-      justify-self: center;
       align-self: center;
-      display: grid;
     }
     &__link {
       padding: 10px 5px;
-      display: grid;
+      display: block;
       margin: 0;
     }
     &__link:hover {
@@ -554,15 +471,6 @@ ul, li {
       display: none;
     }
     &__sourse {
-      // width: auto;
-      // height: 5vw;
-      // min-height: 16px;
-      width: 23vw;
-      min-width: 70px;
-      max-width: 100px;
-    }
-    &__img {
-      height: auto;
       width: 23vw;
       min-width: 70px;
       max-width: 100px;
@@ -778,7 +686,6 @@ ul, li {
       color: $black;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
       width: 22.2vw;
       max-width: 287px;
       font-family: 'Open Sans', sans-serif;

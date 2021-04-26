@@ -1,18 +1,3 @@
-{% macro promoItem(href, nameImg, category, model, name, newPrice, oldPrice) %}
-<li class="promo__item">
-  <a href="{{ href }}" class="promo__link">
-    {{ imageJpeg('promo__sourse', nameImg, 'promo__img', nam) }}
-    <div class="promo__info">
-      <p class="promo__category">{{ category }}</p>
-      <P class="promo__model">{{ model }}</P>
-      <p class="promo__name">{{ name }}</p>
-      <div class="promo__new-price">{{ newPrice }} ₽</div>
-      <div class="promo__old-price">{{ oldPrice }} ₽</div>
-    </div>
-  </a>
-</li>
-{% endmacro %}
-
 {% macro popCategoryItem(href, nameImg, name) %}
 <li class="pop-category__item">
   <a href="{{ href }}" class="pop-category__link">
