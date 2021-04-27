@@ -13,8 +13,12 @@
 <li class="pop-items__item">
   <div class="pop-items__info">
     <div class="pop-items__top">
-      {{ imageSvg('favor', 'pop-items__svg-top icon-favor svg') }}
-      {{ imageSvg('contrast', 'pop-items__svg-top icon-contrast svg') }}
+      <button type="button" class="pop-items__button">
+        {{ imageSvg('favor', 'pop-items__svg-top icon-favor svg') }}
+      </button>
+      <button type="button" class="pop-items__button">
+        {{ imageSvg('contrast', 'pop-items__svg-top icon-contrast svg') }}
+      </button>
     </div>
     {{ imageJpeg('pop-items__sourse', nameImg, 'pop-items__img', name) }}
     <a href="{{ href }}" class="pop-items__name">{{ name|safe }}</a>
@@ -28,7 +32,9 @@
         </div>
       </div>
       <div class="pop-items__market">
-        {{ imageSvg('market', 'pop-items__svg icon-market svg') }}
+        <button type="button" class="pop-items__button">
+          {{ imageSvg('market', 'pop-items__svg icon-market svg') }}
+        </button>
       </div>
     </div>
   </div>
