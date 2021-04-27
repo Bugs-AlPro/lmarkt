@@ -569,7 +569,7 @@
       text-transform: uppercase;
       align-self: center;
       text-align: center;
-      padding: 0 30px;
+      padding: 0 40px;
       font-size: 1.5em; }
     .suggestion__price {
       color: #A0148E;
@@ -601,7 +601,7 @@
     .pop-brand__name {
       display: none; }
     .pop-brand__sourse {
-      width: 23vw;
+      width: 25vw;
       min-width: 70px;
       max-width: 100px; } }
 
