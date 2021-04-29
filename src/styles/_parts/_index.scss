@@ -294,7 +294,7 @@ ul, li {
       display: none;
     }
     .sale &__new-price {
-      display: flex;
+      display: block;
       font-size: 0.8em;
       font-weight: 700;
       color: $general;
@@ -315,10 +315,6 @@ ul, li {
     }
     &__market {
       background-color: $outline;
-      // cursor: pointer;
-      // display: flex;
-      // align-items: center;
-      // color: $general;
     }
     &__market:hover {
       background-color: $market-hover;
@@ -719,7 +715,9 @@ ul, li {
       background-color: $outline;
       border-radius: 2px;
       margin-right: 10px;
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 5px;
       cursor: default;
     }
@@ -727,12 +725,10 @@ ul, li {
       display: none;
     }
     .sale {
-      display: grid;
-      align-self: end;
-      justify-self: center;
+      display: block;
     }
     .sale &__new-price {
-      display: grid;
+      display: block;
       font-size: 1em;
       font-weight: 700;
       color: $general;
@@ -744,6 +740,8 @@ ul, li {
       font-weight: 700;
       text-align: center;
       font-family: 'Exo 2', sans-serif;
+      
+      width: 100%;
     }
     &__old-price .sale {
       font-size: 0.7em;
@@ -762,7 +760,7 @@ ul, li {
       width: 45px;
       height: 45px;
       border-radius: 2px;
-      border: 3px solid $outline;
+      border: 3px solid $outline-price;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -770,6 +768,7 @@ ul, li {
     }
     &__market:hover {
       background-color: $market-hover;
+      border: 3px solid $market-hover;
     }
   }
   .tools-type-wrap {
