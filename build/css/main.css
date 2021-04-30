@@ -1125,9 +1125,10 @@
     fill: currentColor; }
   .header {
     display: grid;
-    grid-template-rows: auto 15px auto;
-    grid-template-areas: "location info info info info info info info info info info social social" ". . . . . . . . . . . . ." "logo catalog search search search search phone phone phone menu menu menu menu";
+    grid-template-rows: auto auto;
+    grid-template-areas: "location info info info info info info info info info info social social" "logo catalog search search search search phone phone phone menu menu menu menu";
     font-family: 'Open Sans', sans-serif;
+    grid-gap: 15px;
     position: relative; }
     .header__location {
       grid-area: location; }
@@ -1205,44 +1206,44 @@
       background-repeat: no-repeat;
       background-position: 50%; }
     .social__link--vk::after {
-      background-image: url(../../img/vk-color.svg);
+      background-image: url(../img/vk-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--vk::before {
-      background-image: url(../../img/vk-black.svg);
+      background-image: url(../img/vk-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--vk:hover::after {
       opacity: 1;
       transition: 0.4s; }
     .social__link--fb::after {
-      background-image: url(../../img/fb-color.svg);
+      background-image: url(../img/fb-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--fb::before {
-      background-image: url(../../img/fb-black.svg);
+      background-image: url(../img/fb-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--fb:hover::after {
       opacity: 1;
       transition: 0.4s; }
     .social__link--ins::after {
-      background-image: url(../../img/ins-color.svg);
+      background-image: url(../img/ins-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--ins::before {
-      background-image: url(../../img/ins-black.svg);
+      background-image: url(../img/ins-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--ins:hover::after {
       opacity: 1;
       transition: 0.4s; }
     .social__link--tg::after {
-      background-image: url(../../img/tg-color.svg);
+      background-image: url(../img/tg-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--tg::before {
-      background-image: url(../../img/tg-black.svg);
+      background-image: url(../img/tg-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--tg:hover::after {
@@ -1622,44 +1623,44 @@
       background-repeat: no-repeat;
       background-position: 50%; }
     .social__link--vk::after {
-      background-image: url(../../img/vk-color.svg);
+      background-image: url(../img/vk-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--vk::before {
-      background-image: url(../../img/vk-black.svg);
+      background-image: url(../img/vk-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--vk:hover::after {
       opacity: 1;
       transition: 0.4s; }
     .social__link--fb::after {
-      background-image: url(../../img/fb-color.svg);
+      background-image: url(../img/fb-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--fb::before {
-      background-image: url(../../img/fb-black.svg);
+      background-image: url(../img/fb-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--fb:hover::after {
       opacity: 1;
       transition: 0.4s; }
     .social__link--ins::after {
-      background-image: url(../../img/ins-color.svg);
+      background-image: url(../img/ins-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--ins::before {
-      background-image: url(../../img/ins-black.svg);
+      background-image: url(../img/ins-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--ins:hover::after {
       opacity: 1;
       transition: 0.4s; }
     .social__link--tg::after {
-      background-image: url(../../img/tg-color.svg);
+      background-image: url(../img/tg-color.svg);
       opacity: 0;
       transition: 0.4s; }
     .social__link--tg::before {
-      background-image: url(../../img/tg-black.svg);
+      background-image: url(../img/tg-black.svg);
       opacity: 0.15;
       transition: 0.4s; }
     .social__link--tg:hover::after {

@@ -153,12 +153,12 @@
     background-position: 50%;
   }
   &__link--vk::after {
-    background-image: url(../../img/vk-color.svg);
+    background-image: url(../img/vk-color.svg);
     opacity: 0;
     transition: 0.4s;
   }
   &__link--vk::before {
-    background-image: url(../../img/vk-black.svg);
+    background-image: url(../img/vk-black.svg);
     opacity: 0.15;
     transition: 0.4s;
   }
@@ -167,12 +167,12 @@
     transition: 0.4s;
   }
   &__link--fb::after {
-    background-image: url(../../img/fb-color.svg);
+    background-image: url(../img/fb-color.svg);
     opacity: 0;
     transition: 0.4s;
   }
   &__link--fb::before {
-    background-image: url(../../img/fb-black.svg);
+    background-image: url(../img/fb-black.svg);
     opacity: 0.15;
     transition: 0.4s;
   }
@@ -181,12 +181,12 @@
     transition: 0.4s;
   }
   &__link--ins::after {
-    background-image: url(../../img/ins-color.svg);
+    background-image: url(../img/ins-color.svg);
     opacity: 0;
     transition: 0.4s;
   }
   &__link--ins::before {
-    background-image: url(../../img/ins-black.svg);
+    background-image: url(../img/ins-black.svg);
     opacity: 0.15;
     transition: 0.4s;
   }
@@ -195,12 +195,12 @@
     transition: 0.4s;
   }
   &__link--tg::after {
-    background-image: url(../../img/tg-color.svg);
+    background-image: url(../img/tg-color.svg);
     opacity: 0;
     transition: 0.4s;
   }
   &__link--tg::before {
-    background-image: url(../../img/tg-black.svg);
+    background-image: url(../img/tg-black.svg);
     opacity: 0.15;
     transition: 0.4s;
   }

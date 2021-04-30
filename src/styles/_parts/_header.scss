@@ -193,12 +193,12 @@
   }
   .header {
     display: grid;
-    grid-template-rows: auto 15px auto;
+    grid-template-rows: auto auto;
     grid-template-areas: 
     "location info info info info info info info info info info social social"
-    ". . . . . . . . . . . . ."
     "logo catalog search search search search phone phone phone menu menu menu menu";
     font-family: 'Open Sans', sans-serif;
+    grid-gap: 15px;
     position: relative;
     &__location {
       grid-area: location;
@@ -294,12 +294,12 @@
       background-position: 50%;
     }
     &__link--vk::after {
-      background-image: url(../../img/vk-color.svg);
+      background-image: url(../img/vk-color.svg);
       opacity: 0;
       transition: 0.4s;
     }
     &__link--vk::before {
-      background-image: url(../../img/vk-black.svg);
+      background-image: url(../img/vk-black.svg);
       opacity: 0.15;
       transition: 0.4s;
     }
@@ -308,12 +308,12 @@
       transition: 0.4s;
     }
     &__link--fb::after {
-      background-image: url(../../img/fb-color.svg);
+      background-image: url(../img/fb-color.svg);
       opacity: 0;
       transition: 0.4s;
     }
     &__link--fb::before {
-      background-image: url(../../img/fb-black.svg);
+      background-image: url(../img/fb-black.svg);
       opacity: 0.15;
       transition: 0.4s;
     }
@@ -322,12 +322,12 @@
       transition: 0.4s;
     }
     &__link--ins::after {
-      background-image: url(../../img/ins-color.svg);
+      background-image: url(../img/ins-color.svg);
       opacity: 0;
       transition: 0.4s;
     }
     &__link--ins::before {
-      background-image: url(../../img/ins-black.svg);
+      background-image: url(../img/ins-black.svg);
       opacity: 0.15;
       transition: 0.4s;
     }
@@ -336,12 +336,12 @@
       transition: 0.4s;
     }
     &__link--tg::after {
-      background-image: url(../../img/tg-color.svg);
+      background-image: url(../img/tg-color.svg);
       opacity: 0;
       transition: 0.4s;
     }
     &__link--tg::before {
-      background-image: url(../../img/tg-black.svg);
+      background-image: url(../img/tg-black.svg);
       opacity: 0.15;
       transition: 0.4s;
     }
