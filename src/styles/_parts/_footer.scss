@@ -90,6 +90,7 @@
     align-items: center;
   }
   &__down-item {
+    // display: flex;
     margin-bottom: 15px;
   }
 }
@@ -113,16 +114,14 @@
   font-size: 0.8em;
   font-family: 'Open Sans', sans-serif;
 }
-.phone {
+.phone-down {
+  opacity: 0.5;
+  margin-bottom: 10px;
   font-size: 1.5em; 
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   line-height: 15px;
   color: $black;
-}
-.phone-down {
-  opacity: 0.5;
-  margin-bottom: 10px;
 }
 .phone-down:hover {
   opacity: 1;
@@ -132,69 +131,82 @@
 }
 .social {
   display: flex;
-  &__link {
-    height: 40px;
-    width: 40px;
-    padding: 5px;
+  &__item {
+    height: 30px;
+    width: 30px;
     display: flex;
   }
-  &__tg {
-    width: 28px;
-    height: 23px;
-    fill: $black;
-    opacity: 0.15;
-    justify-self: center;
-    align-self: center;
+  &__link {
+    height: 30px;
+    width: 30px;
+    position: relative;
   }
-  &__link:hover &__tg {
-    fill: #1E96C8;
-    opacity: 1;
-  }
-  &__ins-black {
-    width: 25px;
-    height: 25px;
-    fill: $black;
-    opacity: 0.15;
+  &__link::after,
+  &__link::before {
     position: absolute;
-    justify-self: center;
-    align-self: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: 50%;
   }
-  &__link:hover &__ins-black {
-    display: none;
-  }
-  &__ins-color {
-    width: 25px;
-    height: 25px;
+  &__link--vk::after {
+    background-image: url(../../img/vk-color.svg);
     opacity: 0;
-    justify-self: center;
-    align-self: center;
+    transition: 0.4s;
   }
-  &__link:hover &__ins-color {
-    opacity: 1;
-  }
-  &__vk {
-    width: 31px;
-    height: 18px;
-    fill: $black;
+  &__link--vk::before {
+    background-image: url(../../img/vk-black.svg);
     opacity: 0.15;
-    justify-self: center;
-    align-self: center;
+    transition: 0.4s;
   }
-  &__link:hover &__vk {
-    fill: #5282b8;
+  &__link--vk:hover::after {
     opacity: 1;
+    transition: 0.4s;
   }
-  &__fb {
-    width: 25px;
-    height: 25px;
-    fill: $black;
+  &__link--fb::after {
+    background-image: url(../../img/fb-color.svg);
+    opacity: 0;
+    transition: 0.4s;
+  }
+  &__link--fb::before {
+    background-image: url(../../img/fb-black.svg);
     opacity: 0.15;
-    justify-self: center;
-    align-self: center;
+    transition: 0.4s;
   }
-  &__link:hover &__fb {
-    fill: #3b589e;
+  &__link--fb:hover::after {
     opacity: 1;
+    transition: 0.4s;
+  }
+  &__link--ins::after {
+    background-image: url(../../img/ins-color.svg);
+    opacity: 0;
+    transition: 0.4s;
+  }
+  &__link--ins::before {
+    background-image: url(../../img/ins-black.svg);
+    opacity: 0.15;
+    transition: 0.4s;
+  }
+  &__link--ins:hover::after {
+    opacity: 1;
+    transition: 0.4s;
+  }
+  &__link--tg::after {
+    background-image: url(../../img/tg-color.svg);
+    opacity: 0;
+    transition: 0.4s;
+  }
+  &__link--tg::before {
+    background-image: url(../../img/tg-black.svg);
+    opacity: 0.15;
+    transition: 0.4s;
+  }
+  &__link--tg:hover::after {
+    opacity: 1;
+    transition: 0.4s;
   }
 }
 .sm-none {

@@ -481,12 +481,17 @@ ul, li {
   a {
     text-decoration: none;
     display: inline-block;
+    transition: 0.4s;
   }
   img {
     display: block;
   }
   * {
     box-sizing: border-box;
+    transition: 0.4s;
+  }
+  *:hover {
+    transition: 0.4s;
   }
   .body {
     margin: auto; 
