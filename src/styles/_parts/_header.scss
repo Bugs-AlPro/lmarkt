@@ -95,64 +95,119 @@
     }
   }
   .search {
-    ::-webkit-input-placeholder {
-      color: $general;
-    }
-    margin: 0px 20px 0px 20px;
-    &__form {
-      height: 45px;
-      width: 100%;
-      position: relative;
-      display: flex;
-      background-color: $outline;
-      border-radius: 3px;
-      padding: 3px;
-      fill: $general;
-      color: $general;
-      box-shadow: inset 0px 0 0 3px $outline; 
-    }
-    &__input {
-      width: 100%;
-      min-width: none;
-      border: none;
-      outline: none;
-      color: inherit;
-      opacity: 0.4;
-      padding: 10px 50px 10px 15px;
-      background-color: inherit;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    &__form:focus-within,
-    &__form:hover {
-      box-shadow: inset 0px 0 0 3px $border-search; 
-      background-color: $search-fild;
-      fill: $hover;
-    }
-    &__form:focus-within &__input {
-      opacity: 0.8;
-    }
-    &__form:hover &__input,
-    &__input:hover {
-      opacity: 0.8;
-    }
-    &__submit {
-      width: 50px;
-      color: inherit;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      background-color: inherit;
-      position: relative;
-    }
-    &__submit:focus {
-      outline: 1px solid $border-search;
-    }
+      margin: 0px 20px 0px 20px;
     &__icon {
       width: 15px;
       height: 15px;
       fill: inherit;
     }
+    ::-webkit-input-placeholder {
+      color: $general;
+    }
+    &__form {
+      position: relative;
+    }
+    &__input {
+      width: 100%;
+      height: 45px;
+      border-radius: 3px;
+      border: none;
+      background-color: $outline;
+      outline: none;
+      padding: 10px 50px 10px 15px;
+      color: $general-op-04;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    &__submit:focus + &__input,
+    &__submit:hover + &__input,
+    &__input:hover,
+    &__input:focus {
+      box-shadow: inset 0px 0 0 3px $border-search; 
+      background-color: $search-fild;
+      color: $general-op-08;
+    }
+    &__submit {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      width: 50px;
+      height: 39px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: inherit;
+      fill: $general;
+    }
+    &__submit:focus {
+      outline: 1px solid $border-search;
+      border: none;
+      fill: $hover;
+    }
+    &__submit:hover {
+      fill: $hover;
+    }
+    // ниже код ориентированный на смену стиля отталкиваясь от form с помощью focus-within
+
+    // ::-webkit-input-placeholder {
+    //   color: $general;
+    // }
+    // margin: 0px 20px 0px 20px;
+    // &__form {
+    //   height: 45px;
+    //   width: 100%;
+    //   position: relative;
+    //   display: flex;
+    //   background-color: $outline;
+    //   border-radius: 3px;
+    //   padding: 3px;
+    //   fill: $general;
+    //   color: $general;
+    //   box-shadow: inset 0px 0 0 3px $outline; 
+    // }
+    // &__input {
+    //   width: 100%;
+    //   min-width: none;
+    //   border: none;
+    //   outline: none;
+    //   color: inherit;
+    //   opacity: 0.4;
+    //   padding: 10px 50px 10px 15px;
+    //   background-color: inherit;
+    //   text-overflow: ellipsis;
+    //   overflow: hidden;
+    // }
+    // &__form:focus-within,
+    // &__form:hover {
+    //   box-shadow: inset 0px 0 0 3px $border-search; 
+    //   background-color: $search-fild;
+    //   fill: $hover;
+    // }
+    // &__form:focus-within &__input {
+    //   opacity: 0.8;
+    // }
+    // &__form:hover &__input,
+    // &__input:hover {
+    //   opacity: 0.8;
+    // }
+    // &__submit {
+    //   width: 50px;
+    //   color: inherit;
+    //   outline: none;
+    //   border: none;
+    //   cursor: pointer;
+    //   background-color: inherit;
+    //   position: relative;
+    // }
+    // &__submit:focus {
+    //   outline: 1px solid $border-search;
+    // }
+    // &__icon {
+    //   width: 15px;
+    //   height: 15px;
+    //   fill: inherit;
+    // }
   }
   .icon-market {
     &__count {
@@ -198,7 +253,7 @@
     "location info info info info info info info info info info social social"
     "logo catalog search search search search phone phone phone menu menu menu menu";
     font-family: 'Open Sans', sans-serif;
-    grid-gap: 15px;
+    row-gap: 15px;
     position: relative;
     &__location {
       grid-area: location;
@@ -396,64 +451,116 @@
     }
   }
   .search {
-    ::-webkit-input-placeholder {
-      color: $general;
-    }
-    &__form {
-      height: 45px;
-      width: 100%;
-      position: relative;
-      display: flex;
-      background-color: $outline;
-      border-radius: 3px;
-      padding: 3px;
-      fill: $general;
-      color: $general;
-      box-shadow: inset 0px 0 0 3px $outline; 
-    }
-    &__input {
-      width: 100%;
-      height: 100%;
-      min-width: none;
-      border: none;
-      outline: none;
-      color: inherit;
-      opacity: 0.4;
-      padding: 10px 50px 10px 15px;
-      background-color: inherit;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    &__form:focus-within,
-    &__form:hover {
-      box-shadow: inset 0px 0 0 3px $border-search; 
-      background-color: $search-fild;
-      fill: $hover;
-    }
-    &__form:focus-within &__input {
-      opacity: 0.8;
-    }
-    &__form:hover &__input,
-    &__input:hover {
-      opacity: 0.8;
-    }
-    &__submit {
-      width: 50px;
-      color: inherit;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      background-color: inherit;
-      position: relative;
-    }
-    &__submit:focus {
-      outline: 1px solid $border-search;
-    }
     &__icon {
       width: 15px;
       height: 15px;
       fill: inherit;
     }
+    ::-webkit-input-placeholder {
+      color: $general;
+    }
+    &__form {
+      position: relative;
+    }
+    &__input {
+      width: 100%;
+      height: 45px;
+      border-radius: 3px;
+      border: none;
+      background-color: $outline;
+      outline: none;
+      padding: 10px 50px 10px 15px;
+      color: $general-op-04;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &__submit:focus + &__input,
+    &__submit:hover + &__input,
+    &__input:hover,
+    &__input:focus {
+      box-shadow: inset 0px 0 0 3px $border-search; 
+      background-color: $search-fild;
+      color: $general-op-08;
+    }
+    &__submit {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      width: 50px;
+      height: 39px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: inherit;
+      fill: $general;
+    }
+    &__submit:focus {
+      outline: 1px solid $border-search;
+      border: none;
+      fill: $hover;
+    }
+    &__submit:hover {
+      fill: $hover;
+    }
+    // ниже код ориентированный на смену стиля отталкиваясь от form с помощью focus-within
+    // ::-webkit-input-placeholder {
+    //   color: $general;
+    // }
+    // &__form {
+    //   height: 45px;
+    //   width: 100%;
+    //   position: relative;
+    //   display: flex;
+    //   background-color: $outline;
+    //   border-radius: 3px;
+    //   padding: 3px;
+    //   fill: $general;
+    //   color: $general;
+    //   box-shadow: inset 0px 0 0 3px $outline; 
+    // }
+    // &__input {
+    //   width: 100%;
+    //   height: 100%;
+    //   min-width: none;
+    //   border: none;
+    //   outline: none;
+    //   color: inherit;
+    //   opacity: 0.4;
+    //   padding: 10px 50px 10px 15px;
+    //   background-color: inherit;
+    //   text-overflow: ellipsis;
+    //   overflow: hidden;
+    // }
+    // &__form:focus-within,
+    // &__form:hover {
+    //   box-shadow: inset 0px 0 0 3px $border-search; 
+    //   background-color: $search-fild;
+    //   fill: $hover;
+    // }
+    // &__form:focus-within &__input {
+    //   opacity: 0.8;
+    // }
+    // &__form:hover &__input,
+    // &__input:hover {
+    //   opacity: 0.8;
+    // }
+    // &__submit {
+    //   width: 50px;
+    //   color: inherit;
+    //   outline: none;
+    //   border: none;
+    //   cursor: pointer;
+    //   background-color: inherit;
+    //   position: relative;
+    // }
+    // &__submit:focus {
+    //   outline: 1px solid $border-search;
+    // }
+    // &__icon {
+    //   width: 15px;
+    //   height: 15px;
+    //   fill: inherit;
+    // }
   }
   .phone {
     font-size: 1.3em;
