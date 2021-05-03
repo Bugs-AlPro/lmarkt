@@ -228,6 +228,11 @@
     text-decoration: none; }
   img {
     display: block; }
+  * {
+    box-sizing: border-box;
+    transition: 0.4s; }
+  *:hover {
+    transition: 0.4s; }
   .body {
     margin: auto;
     display: flex;
